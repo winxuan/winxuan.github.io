@@ -6,6 +6,8 @@ order: 4
 
 ![裴秀智_1](/assets/image/demo.jpg)
 
+![裴秀智_2](/assets/image/demo_2.jpg)
+
 ## 计划
 
 1. GPT系列
