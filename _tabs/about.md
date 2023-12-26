@@ -6,6 +6,7 @@ order: 4
 
 ![裴秀智_1](/assets/image/demo_2.jpg)
 
+![裴秀智_2](/assets/image/demo.jpg)
 
 ## 计划
 
@@ -25,4 +26,4 @@ order: 4
         2. 使用Google Analysis监听blog访问量
         3. 
 
-![裴秀智_2](/assets/image/demo.jpg)
+
