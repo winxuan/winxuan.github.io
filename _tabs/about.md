@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![裴秀智_1](/assets/image/img.gif)
+![裴秀智_1](/assets/image/demo.jpg)
 
 ## 计划
 
