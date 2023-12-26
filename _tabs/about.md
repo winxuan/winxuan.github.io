@@ -4,11 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![裴秀智_1](/assets/image/demo.jpg)
+![裴秀智_1](/assets/image/demo_2.jpg)
 
-----------------------------------------------
-
-![裴秀智_2](/assets/image/demo_2.jpg)
 
 ## 计划
 
@@ -27,3 +24,5 @@ order: 4
         1. 使用github pages快速搭建个人blog
         2. 使用Google Analysis监听blog访问量
         3. 
+
+![裴秀智_2](/assets/image/demo.jpg)
