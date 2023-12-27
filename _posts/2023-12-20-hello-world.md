@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: 2023-12-20 11:00:00 +0800
-categories: [Blogging]
+categories: [Blog，HelloWorld]
 tags: [helloworld]
 ---
 

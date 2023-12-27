@@ -16,8 +16,8 @@ order: 4
         2. 写好ChatGPT提示词原则之：消耗更多步骤（算力换准确度）
         3. 
     2. GPT工具开发基础&进阶系列
-        1. 如何调用gpt api（python）
-        2. gpt API 本地函数调用
+        1. 如何调用GPT API（python）
+        2. GPT API 本地函数调用
         3. 
     3. GPT提示
 2. 基础技术
