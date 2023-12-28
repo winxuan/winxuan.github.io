@@ -17,7 +17,7 @@ order: 4
         3. 
     2. GPT工具开发基础&进阶系列
         1. 如何调用GPT API（python）
-        2. GPT API 本地函数调用
+        2. GPT API 调用本地函数（function call）
         3. 
     3. GPT提示
 2. 基础技术
