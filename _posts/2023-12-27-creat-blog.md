@@ -45,7 +45,34 @@ Jekyll有提供多种主题供用户选择，而且用户选择好主题之后�
 
 ## 获取主题与GitHub相关配置
 
-根据demo中文档介绍，主题作者提供了两种方案供我们选择，一种是通过fork 
+根据demo中文档介绍，主题作者提供了两种创建方案供我们选择，一种是通过fork作者的开发仓库，一种是generate作者的另一个仓库，两种操作各有优缺点，这里会同时介绍两种操作。如果专注于内容，建议使用作者推荐的方案，隔离无关的项目文件，忍受一些小问题，专注于内容创作；如果是自己有能力解决问题，并且有时间有能力自己动手解决问题，则建议fork仓库的形式，为社区做贡献；
+
+### Using the Chirpy Starter（推荐）
+
+操作步骤如下：
+
+1. 创建git仓库
+仓库URL: https://github.com/cotes2020/chirpy-starter，进入仓库后点右上角 <kbd>Use this template</kbd> > <kbd>Create a new repository</kbd> 如下图所示：
+![主题](/assets/image/20231228112752.png)
+
+跳转进入创建页面，修改下仓库名称为 `USERNAME.github.io`，比如我的GitHub用户名是winxuan，那么我的仓库名就是winxuan.github.io（这里因为我已经创建过一个同名仓库了，所以有红字提示）
+![主题](/assets/image/20231228113351.png)
+
+2. 配置github仓库
+进入自己创建好的仓库，点 <kbd>Settings</kbd> <kbd>Pages</kbd> <kbd>Settings</kbd> 后，点 <kbd>Build and deployment</kbd> 下面的 <kbd>Source</kbd> 中的选项 Github Actions，如下图所示。
+![主题](/assets/image/20231228114948.png)
+
+这里会自动创建部署脚本，配置好之后，自己的GitHub Pages已经开始打包了，可以在仓库中 `Actions` 看到对应部署过程。
+![主题](/assets/image/20231228115450.png)
+
+正常都会在1分钟内部署完成，这时候访问`USERNAME.github.io`，即刚刚创建的仓库名，比如我的是winxuan.github.io，即可看到对应的网页。如果能正常看到类似demo的网页，那说明部署成功了。
+
+### GitHub Fork
+
+操作步骤如下（选择这一方法说明已经很了解相关过程，这里简写下）
+
+1. 创建git仓库
+2. 配置github仓库
 
 ## 本地部署环境和调试
 

@@ -48,4 +48,3 @@ def HelloWorld():
 
 > An example showing the `danger` type prompt.
 {: .prompt-danger }
-
