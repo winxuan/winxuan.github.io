@@ -22,13 +22,16 @@ Jekyll是一个简单、可扩展的静态站点生成器。它将文本格式�
 之所以为什么会选择GitHub Pages作为静态网站托管服务，有以下几个好处：
 
 1. 免费与活跃社区支持：
-GitHub Pages是完全免费的解决方案，而且本身也有很多免费优秀的主题，用户通过fork对应主题的仓库，再通过一些简单的配置文件修改，即可生成一个自己的网站。比如我通过fork cotes2020/jekyll-theme-chirpy主题仓库，修改一些配置之后，得到了一个自己的网站：[https://winxuan.github.io/](https://winxuan.github.io/)。同时如果出现任何问题，都可以通过fork from的仓库发issue去询问解决，同时如果自己有代码能力也可以自己去解决并通过issue帮助同样有问题的人解决问题，在一个非常流行的主题仓库是有很多活跃的用户的，他们非常乐意去分享自己的内容。
+
+    GitHub Pages是完全免费的解决方案，而且本身也有很多免费优秀的主题，用户通过fork对应主题的仓库，再通过一些简单的配置文件修改，即可生成一个自己的网站。比如我通过fork cotes2020/jekyll-theme-chirpy主题仓库，修改一些配置之后，得到了一个自己的网站：[https://winxuan.github.io/](https://winxuan.github.io/)。同时如果出现任何问题，都可以通过fork from的仓库发issue去询问解决，同时如果自己有代码能力也可以自己去解决并通过issue帮助同样有问题的人解决问题，在一个非常流行的主题仓库是有很多活跃的用户的，他们非常乐意去分享自己的内容。
 
 2. 集成与自动部署：
-首次配置好GitHub Pages与Jekyll之后，后面自己再继续写的文章等，都不需要再进行配置，只需要将文章的md文件等git push之后，GitHub action就会自动生成对应的文章html等，也就是GitHub Pages自带有免费的CI/CD流程支持，免去自己需要在本地处理文章从md格式转换成网页的过程，极大降低了使用门槛。
+
+    首次配置好GitHub Pages与Jekyll之后，后面自己再继续写的文章等，都不需要再进行配置，只需要将文章的md文件等git push之后，GitHub action就会自动生成对应的文章html等，也就是GitHub Pages自带有免费的CI/CD流程支持，免去自己需要在本地处理文章从md格式转换成网页的过程，极大降低了使用门槛。
 
 3. 定制与源码管理：
-Jekyll有提供多种主题供用户选择，而且用户选择好主题之后，可以fork对应仓库，这样整个网站的源码就在自己的个人仓库中，用户可以通过修改源码，深度定制属于自己的博客。并且GitHub由于处于国外，不需要进行帖子审核等即可上传到自己的个人博客上。
+
+    Jekyll有提供多种主题供用户选择，而且用户选择好主题之后，可以fork对应仓库，这样整个网站的源码就在自己的个人仓库中，用户可以通过修改源码，深度定制属于自己的博客。并且GitHub由于处于国外，不需要进行帖子审核等即可上传到自己的个人博客上。
 
 ## 搭建GitHub Pages博客的准备工作
 
@@ -53,25 +56,25 @@ Jekyll有提供多种主题供用户选择，而且用户选择好主题之后�
 
 1. 创建git仓库
 
-仓库URL: https://github.com/cotes2020/chirpy-starter，进入仓库后点右上角 <kbd>Use this template</kbd> > <kbd>Create a new repository</kbd> 如下图所示：
-![主题](/assets/image/20231228112752.png)
+    仓库URL: https://github.com/cotes2020/chirpy-starter，进入仓库后点右上角 <kbd>Use this template</kbd> > <kbd>Create a new repository</kbd> 如下图所示：
+    ![主题](/assets/image/20231228112752.png)
 
-跳转进入创建页面，修改下仓库名称为 `USERNAME.github.io`，比如我的GitHub用户名是winxuan，那么我的仓库名就是winxuan.github.io（这里因为我已经创建过一个同名仓库了，所以有红字提示）
-![主题](/assets/image/20231228113351.png)
+    跳转进入创建页面，修改下仓库名称为 `USERNAME.github.io`，比如我的GitHub用户名是winxuan，那么我的仓库名就是winxuan.github.io（这里因为我已经创建过一个同名仓库了，所以有红字提示）
+    ![主题](/assets/image/20231228113351.png)
 
 2. 配置github仓库
 
-进入自己创建好的仓库，点 <kbd>Settings</kbd> <kbd>Pages</kbd> <kbd>Settings</kbd> 后，点 <kbd>Build and deployment</kbd> 下面的 <kbd>Source</kbd> 中的选项 Github Actions，如下图所示。
-![主题](/assets/image/20231228114948.png)
+    进入自己创建好的仓库，点 <kbd>Settings</kbd> <kbd>Pages</kbd> <kbd>Settings</kbd> 后，点 <kbd>Build and deployment</kbd> 下面的 <kbd>Source</kbd> 中的选项 Github Actions，如下图所示。
+    ![主题](/assets/image/20231228114948.png)
 
 这里会自动创建部署脚本，配置好之后，自己的GitHub Pages已经开始打包了，可以在仓库中 `Actions` 看到对应部署过程。
 ![主题](/assets/image/20231228115450.png)
 
 3. 修改项目配置
 
-_config.yml中的变量，url，avatar，timezone，lang，主要是这四个配置
+    _config.yml中的变量，url，avatar，timezone，lang，主要是这四个配置
 
-正常都会在1分钟内部署完成，这时候访问`USERNAME.github.io`，即刚刚创建的仓库名，比如我的是winxuan.github.io，即可看到对应的网页。如果能正常看到类似demo的网页，那说明部署成功了。
+    正常都会在1分钟内部署完成，这时候访问`USERNAME.github.io`，即刚刚创建的仓库名，比如我的是winxuan.github.io，即可看到对应的网页。如果能正常看到类似demo的网页，那说明部署成功了。
 
 ### GitHub Fork（开发者专用）
 
@@ -79,21 +82,21 @@ _config.yml中的变量，url，avatar，timezone，lang，主要是这四个配
 
 1. 创建git仓库
 
-fork该仓库https://github.com/cotes2020/jekyll-theme-chirpy，同时修改仓库名为 `USERNAME.github.io`，比如我的GitHub用户名是winxuan，那么我的仓库名就是winxuan.github.io
+    fork该仓库https://github.com/cotes2020/jekyll-theme-chirpy，同时修改仓库名为 `USERNAME.github.io`，比如我的GitHub用户名是winxuan，那么我的仓库名就是winxuan.github.io
 
 2. 配置github仓库
 
-进入自己创建好的仓库，点 <kbd>Settings</kbd> <kbd>Pages</kbd> <kbd>Settings</kbd> 后，点 <kbd>Build and deployment</kbd> 下面的 <kbd>Source</kbd> 中的选项 Github Actions，如下图所示。
-![主题](/assets/image/20231228114948.png)
+    进入自己创建好的仓库，点 <kbd>Settings</kbd> <kbd>Pages</kbd> <kbd>Settings</kbd> 后，点 <kbd>Build and deployment</kbd> 下面的 <kbd>Source</kbd> 中的选项 Github Actions，如下图所示。
+    ![主题](/assets/image/20231228114948.png)
 
-注意这里需要抄作业：
-删除代码仓库中的.github文件夹，将我的仓库中对应的文件夹上传上去
-https://github.com/winxuan/winxuan.github.io/tree/master/.github/workflows
-因为作者的CI流程有些复杂，可能不可用，这里其实用最简单的流程即可，不需要太复杂。
+    注意这里需要抄作业：
+    删除代码仓库中的.github文件夹，将我的仓库中对应的文件夹上传上去
+    https://github.com/winxuan/winxuan.github.io/tree/master/.github/workflows
+    因为作者的CI流程有些复杂，可能不可用，这里其实用最简单的流程即可，不需要太复杂。
 
 3. 修改项目配置
 
-_config.yml中的变量，url，avatar，timezone，lang，主要是这四个配置
+    _config.yml中的变量，url，avatar，timezone，lang，主要是这四个配置
 
 ## 本地部署环境和调试
 
@@ -103,77 +106,76 @@ _config.yml中的变量，url，avatar，timezone，lang，主要是这四个配
 
 1. 安装RUBY
 
-https://rubyinstaller.org/downloads/
- 记得下载带devkit的版本
+    https://rubyinstaller.org/downloads/
+    记得下载带devkit的版本
 
-安装过程中，如果有类似MSYS2 and MINGW development tool chain的选项，记得勾选
+    安装过程中，如果有类似MSYS2 and MINGW development tool chain的选项，记得勾选
 
-安装成功后，使用命令行验证安装结果：
-```
-ruby -v
-gem -v
-```
-未出现报错即安装成功
+    安装成功后，使用命令行验证安装结果：
+    ```
+    ruby -v
+    gem -v
+    ```
+    未出现报错即安装成功
 
 2. 安装Jekyll
 
-```
-gem install jekyll bundler
-
-```
-安装成功后，使用命令行验证安装结果：
-```
-jekyll -v
-```
+    ```
+    gem install jekyll bundler
+    ```
+    安装成功后，使用命令行验证安装结果：
+    ```
+    jekyll -v
+    ```
 
 3. 运行项目
-首先使用git clone拉到项目所有文件，然后进入项目根目录文件夹中，运行命令：
-```
-bundle
-```
-如果安装过程过于缓慢，建议配置国内镜像：
-```
-bundle config mirror.https://rubygems.org https://gems.ruby-china.com
-```
-然后再运行bundle
+    首先使用git clone拉到项目所有文件，然后进入项目根目录文件夹中，运行命令：
+    ```
+    bundle
+    ```
+    如果安装过程过于缓慢，建议配置国内镜像：
+    ```
+    bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+    ```
+    然后再运行bundle
 
-运行成功后，记得配置项目目录下的_config.yml中的变量，url，avatar，timezone，lang
-还有其他变量可以多探索下。
+    运行成功后，记得配置项目目录下的_config.yml中的变量，url，avatar，timezone，lang
+    还有其他变量可以多探索下。
 
-最后使用命令
-```
-bundle exec jekyll serve
-```
-成功的话命令行中会有提醒对应的网址，一般是 http://127.0.0.1:4000/
-访问该网址即是对应自己网站的首页。
+    最后使用命令
+    ```
+    bundle exec jekyll serve
+    ```
+    成功的话命令行中会有提醒对应的网址，一般是 http://127.0.0.1:4000/
+    访问该网址即是对应自己网站的首页。
 
 ## 维护与更新博客
 
 1. 学习md知识
 
-如果之前没有使用过markdown，建议花20分钟左右速刷下教程，语法比较简单，而且加上现在很多编辑器都有实时预览功能，比如vscode，所见即所得。
-这里推荐MarkDown官方文档即可：https://markdown.com.cn/
+    如果之前没有使用过markdown，建议花20分钟左右速刷下教程，语法比较简单，而且加上现在很多编辑器都有实时预览功能，比如vscode，所见即所得。
+    这里推荐MarkDown官方文档即可：https://markdown.com.cn/
 
 2. 写第一篇文章
 
-在_posts文件夹下创建一个md格式文件，文件名格式使用YYYY-MM-DD-TITLE.md
-文件内容上也有要求，前几行格式大概是这样：
-```
----
-title: github pages + jekyll快速搭建blog
-date: 2023-12-27 12:00:00 +0800
-categories: [Blog, Build]
-tags: [blog]
----
-```
-title:即文章标题
-date：就是写文章的日期，记得git push的时候这个时间不能超过真实时间
-categories：分类，比如这篇文章的分类在网站就长这样
-![主题](/assets/image/20231228185955.png)
-tags: 可以看成文章的标记，比如这篇文章长这样
-![主题](/assets/image/20231228190130.png)
-后面就是文章正文，按照md的格式进行编写即可
+    在_posts文件夹下创建一个md格式文件，文件名格式使用YYYY-MM-DD-TITLE.md
+    文件内容上也有要求，前几行格式大概是这样：
+    ```
+    ---
+    title: github pages + jekyll快速搭建blog
+    date: 2023-12-27 12:00:00 +0800
+    categories: [Blog, Build]
+    tags: [blog]
+    ---
+    ```
+    title:即文章标题
+    date：就是写文章的日期，记得git push的时候这个时间不能超过真实时间
+    categories：分类，比如这篇文章的分类在网站就长这样
+    ![主题](/assets/image/20231228185955.png)
+    tags: 可以看成文章的标记，比如这篇文章长这样
+    ![主题](/assets/image/20231228190130.png)
+    后面就是文章正文，按照md的格式进行编写即可
 
 3. 预览与提交
 
-如果本地有配置环境，可以先在本地进行预览后，没有其他需要修改的部分即可push到github中，等大概1分钟打包好之后，刷新blog过几秒后会弹出更新框，点update之后，即可看到更新好的文章。
+    如果本地有配置环境，可以先在本地进行预览后，没有其他需要修改的部分即可push到github中，等大概1分钟打包好之后，刷新blog过几秒后会弹出更新框，点update之后，即可看到更新好的文章。
