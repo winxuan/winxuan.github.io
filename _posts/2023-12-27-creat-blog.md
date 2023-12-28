@@ -52,6 +52,7 @@ Jekyll有提供多种主题供用户选择，而且用户选择好主题之后�
 操作步骤如下：
 
 1. 创建git仓库
+
 仓库URL: https://github.com/cotes2020/chirpy-starter，进入仓库后点右上角 <kbd>Use this template</kbd> > <kbd>Create a new repository</kbd> 如下图所示：
 ![主题](/assets/image/20231228112752.png)
 
@@ -59,6 +60,7 @@ Jekyll有提供多种主题供用户选择，而且用户选择好主题之后�
 ![主题](/assets/image/20231228113351.png)
 
 2. 配置github仓库
+
 进入自己创建好的仓库，点 <kbd>Settings</kbd> <kbd>Pages</kbd> <kbd>Settings</kbd> 后，点 <kbd>Build and deployment</kbd> 下面的 <kbd>Source</kbd> 中的选项 Github Actions，如下图所示。
 ![主题](/assets/image/20231228114948.png)
 
@@ -66,6 +68,7 @@ Jekyll有提供多种主题供用户选择，而且用户选择好主题之后�
 ![主题](/assets/image/20231228115450.png)
 
 3. 修改项目配置
+
 _config.yml中的变量，url，avatar，timezone，lang，主要是这四个配置
 
 正常都会在1分钟内部署完成，这时候访问`USERNAME.github.io`，即刚刚创建的仓库名，比如我的是winxuan.github.io，即可看到对应的网页。如果能正常看到类似demo的网页，那说明部署成功了。
@@ -75,9 +78,11 @@ _config.yml中的变量，url，avatar，timezone，lang，主要是这四个配
 操作步骤如下（选择这一方法说明已经很了解相关过程，这里简写下）
 
 1. 创建git仓库
+
 fork该仓库https://github.com/cotes2020/jekyll-theme-chirpy，同时修改仓库名为 `USERNAME.github.io`，比如我的GitHub用户名是winxuan，那么我的仓库名就是winxuan.github.io
 
 2. 配置github仓库
+
 进入自己创建好的仓库，点 <kbd>Settings</kbd> <kbd>Pages</kbd> <kbd>Settings</kbd> 后，点 <kbd>Build and deployment</kbd> 下面的 <kbd>Source</kbd> 中的选项 Github Actions，如下图所示。
 ![主题](/assets/image/20231228114948.png)
 
@@ -87,6 +92,7 @@ https://github.com/winxuan/winxuan.github.io/tree/master/.github/workflows
 因为作者的CI流程有些复杂，可能不可用，这里其实用最简单的流程即可，不需要太复杂。
 
 3. 修改项目配置
+
 _config.yml中的变量，url，avatar，timezone，lang，主要是这四个配置
 
 ## 本地部署环境和调试
@@ -96,6 +102,7 @@ _config.yml中的变量，url，avatar，timezone，lang，主要是这四个配
 不同的操作系统可能会不太一样，这里以Windows举例，配置本地调试环境：
 
 1. 安装RUBY
+
 https://rubyinstaller.org/downloads/
  记得下载带devkit的版本
 
@@ -143,10 +150,12 @@ bundle exec jekyll serve
 ## 维护与更新博客
 
 1. 学习md知识
+
 如果之前没有使用过markdown，建议花20分钟左右速刷下教程，语法比较简单，而且加上现在很多编辑器都有实时预览功能，比如vscode，所见即所得。
 这里推荐MarkDown官方文档即可：https://markdown.com.cn/
 
 2. 写第一篇文章
+
 在_posts文件夹下创建一个md格式文件，文件名格式使用YYYY-MM-DD-TITLE.md
 文件内容上也有要求，前几行格式大概是这样：
 ```
@@ -163,8 +172,8 @@ categories：分类，比如这篇文章的分类在网站就长这样
 ![主题](/assets/image/20231228185955.png)
 tags: 可以看成文章的标记，比如这篇文章长这样
 ![主题](/assets/image/20231228190130.png)
-
 后面就是文章正文，按照md的格式进行编写即可
 
 3. 预览与提交
+
 如果本地有配置环境，可以先在本地进行预览后，没有其他需要修改的部分即可push到github中，等大概1分钟打包好之后，刷新blog过几秒后会弹出更新框，点update之后，即可看到更新好的文章。
