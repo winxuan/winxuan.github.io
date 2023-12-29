@@ -42,8 +42,8 @@ Jekyll是一个简单、可扩展的静态站点生成器。它将文本格式�
 推荐直接去GitHub中寻找适合自己的主题。[github.com/topics/jekyll-theme](https://github.com/topics/jekyll-theme)
 上述是GitHub自己给出的当前主题排名，一般建议挑选排名靠前的主题，如果自己有需要某些特殊的功能，比如显示数学公式等，也可以在各自的主题介绍中寻找。
 ![主题](/assets/image/20231228005305.png)
-一般每个主题都会有自己的demo网站，一般格式都是 xxx.github.io，也有自己有域名改换成自己私有的域名的，demo内容上都大差不差，都会介绍自己主题的表现以及详细的部署和使用文档。
-比如等下我们要着重介绍部署和使用方法的主题的demo网站 https://chirpy.cotes.page/
+一般每个主题都会有自己的demo网站，一般格式都是 xxx.github.io，也有自己有域名改换成自己私有的域名的，demo内容上都大差不差，都会介绍自己主题的表现以及详细的部署和使用文档。如果自己英文比较好的情况下，建议直接阅读作者提供的部署教程文档。
+等下我们要着重介绍部署和使用方法的主题的demo网站 https://chirpy.cotes.page/
 ![主题](/assets/image/20231228005731.png)
 
 ## 获取主题与GitHub相关配置
