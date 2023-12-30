@@ -1,5 +1,5 @@
 ---
-title: 写好ChatGPT提示词原则之：清晰且具体（clear & specific）
+title: 写好ChatGPT提示词之：清晰且具体（clear & specific）
 date: 2023-12-23 14:00:00 +0800
 categories: [AIGC, OpenAI]
 tags: [chatgpt]

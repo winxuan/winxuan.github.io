@@ -1,5 +1,5 @@
 ---
-title: 写好ChatGPT提示词原则之：消耗更多步骤（算力换准确度）
+title: 写好ChatGPT提示词之：消耗更多步骤（算力换准确度）
 date: 2023-12-26 6:00:00 +0800
 categories: [AIGC, OpenAI]
 tags: [chatgpt]
