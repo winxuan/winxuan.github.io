@@ -90,9 +90,9 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: winxuan/winxuan.github.io # <gh-username>/<repo>
-    repo_id: R_kgDOK7OC2w
+    repo_id: R_kgDOK9xKpw
     category: Comments
-    category_id: DIC_kwDOK7OC284Cb206
+    category_id: DIC_kwDOK9xKp84CcIV2
     mapping: pathname # optional, default to 'pathname'
     input_position: bottom # optional, default to 'bottom'
     lang: zh-CN # optional, default to the value of `site.lang`
