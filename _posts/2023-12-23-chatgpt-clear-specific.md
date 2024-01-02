@@ -30,7 +30,7 @@ Learn for free all: <https://learn.deeplearning.ai/>
 写一个python方法，实现获取ipv4的功能
 ```
 
-![gpt执行结果](/assets/image/20231225004452.png)
+![gpt执行结果](/assets/image/2023/12/20231225004452.png)
 
 使用了分隔符之后：
 
@@ -39,7 +39,7 @@ Learn for free all: <https://learn.deeplearning.ai/>
 '''写一个python方法，实现获取ipv4的功能'''
 ```
 
-![gpt执行结果](/assets/image/20231225005043.png)
+![gpt执行结果](/assets/image/2023/12/20231225005043.png)
 
 明显可以看出没有分割符的gpt已经出现了混淆，所以在提示词中务必使用提示词。 
 
@@ -57,7 +57,7 @@ Learn for free all: <https://learn.deeplearning.ai/>
 给我输出几本书的的一些信息，比如书名，作者名，出版日期，分类等
 ```
 
-![gpt执行结果](/assets/image/20231225005137.png)
+![gpt执行结果](/assets/image/2023/12/20231225005137.png)
 
 指示gpt进行结构化输出：
 
@@ -65,7 +65,7 @@ Learn for free all: <https://learn.deeplearning.ai/>
 给我输出几本书的的一些信息，比如书名，作者名，出版日期，分类等，使用json格式出输出
 ```
 
-![gpt执行结果](/assets/image/20231225005208.png)
+![gpt执行结果](/assets/image/2023/12/20231225005208.png)
 
 这里看起来只是输出不影响结果的含义，其实最重要的点是gpt可以按照结构化输出，而且gpt也善于处理这种转义，后续gpt落地到工具中后，结构化的结果是非常方便程序语言读取的。
 
@@ -89,7 +89,7 @@ Learn for free all: <https://learn.deeplearning.ai/>
 
 ```
 
-![gpt执行结果](/assets/image/20231225005820.png)
+![gpt执行结果](/assets/image/2023/12/20231225005820.png)
 
 可以看到gpt对未有外文的语句仍旧进行了翻译，这里我们让gpt加上一个检查步骤
 
@@ -102,7 +102,7 @@ Learn for free all: <https://learn.deeplearning.ai/>
 
 ```
 
-![gpt执行结果](/assets/image/20231225010109.png)
+![gpt执行结果](/assets/image/2023/12/20231225010109.png)
 
 gpt输出自己检查了第一个字符不是德文后不再使用算力翻译，而没有指定检查步骤时gpt仍会逐字逐句将“德文”“翻译”成中文，实际上不需要翻译。
 
@@ -126,13 +126,13 @@ gpt输出自己检查了第一个字符不是德文后不再使用算力翻译�
 
 首先是gpt3.5的表现
 
-![gpt执行结果](/assets/image/20231225010957.png)
+![gpt执行结果](/assets/image/2023/12/20231225010957.png)
 
 清理上下文后，同样的提问多次提问每次都会判定不同的中文为英文，只有小概率判断正确。
 
 然后是gpt4的表现
 
-![gpt执行结果](/assets/image/20231225011209.png)
+![gpt执行结果](/assets/image/2023/12/20231225011209.png)
 
 清理上下文后，同样的提问多次提问没有出现过误判的情况；
 
@@ -162,7 +162,7 @@ gpt输出自己检查了第一个字符不是德文后不再使用算力翻译�
 
 ```
 
-![gpt执行结果](/assets/image/20231225012151.png)
+![gpt执行结果](/assets/image/2023/12/20231225012151.png)
 
 如果不给出示例的情况下，gpt会反复确认，即使我们在prompt中已经确认强调直接输出，但是gpt一直持续拉扯并且回复的结果并不能让编程语言直接格式化读取 
 
@@ -175,7 +175,7 @@ assistant：{"function_call":"find_package","svn_repository":"trunk","equip_plat
 
 ```
 
-![gpt执行结果](/assets/image/20231225012658.png)
+![gpt执行结果](/assets/image/2023/12/20231225012658.png)
 
 这里可以看出gpt不会与我们持续拉扯和废话，会直接输出结果。
 
@@ -189,4 +189,4 @@ user就是我们自己
 
 这里将上述对话转换成json格式就比较清楚了：
 
-![gpt执行结果](/assets/image/20231225012753.png)
+![gpt执行结果](/assets/image/2023/12/20231225012753.png)
