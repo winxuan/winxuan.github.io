@@ -9,7 +9,7 @@ title: I HAVE A PLAN
 
 ******
 
-# 🧐**AIGC系列**🧐
+# 🧐**AIGC相关**🧐
 1. **吴恩达&提示词工程师教程系列**
     1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a>
     2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a>
@@ -20,15 +20,20 @@ title: I HAVE A PLAN
     2. GPT API 调用本地函数（function call）
     3. GPT类工具入口框架
 
-# 🧐**基础技术**🧐
-1. **使用github创建个人blog系列**
+******
+
+# 🧐**基础技术相关**🧐
+1. **使用GitHub自建个人独立博客站系列**
     1. ✅ <a href="https://winxuan.github.io/posts/creat-blog/" target="_blank">使用github pages快速搭建个人blog</a>
-    2. 配置github pages评论功能&其他主题相关配置功能
-    3. 使用GitHub+jsDelivr自建图床
-    4. 使用Google Analysis监听blog页面访问量
-    5. 
+    2. 配置GitHub Pages评论功能&其他主题相关配置功能
+    3. 使用GitHub+jsDelivr自建图床（加速国内访问1）
+    4. GitHub Pages添加CDN服务（加速国内访问2）
+    5. 使用Google Analysis监听blog页面访问量
 
-# 🤓**工具开发**🤓
-# 🤓**测试**🤓
+# 🤓**测试开发相关**🤓
 
+******
 
+# 🤓**测试相关**🤓
+
+******
