@@ -2,31 +2,33 @@
 # the default layout is 'page'
 icon: fa-solid fa-check
 order: -1
-title: I have a plan
+title: I HAVE A PLAN
 ---
 
 ![西部点子王](/assets/image/dutch.png)
 
-# 🧐AIGC系列
-1. 吴恩达&提示词工程师教程系列
-    1. ✔写好ChatGPT提示词之：清晰且具体（clear & specific）
-    2. ✔写好ChatGPT提示词之：消耗更多步骤（算力换准确度）
-    3. 🏃写好ChatGPT提示词之：prompt的迭代（Iterate）
+******
 
-2. GPT工具开发系列
-    1. 🏃如何调用GPT API（python）
-    2. 🏃GPT API 调用本地函数（function call）
-    3. 
+# 🧐**AIGC系列**🧐
+1. **吴恩达&提示词工程师教程系列**
+    1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a>
+    2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a>
+    3. 🔜 <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a>
 
-# 🧐基础技术
-1. 使用github创建个人blog系列
-    1. ✔使用github pages快速搭建个人blog
+2. **GPT工具开发系列**
+    1. 🔜 <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a>
+    2. GPT API 调用本地函数（function call）
+    3. GPT类工具入口框架
+
+# 🧐**基础技术**🧐
+1. **使用github创建个人blog系列**
+    1. ✅ <a href="https://winxuan.github.io/posts/creat-blog/" target="_blank">使用github pages快速搭建个人blog</a>
     2. 配置github pages评论功能&其他主题相关配置功能
     3. 使用GitHub+jsDelivr自建图床
     4. 使用Google Analysis监听blog页面访问量
     5. 
 
-# 😐工具开发
-# 😐测试
+# 🤓**工具开发**🤓
+# 🤓**测试**🤓
 
 
