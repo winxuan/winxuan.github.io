@@ -1,6 +1,6 @@
 ---
 title: 使用giscus配置GitHub Pages评论功能
-date: 2024-1-3 12:00:00 +0800
+date: 2024-1-4 12:00:00 +0800
 categories: [Blog, Build]
 tags: [blog]
 ---
