@@ -16,7 +16,7 @@ title: I HAVE A PLAN
     3. 🔜 <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a>
 
 2. **GPT工具开发系列**
-    1. 🔜 <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a>
+    1. ✅ <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a>
     2. GPT API 调用本地函数（function call）
     3. GPT类工具入口框架
 
