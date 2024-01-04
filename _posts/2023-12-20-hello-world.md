@@ -34,6 +34,8 @@ def HelloWorld():
 
 {% include embed/youtube.html id='Balreaj8Yqs' %}
 
+{% include embed/bilibili.html id='BV1Kt411S77j' %}
+
 
 **提示信息**
 
