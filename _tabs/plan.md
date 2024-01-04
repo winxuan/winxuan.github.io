@@ -25,7 +25,7 @@ title: I HAVE A PLAN
 # 🧐**基础技术相关**🧐
 1. **使用GitHub自建个人独立博客站系列**
     1. ✅ <a href="https://winxuan.github.io/posts/creat-blog/" target="_blank">使用github pages快速搭建个人blog</a>
-    2. 配置GitHub Pages评论功能&其他主题相关配置功能
+    2. ✅ <a href="https://winxuan.github.io/posts/config-blog-comment/" target="_blank">使用giscus配置GitHub Pages评论功能</a>
     3. 使用GitHub+jsDelivr自建图床（加速国内访问1）
     4. GitHub Pages添加CDN服务（加速国内访问2）
     5. 使用Google Analysis监听blog页面访问量
