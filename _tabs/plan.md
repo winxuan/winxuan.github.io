@@ -10,10 +10,16 @@ title: I HAVE A PLAN
 ******
 
 # 🧐**AIGC相关**🧐
-1. **吴恩达&提示词工程师教程系列**
-    1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a>
-    2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a>
-    3. 🔜 <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a>
+   <details open> 
+    <summary> 
+    <b>1. 吴恩达提示词工程师教程系列</b>
+    </summary>
+
+        1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a>  
+        2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a>  
+        3. 🔜 <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a>  
+    
+   </details>
 
 2. **GPT工具开发系列**
     1. ✅ <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a>
@@ -33,29 +39,29 @@ title: I HAVE A PLAN
 2. **go语言系列**
     <details> <summary>go语言基础</summary>
 
-    1. Windows搭建go语言开发环境
-    2. go 基础语法
-    3. go 高级特性
+    1. Windows搭建go语言开发环境  
+    2. go 基础语法  
+    3. go 高级特性  
 
     </details>
 
     <details> <summary>gin 框架</summary>
 
-    1. gin 框架基础学习
+    1. gin 框架基础学习  
     
     </details>
 3. **python语言系列**
     <details> <summary>go语言基础</summary>
 
-    1. Windows搭建go语言开发环境
-    2. go 基础语法
-    3. go 高级特性
+    1. Windows搭建go语言开发环境  
+    2. go 基础语法  
+    3. go 高级特性  
 
     </details>
 
     <details> <summary>Flask 框架</summary>
 
-    1. Flask 框架基础学习
+    1. Flask 框架基础学习  
     
     </details>
 
