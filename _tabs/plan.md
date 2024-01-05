@@ -30,6 +30,34 @@ title: I HAVE A PLAN
     4. 使用python脚本自动获取GitHub pages页面访问量
     5. GitHub Pages添加CDN服务（加速国内访问1）
     6. 使用GitHub+jsDelivr自建图床（加速国内访问2）
+2. **go语言系列**
+    <details> <summary>go语言基础</summary>
+
+    1. Windows搭建go语言开发环境
+    2. go 基础语法
+    3. go 高级特性
+
+    </details>
+
+    <details> <summary>gin 框架</summary>
+
+    1. gin 框架基础学习
+    
+    </details>
+3. **python语言系列**
+    <details> <summary>go语言基础</summary>
+
+    1. Windows搭建go语言开发环境
+    2. go 基础语法
+    3. go 高级特性
+
+    </details>
+
+    <details> <summary>Flask 框架</summary>
+
+    1. Flask 框架基础学习
+    
+    </details>
 
 ******
 
@@ -46,3 +74,7 @@ title: I HAVE A PLAN
 ******
 
 # 🤗**读书笔记**🤗
+
+******
+
+# 🤗**英语学习**🤗
