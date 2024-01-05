@@ -2,12 +2,13 @@
 # the default layout is 'page'
 icon: fa-solid fa-check
 order: -1
-title: I HAVE A PLAN
+title: 　　　
 ---
 
-![西部点子王](/assets/image/dutch.png)
+<!-- ![西部点子王](/assets/image/dutch.png) -->
+<img src="/assets/image/dutch.png" alt="西部点子王" style="clip-path: inset(0% 0% 0% 0%); width: 100%; max-width: 100%; position: relative; left: -1%; margin-top: -14%;" />
 
-******
+
 
 # 🧐**AIGC相关**🧐
    <details open> 
@@ -97,3 +98,8 @@ title: I HAVE A PLAN
 ******
 
 # 🤗**英语学习**🤗
+
+<div style="position: fixed; bottom: 0; right: 0;">
+    <img src="/assets/image/ArthurMorgan.png" alt="描述" style="width: 200px; height: auto;" />
+</div>
+
