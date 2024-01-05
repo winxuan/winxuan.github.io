@@ -60,7 +60,7 @@ Google Analytics 对于网站所有者来说是一个非常有价值的工具，
 
     如果没有来的及保存，也可以官网找到，详细参考官方参考信息：
 
-    https://support.google.com/analytics/answer/9539598?hl=zh-Hans&ref_topic=14088998&sjid=14875448403416879290-AP
+    <a href="https://support.google.com/analytics/answer/9539598?hl=zh-Hans&ref_topic=14088998&sjid=14875448403416879290-AP" target="_blank">Google_Analytics_help</a>
 
 2. 项目配置
 

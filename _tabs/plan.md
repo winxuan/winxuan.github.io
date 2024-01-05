@@ -17,8 +17,8 @@ title: I HAVE A PLAN
 
 2. **GPT工具开发系列**
     1. ✅ <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a>
-    2. GPT API 调用本地函数（function call）
-    3. GPT类工具入口框架
+    2. 🔜 <a href="https://winxuan.github.io/posts/gpt-api-function-call/" target="_blank">GPT API 调用本地函数（function call）</a>
+    3. GPT类工具入口框架实现
 
 ******
 
