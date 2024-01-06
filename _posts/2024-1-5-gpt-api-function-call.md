@@ -59,10 +59,15 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
 
 以下就是为了完成这一任务，根据介绍中的步骤，我们自己来实现一遍这个功能：
 
-1. 实现根据城市名获取当前天气的脚本
+1. 实现根据城市名获取当前天气的脚本，以及对应的接口描述
 
     这个脚本因为并不是重点，所以这里直接给出：
-    
+    <details>
+
+    <summary markdown="span"><mark> 点击展开查看代码 </mark></summary>
+
+    ### yes, even hidden code blocks!
+
     ```python
     from urllib.request import urlopen
     from bs4 import BeautifulSoup
@@ -141,8 +146,9 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
 
         return {'temperatureLow':temperatureLow, 'temperatureHigh':temperatureHigh, 'weather':weather}
 
-    get_temperature_by_cityname('广州')
+    get_temperature_by_cityname('广州') 
     ```
+    </details>
 
     这里简单介绍下该脚本，国内获取城市天气需要一个城市代码，然后根据城市代码，可以通过一些免费API或者爬虫来获取对应的城市天气：
     
@@ -215,7 +221,6 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
         因为免费的API这里都会需要注册，很麻烦，这里为了简化使用上的步骤，直接爬取中国天气网的信息了，返回的是今天的最低气温，最高气温，天气状态
 
     3. 组装成接口
-
         ```python
         # 根据城市获取城市代码
         def get_temperature_by_cityname(cityname = '广州'):
@@ -284,5 +289,7 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
     ]
     
     ```
+
+    这里接口描述有一些技巧，
 
     
