@@ -62,11 +62,6 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
 1. 实现根据城市名获取当前天气的脚本，以及对应的接口描述
 
     这个脚本因为并不是重点，所以这里直接给出：
-    <details>
-
-    <summary markdown="span"><mark> 点击展开查看代码 </mark></summary>
-
-    ### yes, even hidden code blocks!
 
     ```python
     from urllib.request import urlopen
@@ -148,7 +143,6 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
 
     get_temperature_by_cityname('广州') 
     ```
-    </details>
 
     这里简单介绍下该脚本，国内获取城市天气需要一个城市代码，然后根据城市代码，可以通过一些免费API或者爬虫来获取对应的城市天气：
     
