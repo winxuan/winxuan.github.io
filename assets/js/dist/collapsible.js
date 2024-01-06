@@ -27,6 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
           this.classList.toggle("active");
           if (content.style.maxHeight) {
             content.style.maxHeight = null;
+            // 滚动页面到 trigger 元素的位置
+            content.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+            
           } else {
             content.style.maxHeight = content.scrollHeight + "px";
           }
