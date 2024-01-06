@@ -2,13 +2,11 @@
 # the default layout is 'page'
 icon: fa-solid fa-check
 order: -1
-title: 　　　
+title: Plan
 ---
 
 <!-- ![西部点子王](/assets/image/dutch.png) -->
 <img src="/assets/image/dutch.png" alt="西部点子王" style="clip-path: inset(0% 0% 0% 0%); width: 100%; max-width: 100%; position: relative; left: -1%; margin-top: -14%;" />
-
-
 
 # 🧐**AIGC相关**🧐
    <details open> 
@@ -66,9 +64,9 @@ title: 　　　
     <div style="margin-left: 40px !important;">
         <details> <summary>python语言基础</summary>
         <div style="margin-left: 40px !important;">
-            1. 搭建go语言开发环境 <br />
-            2. go 基础语法 <br />
-            3. go 高级特性 <br />
+            1. 搭建python语言开发环境 <br />
+            2. python 基础语法 <br />
+            3. python 高级特性 <br />
         </div>
         </details>
         <details> <summary>Flask 框架</summary>
