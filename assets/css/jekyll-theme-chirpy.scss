@@ -3,4 +3,24 @@
 
 @import 'main';
 
-/* append your custom style below */
+.collapsible-container {
+  margin-bottom: 10px;
+}
+
+.collapsible-container p {
+  cursor: pointer;
+  margin: 0;
+}
+
+.collapsible-content {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 10px;
+  max-height: calc(1.6em * 10); /* Adjust this value to show more lines (n) */
+}
+.collapsible-trigger-css {
+   color: gray; 
+   text-align: center; 
+   font-size: small;
+}
+

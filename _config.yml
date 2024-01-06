@@ -117,8 +117,8 @@ baseurl: ""
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
-  parse_block_html: true   
-  parse_span_html: true   
+  # parse_block_html: true   
+  # parse_span_html: true   
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight

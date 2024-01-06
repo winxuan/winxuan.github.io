@@ -20,12 +20,20 @@
   Fixed kramdown code highlight rendering:
   https://github.com/penibelst/jekyll-compress-html/issues/101
   https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+  | replace: '<div class="language-', '<script src="/assets/js/dist/addcontainer.js"></script><div class="language-'
+    | replace: '<div class="language-', '<div class="collapsible-container language-'
 -->
+{% if _content contains '<div class="language-' and '<div class="content">'%}
+  {% assign _content = _content
+    | replace: 'highlighter-rouge', 'highlighter-rouge collapsible-container'
+    | replace: '<div class="content">', '<script src="/assets/js/dist/collapsible.js"></script><div class="content">' 
+  %}
+{% endif %}
 
 {% if _content contains '<pre class="highlight">' %}
   {% assign _content = _content
-    | replace: '<div class="highlight"><pre class="highlight"><code', '<div class="highlight"><code'
-    | replace: '</code></pre></div>', '</code></div>'
+    | replace: '<div class="highlight"><pre class="highlight"><code', '<div class="highlight collapsible-content"><code'
+    | replace: '</code></pre></div>', '</code></div> <p class="language-javascript collapsible-trigger collapsible-trigger-css">展开/收起</p>'
   %}
 {% endif %}
 
@@ -185,8 +193,8 @@
 
 <!-- Add header for code snippets -->
 
-{% if _content contains '<div class="highlight"><code>' %}
-  {% assign _code_spippets = _content | split: '<div class="highlight"><code>' %}
+{% if _content contains '<div class="highlight collapsible-content"><code>' %}
+  {% assign _code_spippets = _content | split: '<div class="highlight collapsible-content"><code>' %}
   {% assign _new_content = '' %}
 
   {% for _snippet in _code_spippets %}
@@ -216,7 +224,7 @@
         | append: '<button aria-label="copy" data-title-succeed="'
         | append: site.data.locales[include.lang].post.button.copy_code.succeed
         | append: '"><i class="far fa-clipboard"></i></button></div>'
-        | append: '<div class="highlight"><code>'
+        | append: '<div class="highlight collapsible-content"><code>'
       %}
     {% endif %}
   {% endfor %}
