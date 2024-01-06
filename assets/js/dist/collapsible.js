@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
         trigger.style.display = 'none';
       } else {
         trigger.addEventListener("click", function () { 
+          // 切换按钮上的文字
+          if (this.innerHTML.includes("展开")) {
+            this.innerHTML = "收起";
+          } else {
+            this.innerHTML = "展开";
+          }
           this.classList.toggle("active");
           if (content.style.maxHeight) {
             content.style.maxHeight = null;
