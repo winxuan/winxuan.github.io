@@ -8,16 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
       let content = coll[i].querySelector('.collapsible-content');
       let codeLines = (content.textContent.split('\n').length - 1) / 2; // 计算实际的代码行数
    
-      /* codeLines=实际行的行数*2+一行换行空行，因为chirpy主题使用了<table>标签，里边包含两列，所以js会将1行代码视为2行。下边被注释掉的代码可以查看codeLines的真实值。codeLines=real_lines*2+1wrap_blank_line,because the chirpy theme uses <table> with 2 columns,which js reguard 1 line as 2 lines. The code section below can help you see the real value of codeLines.
-      let tempcodeLines = content.textContent.split('\n').length;
-      let lineCount = document.createElement('span');
-      lineCount.textContent = ' (' + tempcodeLines + ' lines)';
-      coll[i].appendChild(lineCount);
-      */
       console.log(codeLines)
 
       if (codeLines <= defaultOpenLines) {
-        // 如果代码行数小于或等于20行，则默认展开
         this.innerHTML = "收起";
         trigger.style.display = 'none'; // 隐藏触发器
         content.style.maxHeight = content.scrollHeight + "px";

@@ -59,7 +59,7 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
 
 以下就是为了完成这一任务，根据介绍中的步骤，我们自己来实现一遍这个功能：
 
-1. 实现根据城市名获取当前天气的脚本，以及对应的接口描述
+1. 接口实现：根据城市名获取当前天气的脚本
 
     这个脚本因为并不是重点，所以这里直接给出：
 
@@ -237,7 +237,7 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
         14℃ 24℃ 多云
         ```
 
-    脚本完成之后，我们需要进行接口描述，也就是告诉GPT我们提供了一个什么样的接口让它调用
+2. 接口描述：也就是告诉GPT我们提供了一个什么样的接口让它调用
 
     ```python
     tools = [
@@ -284,6 +284,306 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
     
     ```
 
-    这里接口描述有一些技巧，
+    一般的函数或者接口按照上述的函数描述，GPT就可以很好的理解函数到达的目的，这里建议抄作业即可；
+
+
+3. prompt撰写：撰写system和符合预期的用例
+
+    根据之前的prompt提示词学习，这个例子因为非常简单，对应提示词其实可以很简化：
+
+    ```
+    system：你是一个根据天气查询机器人。根据用户给出的城市名，通过调用接口，获取到该城市当天的天气状况，并返回给用户。
+
+    example：{
+        1. 
+            uesr：我想知道广州的天气？
+            assistant：今天广州天气多云，最高气温24℃，最低气温14℃
+        2.
+            uesr：广州天气怎么样？
+            assistant：今天广州天气多云，最高气温24℃，最低气温14℃
+    }
+        
+    ```
+
+4. 代码实现：使用python实现该机器人
+
+    这里也是先给出代码
+
+    ```python
+    from urllib.request import urlopen
+    from bs4 import BeautifulSoup
+
+    import requests as r
+    import json
+    from typing import Dict
+
+    def get_citycode():
+        
+        response = r.request(
+            method='get',
+            url='https://j.i8tq.com/weather2020/search/city.js',
+            headers={
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.0.0',
+                'Referer': 'http://www.weather.com.cn/',
+                'Host': 'j.i8tq.com'
+            }
+        )
+
+        raw_text = response.text
+        first_bracket_index = raw_text.index('{')
+        raw_json = raw_text[first_bracket_index:]
+        weather_json: dict = json.loads(raw_json)
+
+        stack = [weather_json[k] for k in weather_json]
+        name2code: Dict[str, str] = {}
+
+        while len(stack) > 0:
+            q: Dict[str, Dict] = stack.pop()
+            for sq in q.values():
+                area_id = sq.get('AREAID', '')
+                name_cn = sq.get('NAMECN', '')
+                if area_id:
+                    name2code[name_cn] = area_id
+                else:
+                    stack.append(sq)
+
+        areas = sorted(name2code, key=lambda x:name2code[x])
+        name2code = {a: name2code[a] for a in areas}
+        with open('city_code.json', 'w', encoding='utf-8') as fp:
+            json.dump(name2code, fp, indent=4, ensure_ascii=False)
+
+        return name2code
+
+    # 根据城市代码获取天气
+    def get_temperature_by_citycode(citycode):
+        if not citycode:
+            return None, None, None
+        resp=urlopen(f'http://www.weather.com.cn/weather/{citycode}.shtml')
+        soup=BeautifulSoup(resp,'html.parser')
+        tagToday=soup.find('p',class_="tem")  #第一个包含class="tem"的p标签即为存放今天天气数据的标签
+        try:
+            temperatureHigh=tagToday.span.string  #有时候这个最高温度是不显示的，此时利用第二天的最高温度代替。
+        except AttributeError as e:
+            temperatureHigh=tagToday.find_next('p',class_="tem").span.string  #获取第二天的最高温度代替
+
+        temperatureLow=tagToday.i.string  #获取最低温度
+        weather=soup.find('p',class_="wea").string #获取天气
+        
+        return temperatureLow, temperatureHigh, weather
+
+    # 根据城市获取城市代码
+    def get_temperature_by_cityname(cityname):
+        
+        # 获取所在城市的城市代码
+        name2code = get_citycode()
+
+        citycode = name2code[cityname]
+
+        # 根据城市代码获取当前天气
+        temperatureLow, temperatureHigh, weather = get_temperature_by_citycode(citycode)
+        # print('temperatureLow = ' + temperatureLow, ' temperatureHigh = ' + temperatureHigh, ' weather = ' + weather)
+
+        return json.dumps({'temperatureLow':temperatureLow, 'temperatureHigh':temperatureHigh, 'weather':weather})
+        # return json.dumps({'temperatureLow':"16℃", 'temperatureHigh':"16℃", 'weather':"多云"})
+
+    # AI代码
+    from openai import AzureOpenAI
+        
+    client = AzureOpenAI(
+        api_key= "",    # 这里填写你的密钥
+        api_version="2023-12-01-preview",
+        azure_endpoint = "" # 这里填写你的终结点
+    )
+
+    def run_conversation():
+        # Step 1: send the conversation and available functions to the model
+        messages = [{"role": "user", "content": "深圳今天天气怎么样"}]
+        tools = [
+            {
+                "type": "function",
+                "function": {
+                    "name": "get_temperature_by_cityname",
+                    "description": "通过城市名称获取该城市今天的天气情况",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "cityname": {
+                                "type": "string",
+                                "description": "城市的名称，比如广州，深圳，北京，南京",
+                            },
+                            "unit": {"type": "string"},
+                        },
+                        "required": ["cityname"],
+                    },
+                    "returns": {
+                        "type": "object",
+                        "properties": {
+                            "temperatureLow": {
+                                "type": "string",
+                                "description": "城市的最低温度",
+                            },
+                            "temperatureHigh": {
+                                "type": "string",
+                                "description": "城市的最高温度",
+                            },
+                            "weather": {
+                                "type": "string",
+                                "description": "城市的天气情况",
+                            },
+                        },
+                    },
+                    "example": {
+                        "code": "get_temperature_by_cityname('广州')",
+                        "result": "{'temperatureLow': '14℃ ', 'temperatureHigh': '24℃ ', 'weather': '多云'}"
+                    }
+                },
+            }
+        ]
+        response = client.chat.completions.create(
+            model="gpt-35-turbo-1106",
+            messages=messages,
+            tools=tools,
+            tool_choice="auto",  # auto is default, but we'll be explicit
+        )
+        response_message = response.choices[0].message
+        tool_calls = response_message.tool_calls
+        # Step 2: check if the model wanted to call a function
+        if tool_calls:
+            # Step 3: call the function
+            # Note: the JSON response may not always be valid; be sure to handle errors
+            available_functions = {
+                "get_temperature_by_cityname": get_temperature_by_cityname,
+            }  # only one function in this example, but you can have multiple
+            response_message = dict(response.choices[0].message)
+            response_message = {k: v for k, v in response_message.items() if v is not None}
+            response_message["content"] = ""
+            messages.append(response_message)  # extend conversation with assistant's reply
+            # Step 4: send the info for each function call and function response to the model
+            for tool_call in tool_calls:
+                function_name = tool_call.function.name
+                function_to_call = available_functions[function_name]
+                function_args = json.loads(tool_call.function.arguments)
+                function_response = function_to_call(
+                    cityname=function_args.get("cityname"),
+                )
+                messages.append(
+                    {
+                        "tool_call_id": tool_call.id,
+                        "role": "tool",
+                        "name": function_name,
+                        "content": function_response,
+                    }
+                )  # extend conversation with function response
+            second_response = client.chat.completions.create(
+                model="gpt-35-turbo-1106",
+                messages=messages,
+            )  # get a new response from the model where it can see the function response
+            return second_response
+
+    print(run_conversation())
+    ```
+
+    前半部分是上面完成的获取天气的函数接口，这里说明下AI代码
+
+    1. GPT的API使用方法：
+        这里有两种使用方法，微软和OpenAI官方的两种API，这里微软给出了两者的调用转换
+        <a href="https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/switching-endpoints" target="_blank">如何使用 Python 在 OpenAI 和 Azure OpenAI 终结点之间进行切换</a> <br />
+
+        这里我们会用到azure的API，所以我们代码中使用了这个
+        ```python
+        import os
+        from openai import AzureOpenAI
+            
+        client = AzureOpenAI(
+            api_key=os.getenv("AZURE_OPENAI_KEY"),  
+            api_version="2023-12-01-preview",
+            azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+        )
+        ```
+        当然如果你是OpenAI的API用户，只需要替换成这样
+        ```python
+        from openai import OpenAI
+
+        client = OpenAI(
+        api_key=os.environ['OPENAI_API_KEY']  
+        )
+        ```
+        因为OpenAI Python API 库 1.x的发布，所以现在OpenAI和azure的调用区别只有密钥部分，使用调用时可以说时完全一致了，详情请参考微软文档
+
+        <a href="https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/migration?tabs=python%2Cdalle-fix" target="_blank">迁移到 OpenAI Python API 库 1.x</a> <br />
+
+        > 这里请务必使用1.x的库，如果没有请务必升级
+        {: .prompt-warning }
+
+    2. 函数调用例程
+
+        这里微软和OpenAI官方都给了例程，也就是配置好python环境，在例程中加入自己的密钥部分即可直接运行，大家可以测试下：
+
+        微软：
+
+        <a href="https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/function-calling?tabs=python" target="_blank">如何将函数调用与 Azure OpenAI 服务配合使用（预览版）</a> <br />
+
+        OpenAI：（见Example invoking multiple function calls in one response部分，代码被折叠起来了）
+
+        <a href="https://platform.openai.com/docs/guides/function-calling" target="_blank">Function calling</a> <br />
+
+        目前应该不能直接使用（2024年1月8日），因为两个例程中都会在这里报错
+
+        ```python
+        second_response = client.chat.completions.create(
+        报错：Error code: 400 - {'error': {'message': "'content' is a required property - 'messages.1'", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+        ```
+
+        原因其实很简单，1.x的API不允许返回的key中None，当然你使用低于1.x的API也会报错，报错是提示你格式不对，这里其实GitHub有讨论这个问题，
+
+        <a href="https://github.com/openai/openai-python/issues/703" target="_blank">The official example for Function Calling doesn't work with SDK version 1.1.1</a> <br />
+
+        代码中的错误行是这个
+        ```python
+        messages.append(response_message)  # extend conversation with assistant's reply
+        ```
+
+        原因是response返回的是一个object，你直接append肯定会出事，这里需要append前转换下格式：
+        ```python
+        response_message = dict(response.choices[0].message)
+        ```
+        这里就应该可以解决低于1.x的API报错的问题
+
+        但是1.x会继续报错，因为None的问题，其实可以观察下dict后的返回值
+
+        ```python
+        {'content': None, 'role': 'assistant', 'function_call': None, 'tool_calls': [ChatCompletionMessag...function'), ChatCompletionMessag...function'), ChatCompletionMessag...function')]}
+        ```
+        content为None，function_call也为None，API的要求是不允许返回None，所以删除掉所有None的key就行了
+
+        ```python
+        response_message = {k: v for k, v in response_message.items() if v is not None}
+        ```
+        
+        应该又会提示content不存在，因为API还有另一个要求是content必须在，所以这里就给它一个空的值
+
+        ```python
+        response_message["content"] = ""
+        ```
+
+        总的来说：
+
+        使用低1.x版本的API就修改成这样
+        ```python
+        response_message = dict(response.choices[0].message)
+        messages.append(response_message)  # extend conversation with assistant's reply
+        ```
+
+        使用1.x版本的API就修改成这样
+        ```python
+        response_message = dict(response.choices[0].message)
+        response_message = {k: v for k, v in response_message.items() if v is not None}
+        response_message["content"] = ""
+        messages.append(response_message)  # extend conversation with assistant's reply
+        ```
+
+        
+
+        
 
     
