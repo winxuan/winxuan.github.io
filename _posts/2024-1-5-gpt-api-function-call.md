@@ -306,9 +306,123 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
     ```
 
 4. 代码实现：使用python实现该机器人
+    
+    这里也是分几步完成，按照如下步骤进行即可：
 
-    这里也是先给出代码
+    1. GPT的API使用方法：
+        这里有两种使用方法，微软和OpenAI官方的两种API，这里微软给出了两者的调用转换
+        <a href="https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/switching-endpoints" target="_blank">如何使用 Python 在 OpenAI 和 Azure OpenAI 终结点之间进行切换</a> <br />
 
+        这里我们会用到azure的API，所以我们代码中使用了这个
+        ```python
+        import os
+        from openai import AzureOpenAI
+            
+        client = AzureOpenAI(
+            api_key=os.getenv("AZURE_OPENAI_KEY"),  
+            api_version="2023-12-01-preview",
+            azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+        )
+        ```
+        当然如果你是OpenAI的API用户，只需要替换成这样
+        ```python
+        from openai import OpenAI
+
+        client = OpenAI(
+        api_key=os.environ['OPENAI_API_KEY']  
+        )
+        ```
+        因为OpenAI Python API 库 1.x的发布，所以现在OpenAI和azure的调用区别只有密钥部分，使用调用时可以说时完全一致了，详情请参考微软文档
+
+        <a href="https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/migration?tabs=python%2Cdalle-fix" target="_blank">迁移到 OpenAI Python API 库 1.x</a> <br />
+
+        > 这里请务必使用1.x的库，如果没有请务必升级
+        {: .prompt-warning }
+
+    2. 函数调用例程
+
+        这里微软和OpenAI官方都给了例程，也就是配置好python环境，在例程中加入自己的密钥部分即可直接运行，大家可以测试下：
+
+        微软：
+
+        <a href="https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/function-calling?tabs=python" target="_blank">如何将函数调用与 Azure OpenAI 服务配合使用（预览版）</a> <br />
+
+        OpenAI：（见Example invoking multiple function calls in one response部分，代码被折叠起来了）
+
+        <a href="https://platform.openai.com/docs/guides/function-calling" target="_blank">Function calling</a> <br />
+
+        目前应该不能直接使用（2024年1月8日），因为两个例程中都会在这里报错
+
+        ```python
+        second_response = client.chat.completions.create(
+        报错：Error code: 400 - {'error': {'message': "'content' is a required property - 'messages.1'", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+        ```
+
+        原因其实很简单，1.x的API不允许返回的key中None，当然你使用低于1.x的API也会报错，报错是提示你格式不对，这里其实GitHub有讨论这个问题，
+
+        <a href="https://github.com/openai/openai-python/issues/703" target="_blank">The official example for Function Calling doesn't work with SDK version 1.1.1</a> <br />
+
+        代码中的错误行是这个
+        ```python
+        messages.append(response_message)  # extend conversation with assistant's reply
+        ```
+
+        原因是response返回的是一个object，你直接append肯定会出事，这里需要append前转换下格式：
+        ```python
+        response_message = dict(response.choices[0].message)
+        ```
+        这里就应该可以解决低于1.x的API报错的问题
+
+        但是1.x会继续报错，因为None的问题，其实可以观察下dict后的返回值
+
+        ```python
+        {'content': None, 'role': 'assistant', 'function_call': None, 'tool_calls': [ChatCompletionMessag...function'), ChatCompletionMessag...function'), ChatCompletionMessag...function')]}
+        ```
+        content为None，function_call也为None，API的要求是不允许返回None，所以删除掉所有None的key就行了
+
+        ```python
+        response_message = {k: v for k, v in response_message.items() if v is not None}
+        ```
+        
+        应该又会提示content不存在，因为API还有另一个要求是content必须在，所以这里就给它一个空的值
+
+        ```python
+        response_message["content"] = ""
+        ```
+
+        总的来说：
+
+        使用低1.x版本的API就修改成这样
+        ```python
+        response_message = dict(response.choices[0].message)
+        messages.append(response_message)  # extend conversation with assistant's reply
+        ```
+
+        使用1.x版本的API就修改成这样
+        ```python
+        response_message = dict(response.choices[0].message)
+        response_message = {k: v for k, v in response_message.items() if v is not None}
+        response_message["content"] = ""
+        messages.append(response_message)  # extend conversation with assistant's reply
+        ```
+
+        修改完成后再次运行就会正常
+
+    3. 适配我们自己的程序
+
+        运行完例程之后，需要学习下如何做修改使其适配我们自己的程序
+
+        结合我们刚刚前置的操作步骤，我们需要修改的位置有以下几处：
+
+        1. prompt提示词：需要将提示词部分，代码中就是messages，修改成我们自己的提示词；
+        
+        2. tools：即我们描述我们函数接口的部分，我们刚刚的tools和例程中的格式一致，直接修改过来即可；
+
+        3. 函数：在AI工作时，会去已知的接口中查找到能用的接口，并且需要拼装对应的参数，直接替换修改即可；
+
+    完成上述步骤之后，我们的代码就完成了
+
+    
     ```python
     from urllib.request import urlopen
     from bs4 import BeautifulSoup
@@ -483,105 +597,9 @@ GPT最新的更新引入了函数调用能力，标志着大型语言模型在�
     print(run_conversation())
     ```
 
-    前半部分是上面完成的获取天气的函数接口，这里说明下AI代码
+## 总结
 
-    1. GPT的API使用方法：
-        这里有两种使用方法，微软和OpenAI官方的两种API，这里微软给出了两者的调用转换
-        <a href="https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/switching-endpoints" target="_blank">如何使用 Python 在 OpenAI 和 Azure OpenAI 终结点之间进行切换</a> <br />
-
-        这里我们会用到azure的API，所以我们代码中使用了这个
-        ```python
-        import os
-        from openai import AzureOpenAI
-            
-        client = AzureOpenAI(
-            api_key=os.getenv("AZURE_OPENAI_KEY"),  
-            api_version="2023-12-01-preview",
-            azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-        )
-        ```
-        当然如果你是OpenAI的API用户，只需要替换成这样
-        ```python
-        from openai import OpenAI
-
-        client = OpenAI(
-        api_key=os.environ['OPENAI_API_KEY']  
-        )
-        ```
-        因为OpenAI Python API 库 1.x的发布，所以现在OpenAI和azure的调用区别只有密钥部分，使用调用时可以说时完全一致了，详情请参考微软文档
-
-        <a href="https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/migration?tabs=python%2Cdalle-fix" target="_blank">迁移到 OpenAI Python API 库 1.x</a> <br />
-
-        > 这里请务必使用1.x的库，如果没有请务必升级
-        {: .prompt-warning }
-
-    2. 函数调用例程
-
-        这里微软和OpenAI官方都给了例程，也就是配置好python环境，在例程中加入自己的密钥部分即可直接运行，大家可以测试下：
-
-        微软：
-
-        <a href="https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/function-calling?tabs=python" target="_blank">如何将函数调用与 Azure OpenAI 服务配合使用（预览版）</a> <br />
-
-        OpenAI：（见Example invoking multiple function calls in one response部分，代码被折叠起来了）
-
-        <a href="https://platform.openai.com/docs/guides/function-calling" target="_blank">Function calling</a> <br />
-
-        目前应该不能直接使用（2024年1月8日），因为两个例程中都会在这里报错
-
-        ```python
-        second_response = client.chat.completions.create(
-        报错：Error code: 400 - {'error': {'message': "'content' is a required property - 'messages.1'", 'type': 'invalid_request_error', 'param': None, 'code': None}}
-        ```
-
-        原因其实很简单，1.x的API不允许返回的key中None，当然你使用低于1.x的API也会报错，报错是提示你格式不对，这里其实GitHub有讨论这个问题，
-
-        <a href="https://github.com/openai/openai-python/issues/703" target="_blank">The official example for Function Calling doesn't work with SDK version 1.1.1</a> <br />
-
-        代码中的错误行是这个
-        ```python
-        messages.append(response_message)  # extend conversation with assistant's reply
-        ```
-
-        原因是response返回的是一个object，你直接append肯定会出事，这里需要append前转换下格式：
-        ```python
-        response_message = dict(response.choices[0].message)
-        ```
-        这里就应该可以解决低于1.x的API报错的问题
-
-        但是1.x会继续报错，因为None的问题，其实可以观察下dict后的返回值
-
-        ```python
-        {'content': None, 'role': 'assistant', 'function_call': None, 'tool_calls': [ChatCompletionMessag...function'), ChatCompletionMessag...function'), ChatCompletionMessag...function')]}
-        ```
-        content为None，function_call也为None，API的要求是不允许返回None，所以删除掉所有None的key就行了
-
-        ```python
-        response_message = {k: v for k, v in response_message.items() if v is not None}
-        ```
-        
-        应该又会提示content不存在，因为API还有另一个要求是content必须在，所以这里就给它一个空的值
-
-        ```python
-        response_message["content"] = ""
-        ```
-
-        总的来说：
-
-        使用低1.x版本的API就修改成这样
-        ```python
-        response_message = dict(response.choices[0].message)
-        messages.append(response_message)  # extend conversation with assistant's reply
-        ```
-
-        使用1.x版本的API就修改成这样
-        ```python
-        response_message = dict(response.choices[0].message)
-        response_message = {k: v for k, v in response_message.items() if v is not None}
-        response_message["content"] = ""
-        messages.append(response_message)  # extend conversation with assistant's reply
-        ```
-
+以上只是给出一个例程，通过这个例程可以掌握函数调用的基本方法，后续遇到更复杂的情况，基于这些基本方法，并结合一些流程设计和编程技巧，问题都会迎刃而解。
         
 
         
