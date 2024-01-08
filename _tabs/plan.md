@@ -38,6 +38,11 @@ title: Plan
         4. 使用python脚本自动获取GitHub pages页面访问量 <br />
         5. GitHub Pages添加CDN服务（加速国内访问1）<br />
         6. 使用GitHub+jsDelivr自建图床（加速国内访问2） <br />
+        <details> <summary>搭建小配置&小问题记录</summary>
+        <div style="margin-left: 40px !important;">
+                1. ✅ <a href="https://winxuan.github.io/posts/blog-giscus-url/" target="_blank">giscus评论区出现：An error occurred URI_TOO_LONG</a> <br />
+        </div>
+        </details>
     </div>
    </details>
 
@@ -95,9 +100,13 @@ title: Plan
 
 ******
 
+# 🤗**日常随笔**🤗
+
+******
+
 # 🤗**英语学习**🤗
 
-<div style="position: fixed; bottom: 0; right: 0;">
+<!-- <div style="position: fixed; bottom: 0; right: 0;">
     <img src="/assets/image/ArthurMorgan.png" alt="描述" style="width: 200px; height: auto;" />
 </div>
-
+ -->
