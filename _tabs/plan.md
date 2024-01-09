@@ -23,7 +23,7 @@ title: Plan
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/gpt-api-function-call/" target="_blank">GPT API 调用本地函数（function call）</a> <br />
-        3. GPT类工具入口框架实现 <br />
+        3. 🔜 <a href="https://winxuan.github.io/posts/gpt-toolkit/" target="_blank">工具接入GPT框架设计与实现</a> <br /> <br />
     </div>
    </details>
 
