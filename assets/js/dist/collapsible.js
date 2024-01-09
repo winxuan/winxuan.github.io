@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let coll = document.getElementsByClassName("collapsible-container");
-    let maxLines = 10; // 设置折叠显示的行数 Maximum number of lines to display without collapsing
-    let defaultOpenLines = 20; // 默认展开的最大行数
+    let maxLines = 19; // 设置折叠显示的行数 Maximum number of lines to display without collapsing
+    let defaultOpenLines = 30; // 默认展开的最大行数
 
     for (let i = 0; i < coll.length; i++) {
       let trigger = coll[i].querySelector('.collapsible-trigger');
