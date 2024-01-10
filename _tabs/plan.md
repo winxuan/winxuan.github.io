@@ -11,7 +11,7 @@ title: Plan
 <button id="toggleButton" onclick="toggleDetails()">折叠所有小分页</button>
 
 # 🧐**AIGC相关**🧐
-   <details open> 
+   <details>
     <summary><b>1. 吴恩达Prompt工程指南系列</b></summary>
     <div style="margin-left: 40px !important;">
         <details> <summary>课程学习</summary>
@@ -19,18 +19,18 @@ title: Plan
         1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a> <br />
         3. 🔜 <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a> <br />
-        4. 写好ChatGPT提示词之：文本概括（Summarizing）
-        5. 写好ChatGPT提示词之：文本推断（Inferring）
-        6. 写好ChatGPT提示词之：文本转换（Transforming）
-        7. 写好ChatGPT提示词之：文本扩展（Expanding）
-        8. 写好ChatGPT提示词之：聊天机器人（Chatbot）
+        4. 写好ChatGPT提示词之：文本概括（Summarizing） <br />
+        5. 写好ChatGPT提示词之：文本推断（Inferring） <br />
+        6. 写好ChatGPT提示词之：文本转换（Transforming） <br />
+        7. 写好ChatGPT提示词之：文本扩展（Expanding） <br />
+        8. 写好ChatGPT提示词之：聊天机器人（Chatbot） <br />
         参考资料：https://xiniushu.com/
         </div>
         </details>
     </div>
    </details>
 
-   <details open> 
+   <details>
     <summary><b>2. GPT工具开发系列</b></summary>
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a> <br />
@@ -41,7 +41,7 @@ title: Plan
 
 ******
 # 🧐**基础技术相关**🧐
-   <details open> 
+   <details>
     <summary><b>1. 自建个人独立blog站系列</b></summary>
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/creat-blog/" target="_blank">使用github pages+jekyll快速搭建个人blog</a> <br />
@@ -58,14 +58,14 @@ title: Plan
         <details> <summary>搭建小问题解决记录</summary>
         <div style="margin-left: 40px !important;">
                 1. ✅ <a href="https://winxuan.github.io/posts/blog-giscus-url/" target="_blank">giscus评论区出现：An error occurred URI_TOO_LONG</a> <br />
-                2. GitHub Actions出错--Build Failure with Ruby 3.x问题解决
-                3. 本地环境init配置国内镜像
+                2. GitHub Actions出错--Build Failure with Ruby 3.x问题解决 <br />
+                3. 本地环境init配置国内镜像 <br />
         </div>
         </details>
     </div>
    </details>
 
-   <details open> 
+   <details>
     <summary><b>2. go语言系列</b></summary>
     <div style="margin-left: 40px !important;">
         <details> <summary>go语言基础</summary>
@@ -83,7 +83,7 @@ title: Plan
     </div>
    </details>
 
-   <details open> 
+   <details>
     <summary><b>3. python语言系列</b></summary>
     <div style="margin-left: 40px !important;">
         <details> <summary>python语言基础</summary>
