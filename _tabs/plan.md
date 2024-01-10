@@ -47,7 +47,7 @@ title: Plan
         1. ✅ <a href="https://winxuan.github.io/posts/creat-blog/" target="_blank">使用github pages+jekyll快速搭建个人blog</a> <br />
         <details open> <summary>搭建小配置记录</summary>
         <div style="margin-left: 40px !important;">
-                1. 🔜 <a href="https://winxuan.github.io/posts/fenced-code-blocks-indentation/" target="_blank">chirpy主题围栏代码块（Fenced Code Blocks）缩进功能添加</a> <br />
+                1. ✅ <a href="https://winxuan.github.io/posts/fenced-code-blocks-indentation/" target="_blank">chirpy主题围栏代码块（Fenced Code Blocks）缩进功能添加</a> <br />
                 2. ✅ <a href="https://winxuan.github.io/posts/config-blog-comment/" target="_blank">使用giscus配置GitHub Pages评论功能</a> <br />
                 3. ✅ <a href="https://winxuan.github.io/posts/add-google-analytics/" target="_blank">使用Google Analysis监听GitHub pages页面访问量</a> <br />
                 4. 使用python脚本自动获取GitHub pages页面访问量 <br />
@@ -132,10 +132,6 @@ title: Plan
 
 
 <script>
-// 页面加载时，默认展开所有 <details open>
-window.onload = function() {
-    openAllDetails();
-};
 
 function toggleDetails() {
     const details = document.querySelectorAll('details');
