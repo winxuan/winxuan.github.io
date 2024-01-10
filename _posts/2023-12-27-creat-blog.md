@@ -1,5 +1,5 @@
 ---
-title: github pages + jekyll快速搭建blog
+title: 使用github pages+jekyll快速搭建个人blog
 date: 2023-12-27 12:00:00 +0800
 categories: [Blog, Build]
 tags: [blog]

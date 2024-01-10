@@ -15,6 +15,12 @@ title: Plan
         1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a> <br />
         3. 🔜 <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a> <br />
+        4. 写好ChatGPT提示词之：文本概括（Summarizing）
+        5. 写好ChatGPT提示词之：文本推断（Inferring）
+        6. 写好ChatGPT提示词之：文本转换（Transforming）
+        7. 写好ChatGPT提示词之：文本扩展（Expanding）
+        8. 写好ChatGPT提示词之：聊天机器人（Chatbot）
+        参考资料：https://xiniushu.com/
     </div>
    </details>
 
@@ -23,24 +29,31 @@ title: Plan
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/gpt-api-function-call/" target="_blank">GPT API 调用本地函数（function call）</a> <br />
+        3. 🔜 <a href="https://winxuan.github.io/posts/introduction-ai-programming/" target="_blank">面向AI框架编程--引言&简介</a> <br />
     </div>
    </details>
 
 ******
 # 🧐**基础技术相关**🧐
    <details open> 
-    <summary><b>1. 使用GitHub自建个人独立博客站系列</b></summary>
+    <summary><b>1. 自建个人独立blog站系列</b></summary>
     <div style="margin-left: 40px !important;">
-        1. ✅ <a href="https://winxuan.github.io/posts/creat-blog/" target="_blank">使用github pages快速搭建个人blog</a> <br />
-        2. ✅ <a href="https://winxuan.github.io/posts/config-blog-comment/" target="_blank">使用giscus配置GitHub Pages评论功能</a> <br />
-        3. ✅ <a href="https://winxuan.github.io/posts/add-google-analytics/" target="_blank">使用Google Analysis监听GitHub pages页面访问量</a> <br />
-        4. 使用python脚本自动获取GitHub pages页面访问量 <br />
-        5. GitHub Pages添加CDN服务（加速国内访问1）<br />
-        6. 使用GitHub+jsDelivr自建图床（加速国内访问2） <br />
-        <details> <summary>搭建小配置&小问题记录</summary>
+        1. ✅ <a href="https://winxuan.github.io/posts/creat-blog/" target="_blank">使用github pages+jekyll快速搭建个人blog</a> <br />
+        <details> <summary>搭建小配置记录</summary>
+        <div style="margin-left: 40px !important;">
+                1. 🔜 <a href="https://winxuan.github.io/posts/fenced-code-blocks-indentation/" target="_blank">chirpy主题围栏代码块（Fenced Code Blocks）缩进功能添加</a> <br />
+                2. ✅ <a href="https://winxuan.github.io/posts/config-blog-comment/" target="_blank">使用giscus配置GitHub Pages评论功能</a> <br />
+                3. ✅ <a href="https://winxuan.github.io/posts/add-google-analytics/" target="_blank">使用Google Analysis监听GitHub pages页面访问量</a> <br />
+                4. 使用python脚本自动获取GitHub pages页面访问量 <br />
+                5. GitHub Pages添加CDN服务（加速国内访问1）<br />
+                6. 使用GitHub+jsDelivr自建图床（加速国内访问2） <br />
+        </div>
+        </details>
+        <details> <summary>搭建小问题解决记录</summary>
         <div style="margin-left: 40px !important;">
                 1. ✅ <a href="https://winxuan.github.io/posts/blog-giscus-url/" target="_blank">giscus评论区出现：An error occurred URI_TOO_LONG</a> <br />
-                2. 🔜 <a href="https://winxuan.github.io/posts/fenced-code-blocks-indentation/" target="_blank">chirpy主题围栏代码块（Fenced Code Blocks）缩进功能添加</a> <br />
+                2. GitHub Actions出错--Build Failure with Ruby 3.x问题解决
+                3. 本地环境配置国内镜像
         </div>
         </details>
     </div>
