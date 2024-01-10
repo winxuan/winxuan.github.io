@@ -23,7 +23,6 @@ title: Plan
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/gpt-api-function-call/" target="_blank">GPT API 调用本地函数（function call）</a> <br />
-        3. 🔜 <a href="https://winxuan.github.io/posts/gpt-toolkit/" target="_blank">工具接入GPT框架设计与实现</a> <br /> <br />
     </div>
    </details>
 
@@ -41,6 +40,7 @@ title: Plan
         <details> <summary>搭建小配置&小问题记录</summary>
         <div style="margin-left: 40px !important;">
                 1. ✅ <a href="https://winxuan.github.io/posts/blog-giscus-url/" target="_blank">giscus评论区出现：An error occurred URI_TOO_LONG</a> <br />
+                2. 🔜 <a href="https://winxuan.github.io/posts/fenced-code-blocks-indentation/" target="_blank">chirpy主题围栏代码块（Fenced Code Blocks）缩进功能添加</a> <br />
         </div>
         </details>
     </div>
