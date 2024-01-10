@@ -49,12 +49,14 @@ tags: [blog]
     ```
 
     ```
+    {% raw %}
     {% if _content contains '<div class="language-' and '<div class="content">'%}
     {% assign _content = _content
         | replace: '<div class="language-', '<div class="collapsible-container language-'
         | replace: '<div class="content">', '<script src="/assets/js/dist/collapsible.js"></script><div class="content">' 
     %}
     {% endif %}
+    {% endraw %}
     ```
 
     这里注意post-content现在已经修改为了content，我已经修改了
@@ -158,11 +160,13 @@ tags: [blog]
 实际上是因为作者这里的替换
 
 ```
+{% raw %}
 {% if _content contains '<div class="language-' and '<div class="post-content">'%}
     {% assign _content = _content
         | replace: '<div class="language-', '<div class="collapsible-container language-'
         | replace: '<div class="post-content">', '<script src="/assets/js/collapsible.js"></script><div class="post-content">' %}
         {% endif %}
+{% endraw %}
 ```
 
 | replace: '<div class="language-', '<div class="collapsible-container language-'
@@ -174,12 +178,14 @@ tags: [blog]
 也就是最终改为这个
 
 ```
+{% raw %}
 {% if _content contains '<div class="language-' and '<div class="content">'%}
 {% assign _content = _content
     | replace: 'highlighter-rouge', 'highlighter-rouge collapsible-container'
     | replace: '<div class="content">', '<script src="/assets/js/dist/collapsible.js"></script><div class="content">' 
 %}
 {% endif %}
+{% endraw %}
 ```
 笔者这里将collapsible.js文件移动到了/assets/js/dist/，这里看心情是否移动
 
