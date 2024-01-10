@@ -8,9 +8,7 @@ title: Plan
 <!-- ![西部点子王](/assets/image/dutch.png) -->
 <img src="/assets/image/dutch.png" alt="西部点子王" style="clip-path: inset(0% 0% 0% 0%); width: 100%; max-width: 100%; position: relative; left: -1%; margin-top: -14%;" />
 
-
-<button onclick="openAllDetails()">展开所有</button>
-<button onclick="closeAllDetails()">关闭所有</button>
+<button id="toggleButton" onclick="toggleDetails()">折叠所有小分页</button>
 
 # 🧐**AIGC相关**🧐
    <details open> 
@@ -132,16 +130,30 @@ title: Plan
 </div>
  -->
 
+
 <script>
+// 页面加载时，默认展开所有 <details>
+window.onload = function() {
+    openAllDetails();
+};
+
+function toggleDetails() {
+    const details = document.querySelectorAll('details');
+    const button = document.getElementById('toggleButton');
+    const areAllOpen = Array.from(details).every(detail => detail.hasAttribute('open'));
+
+    if (areAllOpen) {
+        details.forEach((detail) => detail.removeAttribute('open'));
+        button.innerText = '展开所有小分页';
+    } else {
+        details.forEach((detail) => detail.setAttribute('open', ''));
+        button.innerText = '折叠所有小分页';
+    }
+}
+
 function openAllDetails() {
     document.querySelectorAll('details').forEach((detail) => {
         detail.setAttribute('open', '');
-    });
-}
-
-function closeAllDetails() {
-    document.querySelectorAll('details').forEach((detail) => {
-        detail.removeAttribute('open');
     });
 }
 </script>
