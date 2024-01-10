@@ -48,13 +48,13 @@ tags: [blog]
         <p class="language-javascript collapsible-trigger collapsible-trigger-css">展开/收起</p>
     ```
 
-    ```html
-        {% if _content contains '<div class="language-' and '<div class="content">'%}
-        {% assign _content = _content
-            | replace: '<div class="language-', '<div class="collapsible-container language-'
-            | replace: '<div class="content">', '<script src="/assets/js/dist/collapsible.js"></script><div class="content">' 
-        %}
-        {% endif %}
+    ```
+    {% if _content contains '<div class="language-' and '<div class="content">'%}
+    {% assign _content = _content
+        | replace: '<div class="language-', '<div class="collapsible-container language-'
+        | replace: '<div class="content">', '<script src="/assets/js/dist/collapsible.js"></script><div class="content">' 
+    %}
+    {% endif %}
     ```
 
     这里注意post-content现在已经修改为了content，我已经修改了
@@ -66,46 +66,46 @@ tags: [blog]
     ![截图](/assets/image/2024/1/20240110163700.png)
 
     ```
-        .collapsible-container {
-        margin-bottom: 10px;
-        }
+    .collapsible-container {
+    margin-bottom: 10px;
+    }
 
-        .collapsible-container p {
-        cursor: pointer;
-        margin: 0;
-        }
+    .collapsible-container p {
+    cursor: pointer;
+    margin: 0;
+    }
 
-        .collapsible-content {
-        overflow-x: auto;
-        overflow-y: hidden;
-        margin-top: 10px;
-        max-height: calc(1.6em * 5); /* Adjust this value to show more lines (n) */
-        }
-        .collapsible-trigger-css {
-        color: gray; 
-        text-align: center; 
-        font-size: small;
-        }
+    .collapsible-content {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-top: 10px;
+    max-height: calc(1.6em * 5); /* Adjust this value to show more lines (n) */
+    }
+    .collapsible-trigger-css {
+    color: gray; 
+    text-align: center; 
+    font-size: small;
+    }
 
-        /* 为代码展示框设置滚动条样式，仅针对WebKit浏览器 */
-        .collapsible-content::-webkit-scrollbar {
-        width: 8px; /* 滚动条宽度 */
-        height: 8px; /* 滚动条高度（对于水平滚动条） */
-        }
+    /* 为代码展示框设置滚动条样式，仅针对WebKit浏览器 */
+    .collapsible-content::-webkit-scrollbar {
+    width: 8px; /* 滚动条宽度 */
+    height: 8px; /* 滚动条高度（对于水平滚动条） */
+    }
 
-        .collapsible-content::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.2); /* 滚动条滑块颜色 */
-        border-radius: 6px; /* 滚动条滑块圆角 */
-        }
+    .collapsible-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* 滚动条滑块颜色 */
+    border-radius: 6px; /* 滚动条滑块圆角 */
+    }
 
-        .collapsible-content::-webkit-scrollbar-thumb:hover {
-        background-color: rgba(0, 0, 0, 0.3); /* 滚动条滑块鼠标悬停颜色 */
-        }
+    .collapsible-content::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* 滚动条滑块鼠标悬停颜色 */
+    }
 
-        .collapsible-content::-webkit-scrollbar-track {
-        background-color: #f1f1f1; /* 滚动条轨道颜色 */
-        border-radius: 6px; /* 滚动条轨道圆角 */
-        }
+    .collapsible-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* 滚动条轨道颜色 */
+    border-radius: 6px; /* 滚动条轨道圆角 */
+    }
     ```
 
 3. 创建\assets\js\collapsible.js
@@ -113,36 +113,36 @@ tags: [blog]
     这里直接创建即可，位置不变
 
     ```javascript
-        document.addEventListener("DOMContentLoaded", function () {
-        let coll = document.getElementsByClassName("collapsible-container");
-        let maxLines = 5; // 设置折叠显示的行数 Maximum number of lines to display without collapsing
+    document.addEventListener("DOMContentLoaded", function () {
+    let coll = document.getElementsByClassName("collapsible-container");
+    let maxLines = 5; // 设置折叠显示的行数 Maximum number of lines to display without collapsing
 
-        for (let i = 0; i < coll.length; i++) {
-            let trigger = coll[i].querySelector('.collapsible-trigger');
-            let content = coll[i].querySelector('.collapsible-content');
-            let codeLines = content.textContent.split('\n').length;
+    for (let i = 0; i < coll.length; i++) {
+        let trigger = coll[i].querySelector('.collapsible-trigger');
+        let content = coll[i].querySelector('.collapsible-content');
+        let codeLines = content.textContent.split('\n').length;
 
-            /* codeLines=实际行的行数*2+一行换行空行，因为chirpy主题使用了<table>标签，里边包含两列，所以js会将1行代码视为2行。下边被注释掉的代码可以查看codeLines的真实值。codeLines=real_lines*2+1wrap_blank_line,because the chirpy theme uses <table> with 2 columns,which js reguard 1 line as 2 lines. The code section below can help you see the real value of codeLines.
-            let tempcodeLines = content.textContent.split('\n').length;
-            let lineCount = document.createElement('span');
-            lineCount.textContent = ' (' + tempcodeLines + ' lines)';
-            coll[i].appendChild(lineCount);
-            */
+        /* codeLines=实际行的行数*2+一行换行空行，因为chirpy主题使用了<table>标签，里边包含两列，所以js会将1行代码视为2行。下边被注释掉的代码可以查看codeLines的真实值。codeLines=real_lines*2+1wrap_blank_line,because the chirpy theme uses <table> with 2 columns,which js reguard 1 line as 2 lines. The code section below can help you see the real value of codeLines.
+        let tempcodeLines = content.textContent.split('\n').length;
+        let lineCount = document.createElement('span');
+        lineCount.textContent = ' (' + tempcodeLines + ' lines)';
+        coll[i].appendChild(lineCount);
+        */
 
-            if (codeLines - 6 <= maxLines) { /*根据主题的实际情况将codeLines调整为实际行数 Adjust codeLines to real lines*/
-            trigger.style.display = 'none';
+        if (codeLines - 6 <= maxLines) { /*根据主题的实际情况将codeLines调整为实际行数 Adjust codeLines to real lines*/
+        trigger.style.display = 'none';
+        } else {
+        trigger.addEventListener("click", function () {
+            this.classList.toggle("active");
+            if (content.style.maxHeight) {
+            content.style.maxHeight = null;
             } else {
-            trigger.addEventListener("click", function () {
-                this.classList.toggle("active");
-                if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
+            content.style.maxHeight = content.scrollHeight + "px";
             }
-        }
         });
+        }
+    }
+    });
     ```
 
 更改之后，代码超过5行就被自动折叠，如果不超过5行，不会出现折叠展开按钮
@@ -157,12 +157,12 @@ tags: [blog]
 
 实际上是因为作者这里的替换
 
-```html
-    {% if _content contains '<div class="language-' and '<div class="post-content">'%}
-        {% assign _content = _content
-            | replace: '<div class="language-', '<div class="collapsible-container language-'
-            | replace: '<div class="post-content">', '<script src="/assets/js/collapsible.js"></script><div class="post-content">' %}
-            {% endif %}
+```
+{% if _content contains '<div class="language-' and '<div class="post-content">'%}
+    {% assign _content = _content
+        | replace: '<div class="language-', '<div class="collapsible-container language-'
+        | replace: '<div class="post-content">', '<script src="/assets/js/collapsible.js"></script><div class="post-content">' %}
+        {% endif %}
 ```
 
 | replace: '<div class="language-', '<div class="collapsible-container language-'
@@ -173,13 +173,13 @@ tags: [blog]
 
 也就是最终改为这个
 
-```html
-    {% if _content contains '<div class="language-' and '<div class="content">'%}
-    {% assign _content = _content
-        | replace: 'highlighter-rouge', 'highlighter-rouge collapsible-container'
-        | replace: '<div class="content">', '<script src="/assets/js/dist/collapsible.js"></script><div class="content">' 
-    %}
-    {% endif %}
+```
+{% if _content contains '<div class="language-' and '<div class="content">'%}
+{% assign _content = _content
+    | replace: 'highlighter-rouge', 'highlighter-rouge collapsible-container'
+    | replace: '<div class="content">', '<script src="/assets/js/dist/collapsible.js"></script><div class="content">' 
+%}
+{% endif %}
 ```
 笔者这里将collapsible.js文件移动到了/assets/js/dist/，这里看心情是否移动
 
