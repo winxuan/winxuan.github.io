@@ -8,6 +8,10 @@ title: Plan
 <!-- ![西部点子王](/assets/image/dutch.png) -->
 <img src="/assets/image/dutch.png" alt="西部点子王" style="clip-path: inset(0% 0% 0% 0%); width: 100%; max-width: 100%; position: relative; left: -1%; margin-top: -14%;" />
 
+
+<button onclick="openAllDetails()">展开所有</button>
+<button onclick="closeAllDetails()">关闭所有</button>
+
 # 🧐**AIGC相关**🧐
    <details open> 
     <summary><b>1. 吴恩达Prompt工程指南系列</b></summary>
@@ -127,3 +131,17 @@ title: Plan
     <img src="/assets/image/ArthurMorgan.png" alt="描述" style="width: 200px; height: auto;" />
 </div>
  -->
+
+<script>
+function openAllDetails() {
+    document.querySelectorAll('details').forEach((detail) => {
+        detail.setAttribute('open', '');
+    });
+}
+
+function closeAllDetails() {
+    document.querySelectorAll('details').forEach((detail) => {
+        detail.removeAttribute('open');
+    });
+}
+</script>
