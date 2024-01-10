@@ -14,8 +14,6 @@ title: Plan
    <details open>
     <summary><b>1. 吴恩达Prompt工程指南系列</b></summary>
     <div style="margin-left: 40px !important;">
-        <details open> <summary>课程学习</summary>
-        <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a> <br />
         3. 🔜 <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a> <br />
@@ -25,8 +23,6 @@ title: Plan
         7. 写好ChatGPT提示词之：文本扩展（Expanding） <br />
         8. 写好ChatGPT提示词之：聊天机器人（Chatbot） <br />
         参考资料：https://xiniushu.com/
-        </div>
-        </details>
     </div>
    </details>
 
@@ -53,13 +49,14 @@ title: Plan
                 4. 使用python脚本自动获取GitHub pages页面访问量 <br />
                 5. GitHub Pages添加CDN服务（加速国内访问1）<br />
                 6. 使用GitHub+jsDelivr自建图床（加速国内访问2） <br />
+                7. 本地环境init配置国内镜像 <br />
         </div>
         </details>
         <details open> <summary>搭建小问题解决记录</summary>
         <div style="margin-left: 40px !important;">
                 1. ✅ <a href="https://winxuan.github.io/posts/blog-giscus-url/" target="_blank">giscus评论区出现：An error occurred URI_TOO_LONG</a> <br />
                 2. GitHub Actions出错--Build Failure with Ruby 3.x问题解决 <br />
-                3. 本地环境init配置国内镜像 <br />
+                3. html围栏块为空问题
         </div>
         </details>
     </div>
