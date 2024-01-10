@@ -16,27 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
         content.style.maxHeight = content.scrollHeight + "px";
       } else {
         trigger.addEventListener("click", function () { 
-          var triggerPosition = trigger.getBoundingClientRect().top; // 获取按钮当前位置
+          // var triggerPosition = trigger.getBoundingClientRect().top; // 获取按钮当前位置
           // 切换按钮上的文字
           if (this.innerHTML.includes("展开")) {
             this.innerHTML = "收起";
           } else {
             this.innerHTML = "展开";
           }
-          // this.classList.toggle("active");
-          // if (content.style.maxHeight) {
-          //   content.style.maxHeight = null;
-          //   // 滚动页面到 trigger 元素的位置
-          //   content.scrollIntoView({
-          //     behavior: "smooth",
-          //     block: "center"
-          //   });
-          // } else {
-          //   content.style.maxHeight = content.scrollHeight + "px";
-          // }
-          setTimeout(() => {
-            window.scrollBy(0, trigger.getBoundingClientRect().top - triggerPosition);
-          }, 500); // 在内容展开/收起动画完成后调整滚动位置
+          this.classList.toggle("active");
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            // 滚动页面到 trigger 元素的位置
+            content.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+          // setTimeout(() => {
+          //   window.scrollBy(0, trigger.getBoundingClientRect().top - triggerPosition);
+          // }, 500); // 在内容展开/收起动画完成后调整滚动位置
         });
       }
     }
