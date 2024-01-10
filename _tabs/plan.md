@@ -10,8 +10,10 @@ title: Plan
 
 # 🧐**AIGC相关**🧐
    <details open> 
-    <summary><b>1. 吴恩达提示词工程师教程系列</b></summary>
+    <summary><b>1. 吴恩达Prompt工程指南系列</b></summary>
     <div style="margin-left: 40px !important;">
+        <details> <summary>课程学习</summary>
+        <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a> <br />
         3. 🔜 <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a> <br />
@@ -21,6 +23,8 @@ title: Plan
         7. 写好ChatGPT提示词之：文本扩展（Expanding）
         8. 写好ChatGPT提示词之：聊天机器人（Chatbot）
         参考资料：https://xiniushu.com/
+        </div>
+        </details>
     </div>
    </details>
 
@@ -53,7 +57,7 @@ title: Plan
         <div style="margin-left: 40px !important;">
                 1. ✅ <a href="https://winxuan.github.io/posts/blog-giscus-url/" target="_blank">giscus评论区出现：An error occurred URI_TOO_LONG</a> <br />
                 2. GitHub Actions出错--Build Failure with Ruby 3.x问题解决
-                3. 本地环境配置国内镜像
+                3. 本地环境init配置国内镜像
         </div>
         </details>
     </div>
