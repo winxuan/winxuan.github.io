@@ -40,72 +40,48 @@ title: Plan
    <details open>
     <summary><b>1. 自建个人独立blog站系列</b></summary>
     <div style="margin-left: 40px !important;">
-        1. ✅ <a href="https://winxuan.github.io/posts/creat-blog/" target="_blank">使用github pages+jekyll快速搭建个人blog</a> <br />
         <details open> <summary>搭建小配置记录</summary>
         <div style="margin-left: 40px !important;">
-                1. ✅ <a href="https://winxuan.github.io/posts/fenced-code-blocks-indentation/" target="_blank">chirpy主题围栏代码块（Fenced Code Blocks）缩进功能添加</a> <br />
-                2. ✅ <a href="https://winxuan.github.io/posts/config-blog-comment/" target="_blank">使用giscus配置GitHub Pages评论功能</a> <br />
-                3. ✅ <a href="https://winxuan.github.io/posts/add-google-analytics/" target="_blank">使用Google Analysis监听GitHub pages页面访问量</a> <br />
-                4. GitHub pages同步主题作者仓库更改
-                5. 使用python脚本自动获取GitHub pages页面访问量 <br />
-                6. GitHub Pages添加CDN服务（加速国内访问1）<br />
-                7. 使用GitHub+jsDelivr自建图床（加速国内访问2） <br />
-                8. 本地环境init配置国内镜像 <br />
+                1. ✅ <a href="https://winxuan.github.io/posts/creat-blog/" target="_blank">使用github pages+jekyll快速搭建个人blog</a> <br />
+                2. ✅ <a href="https://winxuan.github.io/posts/fenced-code-blocks-indentation/" target="_blank">chirpy主题围栏代码块（Fenced Code Blocks）缩进功能添加</a> <br />
+                3. ✅ <a href="https://winxuan.github.io/posts/config-blog-comment/" target="_blank">使用giscus配置GitHub Pages评论功能</a> <br />
+                4. ✅ <a href="https://winxuan.github.io/posts/add-google-analytics/" target="_blank">使用Google Analysis监听GitHub pages页面访问量</a> <br />
+                5. GitHub pages同步主题作者仓库更改 <br />
+                6. 使用python脚本自动获取GitHub pages页面访问量 <br />
+                7. GitHub Pages添加CDN服务（加速国内访问1） <br />
+                8. GitHub+jsDelivr自建图床（加速国内访问2） <br />
+                9. Google&Baidu收录个人blog（Blog可以被搜索引擎搜索到） <br />
         </div>
         </details>
         <details open> <summary>搭建小问题解决记录</summary>
         <div style="margin-left: 40px !important;">
                 1. ✅ <a href="https://winxuan.github.io/posts/blog-giscus-url/" target="_blank">giscus评论区出现：An error occurred URI_TOO_LONG</a> <br />
                 2. ✅ <a href="https://winxuan.github.io/posts/github-action-build-failure/" target="_blank">GitHub Actions出错--Build Failure with Ruby 3.x问题解决</a> <br />
-                3. html围栏块为空问题
+                3. ✅ <a href="https://winxuan.github.io/posts/html-fence-block-empty/" target="_blank">GitHub pages代码围栏块写入html显示为空问题解决</a> <br />
         </div>
         </details>
     </div>
    </details>
-
-   <details open>
-    <summary><b>2. go语言系列</b></summary>
-    <div style="margin-left: 40px !important;">
-        <details open> <summary>go语言基础</summary>
-        <div style="margin-left: 40px !important;">
-            1. 搭建go语言开发环境 <br />
-            2. go 基础语法 <br />
-            3. go 高级特性 <br />
-        </div>
-        </details>
-        <details open> <summary>gin 框架</summary>
-        <div style="margin-left: 40px !important;">
-            1. gin 框架基础学习 <br />
-        </div>
-        </details>
-    </div>
-   </details>
-
-   <details open>
-    <summary><b>3. python语言系列</b></summary>
-    <div style="margin-left: 40px !important;">
-        <details open> <summary>python语言基础</summary>
-        <div style="margin-left: 40px !important;">
-            1. 搭建python语言开发环境 <br />
-            2. python 基础语法 <br />
-            3. python 高级特性 <br />
-        </div>
-        </details>
-        <details open> <summary>Flask 框架</summary>
-        <div style="margin-left: 40px !important;">
-            1. Flask 框架基础学习 <br />
-        </div>
-        </details>
-    </div>
-   </details>
-
-******
-
-# 🧐**unity相关**🧐
 
 ******
 
 # 🤓**测试开发相关**🤓
+   <details open>
+    <summary><b>1. Jenkins相关</b></summary>
+    <div style="margin-left: 40px !important;">
+        <details open> <summary>搭建小配置记录</summary>
+        <div style="margin-left: 40px !important;">
+                1. Jenkins安装 <br />
+                2. Jenkins备份与迁移 <br />
+        </div>
+        </details>
+        <details open> <summary>搭建小问题解决记录</summary>
+        <div style="margin-left: 40px !important;">
+                1. xxx <br />
+        </div>
+        </details>
+    </div>
+   </details>
 
 ******
 
