@@ -16,7 +16,7 @@ title: Plan
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a> <br />
-        3. 🔜 <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a> <br />
+        3. ✅ <a href="https://winxuan.github.io/posts/chatgpt-Iterate/" target="_blank">写好ChatGPT提示词之：prompt的迭代（Iterate）</a> <br />
         4. 写好ChatGPT提示词之：文本概括（Summarizing） <br />
         5. 写好ChatGPT提示词之：文本推断（Inferring） <br />
         6. 写好ChatGPT提示词之：文本转换（Transforming） <br />
