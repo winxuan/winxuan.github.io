@@ -46,16 +46,17 @@ title: Plan
                 1. ✅ <a href="https://winxuan.github.io/posts/fenced-code-blocks-indentation/" target="_blank">chirpy主题围栏代码块（Fenced Code Blocks）缩进功能添加</a> <br />
                 2. ✅ <a href="https://winxuan.github.io/posts/config-blog-comment/" target="_blank">使用giscus配置GitHub Pages评论功能</a> <br />
                 3. ✅ <a href="https://winxuan.github.io/posts/add-google-analytics/" target="_blank">使用Google Analysis监听GitHub pages页面访问量</a> <br />
-                4. 使用python脚本自动获取GitHub pages页面访问量 <br />
-                5. GitHub Pages添加CDN服务（加速国内访问1）<br />
-                6. 使用GitHub+jsDelivr自建图床（加速国内访问2） <br />
-                7. 本地环境init配置国内镜像 <br />
+                4. GitHub pages同步主题作者仓库更改
+                5. 使用python脚本自动获取GitHub pages页面访问量 <br />
+                6. GitHub Pages添加CDN服务（加速国内访问1）<br />
+                7. 使用GitHub+jsDelivr自建图床（加速国内访问2） <br />
+                8. 本地环境init配置国内镜像 <br />
         </div>
         </details>
         <details open> <summary>搭建小问题解决记录</summary>
         <div style="margin-left: 40px !important;">
                 1. ✅ <a href="https://winxuan.github.io/posts/blog-giscus-url/" target="_blank">giscus评论区出现：An error occurred URI_TOO_LONG</a> <br />
-                2. GitHub Actions出错--Build Failure with Ruby 3.x问题解决 <br />
+                2. ✅ <a href="https://winxuan.github.io/posts/github-action-build-failure/" target="_blank">GitHub Actions出错--Build Failure with Ruby 3.x问题解决</a> <br />
                 3. html围栏块为空问题
         </div>
         </details>
@@ -117,6 +118,22 @@ title: Plan
 ******
 
 # 🤗**日常随笔**🤗
+<details open>
+    <summary><b>漫游散记</b></summary>
+    <div style="margin-left: 40px !important;">
+        <details open> <summary>深圳</summary>
+        <div style="margin-left: 40px !important;">
+            1. 深圳市天文台 <br />
+        </div>
+        </details>
+        <details open> <summary>广州</summary>
+        <div style="margin-left: 40px !important;">
+            1. 广州省博物馆&省图书馆 <br />
+            2. 广州市龙头山森林公园 <br />
+        </div>
+        </details>
+    </div>
+   </details>
 
 ******
 

@@ -35,8 +35,8 @@ LangChain是一个基于语言模型开发应用程序的非常著名的框架�
 
 目前（2024年1月15日）已经正式发布了0.1版本，也就是LangChain v0.1.0，也是该框架首个稳定版本，同时官方也在该版本中增加了很多功能：[LangChain v0.1.0](https://blog.langchain.dev/langchain-v0-1-0/)
 
-LangChain官方已经有比较系统的文档：[LangChain_introduction](https://python.langchain.com/docs/get_started/introduction)，由于从创建到现在只有短短1年时间，虽然已经是比较主流的框架，但是相对学习资料目前还没有太多，一方面是
+LangChain官方已经有比较系统的文档：[LangChain_introduction](https://python.langchain.com/docs/get_started/introduction)，由于从创建到现在只有短短1年时间，虽然已经是比较主流的框架，但是相对学习资料目前还没有太多，一方面是时间确实过短，另一方面是官方更新的速度过快，可能1个月前的学习资料可能已经无法直接用来抄作业了，所以最好的学习方法建议是直接阅读官方提供的英文文档，国内的中文文档可能会稍微落后官方文档几个版本[LangChain 中文文档](https://python.langchain.com.cn/docs/)
 
 ## Semantic Kernel简介
 
-
+## LangChain与Semantic Kernel横向对比
