@@ -87,8 +87,8 @@ title: Plan
     <div style="margin-left: 40px !important;">
         <details open> <summary>搭建小配置记录</summary>
         <div style="margin-left: 40px !important;">
-                1. Jenkins安装 <br />
-                2. Jenkins备份与迁移 <br />
+                1. ✅ <a href="https://winxuan.github.io/posts/jenkins-introduce/" target="_blank">Jenkins介绍</a> <br />
+                2. Jenkins安装与部署 <br />
         </div>
         </details>
         <details open> <summary>搭建小问题解决记录</summary>
