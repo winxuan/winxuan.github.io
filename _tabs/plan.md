@@ -10,7 +10,8 @@ title: Plan
 
 <button id="toggleButton" onclick="toggleDetails()">折叠所有小分页</button>
 
-# 🧐**AIGC相关**🧐
+# 🧐**AIGC 相关**🧐
+
    <details open>
     <summary><b>1. 吴恩达Prompt工程指南系列</b></summary>
     <div style="margin-left: 40px !important;">
@@ -35,8 +36,10 @@ title: Plan
     </div>
    </details>
 
-******
+---
+
 # 🧐**基础技术相关**🧐
+
    <details open>
     <summary><b>1. 自建个人独立blog站系列</b></summary>
     <div style="margin-left: 40px !important;">
@@ -46,7 +49,7 @@ title: Plan
                 2. ✅ <a href="https://winxuan.github.io/posts/fenced-code-blocks-indentation/" target="_blank">chirpy主题围栏代码块（Fenced Code Blocks）缩进功能添加</a> <br />
                 3. ✅ <a href="https://winxuan.github.io/posts/config-blog-comment/" target="_blank">使用giscus配置GitHub Pages评论功能</a> <br />
                 4. ✅ <a href="https://winxuan.github.io/posts/add-google-analytics/" target="_blank">使用Google Analysis监听GitHub pages页面访问量</a> <br />
-                5. GitHub pages同步主题作者仓库更改 <br />
+                5. ✅ <a href="https://winxuan.github.io/posts/blog-merge-theme-modify/" target="_blank">GitHub pages同步主题作者仓库更改</a> <br />
                 6. 使用python脚本自动获取GitHub pages页面访问量 <br />
                 7. GitHub Pages添加CDN服务（加速国内访问1） <br />
                 8. GitHub+jsDelivr自建图床（加速国内访问2） <br />
@@ -79,9 +82,10 @@ title: Plan
     </div>
    </details>
 
-******
+---
 
 # 🤓**测试开发相关**🤓
+
    <details open>
     <summary><b>1. Jenkins相关</b></summary>
     <div style="margin-left: 40px !important;">
@@ -99,17 +103,18 @@ title: Plan
     </div>
    </details>
 
-******
+---
 
 # 🤓**测试相关**🤓
 
-******
+---
 
 # 🤗**读书笔记**🤗
 
-******
+---
 
 # 🤗**日常随笔**🤗
+
 <details open>
     <summary><b>漫游散记</b></summary>
     <div style="margin-left: 40px !important;">
@@ -127,7 +132,7 @@ title: Plan
     </div>
    </details>
 
-******
+---
 
 # 🤗**英语学习**🤗
 
@@ -135,7 +140,6 @@ title: Plan
     <img src="/assets/image/ArthurMorgan.png" alt="描述" style="width: 200px; height: auto;" />
 </div>
  -->
-
 
 <script>
 
