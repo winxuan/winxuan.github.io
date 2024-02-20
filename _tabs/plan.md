@@ -125,7 +125,7 @@ title: Plan
         </details>
         <details open> <summary>广州</summary>
         <div style="margin-left: 40px !important;">
-            1. 广州省博物馆&省图书馆 <br />
+            1. 广东省博物馆&省图书馆 <br />
             2. 广州市龙头山森林公园 <br />
         </div>
         </details>
