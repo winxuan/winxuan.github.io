@@ -165,3 +165,9 @@ function openAllDetails() {
     });
 }
 </script>
+
+// 新增刷新页面的函数
+function refreshPage() {
+    window.location.reload();
+}
+</script>
