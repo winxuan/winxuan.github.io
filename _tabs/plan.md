@@ -164,10 +164,9 @@ function openAllDetails() {
         detail.setAttribute('open', '');
     });
 }
-</script>
 
-// 新增刷新页面的函数
 function refreshPage() {
     window.location.reload(true);
 }
+
 </script>
