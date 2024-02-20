@@ -141,7 +141,7 @@ title: Plan
 </div>
  -->
 
-<button id="refreshButton" onclick="refreshPage()">清除缓存刷新页面</button>
+<button id="refreshButton" onclick="refreshPage()">绕过缓存获取最新内容</button>
 
 <script>
 
@@ -166,7 +166,8 @@ function openAllDetails() {
 }
 
 function refreshPage() {
-    window.location.reload(true);
+    const now = new Date().getTime();
+    window.location.href = window.location.href.split('?')[0] + '?updated=' + now;
 }
 
 </script>
