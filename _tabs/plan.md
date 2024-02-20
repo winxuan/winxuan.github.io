@@ -141,6 +141,8 @@ title: Plan
 </div>
  -->
 
+<button id="refreshButton" onclick="refreshPage()">清除缓存刷新页面</button>
+
 <script>
 
 function toggleDetails() {
