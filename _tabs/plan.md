@@ -93,6 +93,7 @@ title: Plan
         <div style="margin-left: 40px !important;">
                 1. ✅ <a href="https://winxuan.github.io/posts/jenkins-introduce/" target="_blank">Jenkins介绍</a> <br />
                 2. Jenkins安装与部署 <br />
+                3. ✅ <a href="https://winxuan.github.io/posts/jenkins-backup-and-quick-recovery/" target="_blank">Jenkins备份与快速恢复</a> <br />
         </div>
         </details>
         <details open> <summary>搭建小问题解决记录</summary>
