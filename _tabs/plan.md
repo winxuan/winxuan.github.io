@@ -13,7 +13,7 @@ title: Plan
 # 🧐**AIGC 相关**🧐
 
    <details open>
-    <summary><b>1. 吴恩达Prompt工程指南系列</b></summary>
+    <summary><b>1. 吴恩达Prompt工程指南</b></summary>
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-clear-specific/" target="_blank">写好ChatGPT提示词之：清晰且具体（clear & specific）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-more-think/" target="_blank">写好ChatGPT提示词之：消耗更多步骤（算力换准确度）</a> <br />
@@ -28,11 +28,13 @@ title: Plan
    </details>
 
    <details open>
-    <summary><b>2. GPT工具开发系列</b></summary>
+    <summary><b>2. GPT工具</b></summary>
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/gpt-api-function-call/" target="_blank">GPT API 调用本地函数（function call）</a> <br />
         3. 🔜 <a href="https://winxuan.github.io/posts/introduction-ai-programming/" target="_blank">面向AI框架编程--引言&简介</a> <br />
+        4. ✅ <a href="https://winxuan.github.io/posts/chatgpt-next-web-usage-onfig-record/" target="_blank">ChatGPT-Next-Web客户端+Azure使用配置部署</a> <br />
+        5. ChatGPT-Next-Web网页版+Azure使用配置部署
     </div>
    </details>
 
