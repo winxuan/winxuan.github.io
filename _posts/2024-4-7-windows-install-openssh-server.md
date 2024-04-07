@@ -92,15 +92,20 @@ if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyCon
 1. 仓库位置在https://github.com/PowerShell/Win32-OpenSSH，这里建议直接下载release版本即可，位置在https://github.com/PowerShell/Win32-OpenSSH/releases，根据版本选择，这里笔者选择OpenSSH-Win64.zip
 2. 由于是长期使用软件，这里笔者直接将解压后的文件放在C:\Program Files\OpenSSH-Win64
 3. 使用管理员打开PowerShell，并cd到C:\Program Files\OpenSSH-Win64目录下，输入如下命令
+
 ```
 set-executionpolicy remotesigned
 ```
+
 并输入y确认
 再输入如下命令完成安装
+
 ```
 .\install-sshd.ps1
 ```
+
 4. 使用如下命令分别启动ssh服务端，配置服务开机自动启动，配置防火墙
+
 ```
 # Start the sshd service
 Start-Service sshd
