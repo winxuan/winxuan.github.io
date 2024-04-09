@@ -77,15 +77,15 @@ title: Plan
    </details>
 
    <details open>
-    <summary><b>2. 日常技巧</b></summary>
+    <summary><b>2. IT技巧</b></summary>
     <div style="margin-left: 40px !important;">
-        <details open> <summary>Windows 系统优化技巧</summary>
+        <details open> <summary>Windows 系统技巧</summary>
         <div style="margin-left: 40px !important;">
                 1. ✅ <a href="https://winxuan.github.io/posts/win10-auto-login/" target="_blank">win10系统设置自动登录</a> <br />
                 2. ✅ <a href="https://winxuan.github.io/posts/windows-install-openssh-server/" target="_blank">Windows系统如何安装ssh服务端</a> <br />
         </div>
         </details>
-        <details open> <summary>Linux 系统优化技巧</summary>
+        <details open> <summary>Linux 系统技巧</summary>
         <div style="margin-left: 40px !important;">
                 1. xxx <br />
         </div>
