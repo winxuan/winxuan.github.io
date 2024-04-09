@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.5.5](https://github.com/cotes2020/jekyll-theme-chirpy/compare/v6.5.4...v6.5.5) (2024-03-23)
+
+### Bug Fixes
+
+* **post:** correct the image URLs ([#1627](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1627)) ([2d649aa](https://github.com/cotes2020/jekyll-theme-chirpy/commit/2d649aae0e40a24db1ab0d46fa474294e96cb135))
+
+## [6.5.4](https://github.com/cotes2020/jekyll-theme-chirpy/compare/v6.5.3...v6.5.4) (2024-03-22)
+
+### Bug Fixes
+
+* correct the attribute for the Twitter social image ([#1615](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1615)) ([cfe44f2](https://github.com/cotes2020/jekyll-theme-chirpy/commit/cfe44f204bcec8e05f498512ec50878e626a124f))
+* **seo:** correct social preview image path inside `<meta>` tag ([#1623](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1623)) ([74cf57a](https://github.com/cotes2020/jekyll-theme-chirpy/commit/74cf57aaacf6674057e6f33240a22f4888cfe88f))
+
+## [6.5.3](https://github.com/cotes2020/jekyll-theme-chirpy/compare/v6.5.2...v6.5.3) (2024-03-07)
+
+* replace `polyfill.io` with `cdnjs` hosted link ([#1598](https://github.com/cotes2020/jekyll-theme-chirpy/pull/1598)) ([75a3d73](https://github.com/cotes2020/jekyll-theme-chirpy/commit/75a3d7399b257256a09d602cbe01062fe1cdf68d))
+
+## [6.5.2](https://github.com/cotes2020/jekyll-theme-chirpy/compare/v6.5.1...v6.5.2) (2024-02-29)
+
+### Bug Fixes
+
+* correct the base URL parameter name ([#1576](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1576)) ([19d6baf](https://github.com/cotes2020/jekyll-theme-chirpy/commit/19d6bafbe1a60614e0d63b961bc73c342a9f6f33)), closes [#1553](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1553)
+
+## [6.5.1](https://github.com/cotes2020/jekyll-theme-chirpy/compare/v6.5.0...v6.5.1) (2024-02-26)
+
+### Bug Fixes
+
+* correct the generation of relative resource paths ([#1553](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1553)) ([89b9625](https://github.com/cotes2020/jekyll-theme-chirpy/commit/89b962557a56ccc13eba3c9c20b4270ee9d30042))
+
 ## [6.5.0](https://github.com/cotes2020/jekyll-theme-chirpy/compare/v6.4.2...v6.5.0) (2024-02-14)
 
 ### Features
