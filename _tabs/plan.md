@@ -40,7 +40,7 @@ title: Plan
     <summary><b>3. 套壳ChatGPT</b></summary>
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/casing-chatgpt-research/" target="_blank">套壳ChatGPT项目调研</a> <br />
-        2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-next-web-usage-onfig-record/" target="_blank">ChatGPT-Next-Web客户端+Azure使用配置部署</a> <br />
+        2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-next-web-usage-config-record/" target="_blank">ChatGPT-Next-Web客户端+Azure使用配置部署</a> <br />
         3. ChatGPT-Next-Web网页版+Azure使用配置部署 <br />
         4. LibreChat+Azure使用配置部署 <br />
     </div>
