@@ -42,7 +42,7 @@ title: Plan
         1. ✅ <a href="https://winxuan.github.io/posts/casing-chatgpt-research/" target="_blank">套壳ChatGPT项目调研</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-next-web-usage-config-record/" target="_blank">ChatGPT-Next-Web客户端+Azure使用配置部署</a> <br />
         3. ChatGPT-Next-Web网页版+Azure使用配置部署 <br />
-        4. LibreChat+Azure使用配置部署 <br />
+        4. 🔜 <a href="https://winxuan.github.io/posts/libre-chat-usage-config-record/" target="_blank">LibreChat使用配置部署</a> <br />
     </div>
    </details>
 
@@ -140,6 +140,8 @@ title: Plan
             1. 广东省博物馆&省图书馆 <br />
             2. 广州市龙头山森林公园 <br />
             3. 华南国家植物园 <br />
+            4. 广州市火炉山 <br />
+            5. 广州市白云山 <br />
         </div>
         </details>
     </div>

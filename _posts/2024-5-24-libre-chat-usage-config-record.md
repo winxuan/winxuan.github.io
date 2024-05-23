@@ -1,5 +1,5 @@
 ---
-title: LibreChat+Azure使用配置部署
+title: LibreChat使用配置部署
 date: 2024-5-24 00:00:00 +0800
 categories: [AIGC, OpenAI]
 tags: [chatgpt]
@@ -13,11 +13,11 @@ tags: [chatgpt]
 
 LibreChat的项目文档十分细节，细节到教会你如何更新Docker配置。如下图所示：
 
-![截图](/assets/image/2024/4/20240410231820.png)
+![截图](/assets/image/2024/5/20240524021544.png)
 
 项目文档十分细节是非常难得的，这直接会让用户的部署和维护变得不是那么困难。并且项目支持多种部署方式，这里介绍下两种部署方式，使用Docker部署和使用Windows部署，使用Linux和Mac也大同小异。
 
-不过部署过程还是有点小坑，尤其是第一次部署的，不一定能顺利部署启动成功，下面是笔者自己在Windows使用docker和直接部署的过程
+不过部署过程还是有点小坑，尤其是第一次部署的，不一定能顺利部署启动成功，下面是笔者自己在Windows使用docker和直接部署的过程，以及踩坑&解决办法
 
 ## 使用Docker部署
 
