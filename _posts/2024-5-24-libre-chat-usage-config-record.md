@@ -89,15 +89,15 @@ Docker的部署十分简便，如果各位部署环境中有长期运行的Docke
 
       笔者这里假设Azure OpenAI中配置得到了如下参数：
       ```
-      终结点1: https://xxxxx-sweden-central.openai.azure.com/
-      密钥: deas90d8f90as8d8f09a8sd0
+      终结点1: https://marvin-sweden-central.openai.azure.com/
+      密钥: deas90d8f90as8d8f09a8sd0asdfa
       部署模型1: gpt-4
       部署名: gpt-4-turbo
       部署模型2: gpt-35-turbo
       部署名: gpt-35-turbo
 
-      终结点2: https://xxxxx-us-north-central.openai.azure.com/
-      密钥: jolk122j312jlkj1l2k3jlkj
+      终结点2: https://marvin-us-north-central.openai.azure.com/
+      密钥: jolk122j312jlkj1l2k3jlkjasdf
       部署模型1: gpt-4o
       部署名: gpt-4o
       ```
@@ -107,37 +107,35 @@ Docker的部署十分简便，如果各位部署环境中有长期运行的Docke
 
       那么对应的librechat.yaml就需要添加如下的配置
       ```
-          azureOpenAI:
-            # Endpoint-level configuration
-            titleModel: "current_model"
-            summarize: true
-            summaryModel: "gpt-3.5-turbo"
-            titleConvo: true
-            titleMethod: "completion"
-            groups:
-            # Group-level configuration
-            - group: "sweden-central"
-               apiKey: "deas90d8f90as8d8f09a8sd0"
-               baseURL: "https://xxxxx-sweden-central.openai.azure.com/"
-               instanceName: "sweden-central"
-               version: "2024-02-15-preview"
+      endpoints:
+         azureOpenAI:
+               # Endpoint-level configuration
+               titleModel: "current_model"
+               titleMethod: "completion"
+               groups:
+               # Group-level configuration
+               - group: "sweden-central"
+               apiKey: "deas90d8f90as8d8f09a8sd0asdfa"
+               baseURL: "https://${INSTANCE_NAME}.openai.azure.com/openai/deployments/${DEPLOYMENT_NAME}/chat/completions?api-version=${version}"
+               instanceName: "marvin-sweden-central"
                models:
                   gpt-3.5-turbo:
-                  deploymentName: gpt-35-turbo
-                  version: "2024-02-15-preview"
+                     deploymentName: gpt-35-turbo
+                     version: "2024-02-01"
                   gpt-4:
-                  deploymentName: gpt-4-turbo
-                  version: "2024-02-15-preview"
+                     deploymentName: gpt-4-turbo
+                     version: "2024-02-15-preview"
             
-            - group: "us-north-central"
-               apiKey: "jolk122j312jlkj1l2k3jlkj"
-               instanceName: "us-north-central"
-               version: "2024-02-15-preview"
+               - group: "us-north-central"
+               apiKey: "jolk122j312jlkj1l2k3jlkjasdf"
+               baseURL: "https://${INSTANCE_NAME}.openai.azure.com/openai/deployments/${DEPLOYMENT_NAME}/chat/completions?api-version=${version}"
+               instanceName: "marvin-us-north-central"
                models:
                   gpt-4o:
-                  deploymentName: gpt-4o
-                  version: "2024-02-15-preview"
+                     deploymentName: gpt-4o
+                     version: "2024-02-01"
       ```
+      作者的配置为了适配Azure OpenAI的复杂性也非常复杂，这里笔者能省略即省略了，这个应该是能配置2个终结点多个模型的最简化配置了。
 
 
 2. libreChat配置llama3
