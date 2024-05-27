@@ -83,18 +83,11 @@ Docker的部署十分简便，如果各位部署环境中有长期运行的Docke
       cp librechat.example.yaml librechat.yaml
       ```
 
-   2. 修改下docker-compose.yml，添加一行
+   2. 配置Docker override
 
-      ```
-      - ./librechat.yaml:/app/librechat.yaml
-      ```
+      这里作者给出了配置的步骤，参考：https://www.librechat.ai/docs/configuration/docker_override
 
-      ![截图](/assets/image/2024/5/20240524143301.png)
-
-      不修改这里的话，因为docker的原因，会找不到这个librechat.yaml的，librechat.yaml的配置也会失效
-      ![截图](/assets/image/2024/5/20240524015745.png)
-
-      这里bug好像作者是已知的，但是没有修复，不知道为什么，建议如果没报错或者配置生效了，建议不改了
+      这一步很多人配置的时候漏掉了，会导致librechat.yaml文件失效。
    
    3. 修改librechat.yaml，配置Azure OpenAI
 
@@ -329,6 +322,64 @@ Docker的部署十分简便，如果各位部署环境中有长期运行的Docke
    ![截图](/assets/image/2024/5/20240526025858.png)
 
    千万注意缩进问题
+
+Docker部署配置问题：
+
+1. 页面右键刷新后跳转到登录界面
+
+   这个问题可能是作者cookie没有配置好，导致会在非部署机器上登录后刷新网页直接跳转到登录页面的问题。
+
+   23年已经有人给作者提了相关问题，作者给了一种临时的解决办法，但是截止目前（2024年5月27日）正式部署还是有此种问题。
+
+   ![截图](/assets/image/2024/5/20240527143414.png)
+
+   所以需要做如下操作
+
+   1. 进入项目根目录，cp一个
+   ```
+   cp docker-compose.override.yml.example docker-compose.override.yml
+   ```
+   
+   2. docker-compose.override.yml添加如下内容
+
+   ```
+   services:
+      api:
+         command: npm run backend:dev
+   ```
+
+   保存后重新运行下就好
+
+2. 配置了librechat.yaml但是未生效
+
+   这个问题也是因为Docker找不到librechat.yaml导致的，细心的话会发现运行中就会报错这个：
+
+   ![截图](/assets/image/2024/5/20240524015745.png)
+
+   这个问题也是需要修改docker-compose.override.yml来控制，最好不要直接修改docker-compose.yml
+
+   如果已经有docker-compose.override.yml文件，就不用执行下面复制这一步，没有得话需要执行下
+
+   进入项目根目录，cp一个
+   ```
+   cp docker-compose.override.yml.example docker-compose.override.yml
+   ```
+
+   确认根目录中有docker-compose.override.yml后，找到api的位置添加一行，如下
+
+   ```
+   services:
+     api:
+         volumes:
+            - ./librechat.yaml:/app/librechat.yaml
+   ```
+
+   保存后重新运行下就好
+
+   
+
+
+
 
 ## 直接部署在Windows
 
