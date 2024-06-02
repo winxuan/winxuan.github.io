@@ -10,12 +10,12 @@ layout:
 # The tabs of sidebar
 tabs:
   # format: <filename_without_extension>: <value>
-  home: 刷新
+  home: 主页(refresh)
   categories: 分类
   tags: 标签
   archives: 归档
   about: 关于
-  plan: 计划&目录
+  plan: 目录
 
 # the text displayed in the search bar & search results
 search:
