@@ -39,11 +39,20 @@ title: Plan
    <details open>
     <summary><b>3. 套壳ChatGPT</b></summary>
     <div style="margin-left: 40px !important;">
-        1. ✅ <a href="https://winxuan.github.io/posts/casing-chatgpt-research/" target="_blank">套壳ChatGPT项目调研</a> <br />
-        2. ✅ <a href="https://winxuan.github.io/posts/chatgpt-next-web-usage-config-record/" target="_blank">ChatGPT-Next-Web客户端+Azure使用配置部署</a> <br />
-        3. ChatGPT-Next-Web网页版+Azure使用配置部署 <br />
-        4. 🔜 <a href="https://winxuan.github.io/posts/libre-chat-usage-config-record/" target="_blank">LibreChat使用配置部署</a> <br />
-        5. ✅ <a href="https://winxuan.github.io/posts/azure-openai-content-stream-processing/" target="_blank">Azure OpenAI生成内容流式输出（配置打字机效果）</a> <br />
+        1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-azure-openai-preface" target="_blank">套皮ChatGPT系列--写在前面</a> <br />
+        2. Azure OpenAI 申请与模型部署相关
+        3. ✅ <a href="https://winxuan.github.io/posts/azure-openai-content-stream-processing/" target="_blank">Azure OpenAI生成内容流式输出（配置打字机效果）</a> <br />
+        4. ✅ <a href="https://winxuan.github.io/posts/casing-chatgpt-research/" target="_blank">套壳ChatGPT项目调研</a> <br />
+        5. ✅ <a href="https://winxuan.github.io/posts/chatgpt-next-web-usage-config-record/" target="_blank">ChatGPT-Next-Web客户端+Azure使用配置部署</a> <br />
+        6. ChatGPT-Next-Web网页版+Azure使用配置部署 <br />
+        7. 🔜 <a href="https://winxuan.github.io/posts/libre-chat-usage-config-record/" target="_blank">LibreChat使用配置部署</a> <br />
+    </div>
+   </details>
+
+   <details open>
+    <summary><b>4. 本地部署大模型</b></summary>
+    <div style="margin-left: 40px !important;">
+        1. 本地部署运行llama3（ollama）
     </div>
    </details>
 
@@ -80,17 +89,9 @@ title: Plan
    <details open>
     <summary><b>2. IT技巧</b></summary>
     <div style="margin-left: 40px !important;">
-        <details open> <summary>Windows 系统技巧</summary>
-        <div style="margin-left: 40px !important;">
-                1. ✅ <a href="https://winxuan.github.io/posts/win10-auto-login/" target="_blank">win10系统设置自动登录</a> <br />
-                2. ✅ <a href="https://winxuan.github.io/posts/windows-install-openssh-server/" target="_blank">Windows系统如何安装ssh服务端</a> <br />
-        </div>
-        </details>
-        <details open> <summary>Linux 系统技巧</summary>
-        <div style="margin-left: 40px !important;">
-                1. xxx <br />
-        </div>
-        </details>
+        1. ✅ <a href="https://winxuan.github.io/posts/win10-auto-login/" target="_blank">win10系统设置自动登录</a> <br />
+        2. ✅ <a href="https://winxuan.github.io/posts/windows-install-openssh-server/" target="_blank">Windows系统如何安装ssh服务端</a> <br />
+        3. 软链接--无法变更软件配置文件路径时的好办法
     </div>
    </details>
 
@@ -101,18 +102,19 @@ title: Plan
    <details open>
     <summary><b>1. Jenkins相关</b></summary>
     <div style="margin-left: 40px !important;">
-        <details open> <summary>搭建小配置记录</summary>
-        <div style="margin-left: 40px !important;">
-                1. ✅ <a href="https://winxuan.github.io/posts/jenkins-introduce/" target="_blank">Jenkins介绍</a> <br />
-                2. Jenkins安装与部署 <br />
-                3. ✅ <a href="https://winxuan.github.io/posts/jenkins-backup-and-quick-recovery/" target="_blank">Jenkins备份与快速恢复</a> <br />
-        </div>
-        </details>
-        <details open> <summary>搭建小问题解决记录</summary>
-        <div style="margin-left: 40px !important;">
-                1. xxx <br />
-        </div>
-        </details>
+        1. ✅ <a href="https://winxuan.github.io/posts/jenkins-introduce/" target="_blank">Jenkins介绍</a> <br />
+        2. Jenkins安装与部署 <br />
+        3. ✅ <a href="https://winxuan.github.io/posts/jenkins-backup-and-quick-recovery/" target="_blank">Jenkins备份与快速恢复</a> <br />
+    </div>
+   </details>
+
+   <details open>
+    <summary><b>2. 多分支开发下质量保障工具</b></summary>
+    <div style="margin-left: 40px !important;">
+        1. 多分支Excel merge工具设计与开发
+        2. 多分支Excel blame工具设计与开发
+        3. 多分支merge diff工具设计与开发
+        4.  
     </div>
    </details>
 
