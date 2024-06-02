@@ -39,8 +39,8 @@ title: Plan
    <details open>
     <summary><b>3. 套壳ChatGPT</b></summary>
     <div style="margin-left: 40px !important;">
-        1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-azure-openai-preface" target="_blank">套皮ChatGPT系列--写在前面</a> <br />
-        2. Azure OpenAI 申请与模型部署相关
+        1. ✅ <a href="https://winxuan.github.io/posts/chatgpt-azure-openai-preface" target="_blank">套壳ChatGPT系列--写在前面</a> <br />
+        2. Azure OpenAI 申请与模型部署相关 <br />
         3. ✅ <a href="https://winxuan.github.io/posts/azure-openai-content-stream-processing/" target="_blank">Azure OpenAI生成内容流式输出（配置打字机效果）</a> <br />
         4. ✅ <a href="https://winxuan.github.io/posts/casing-chatgpt-research/" target="_blank">套壳ChatGPT项目调研</a> <br />
         5. ✅ <a href="https://winxuan.github.io/posts/chatgpt-next-web-usage-config-record/" target="_blank">ChatGPT-Next-Web客户端+Azure使用配置部署</a> <br />
@@ -91,7 +91,7 @@ title: Plan
     <div style="margin-left: 40px !important;">
         1. ✅ <a href="https://winxuan.github.io/posts/win10-auto-login/" target="_blank">win10系统设置自动登录</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/windows-install-openssh-server/" target="_blank">Windows系统如何安装ssh服务端</a> <br />
-        3. 软链接--无法变更软件配置文件路径时的好办法
+        3. ✅ <a href="https://winxuan.github.io/posts/windows-symbolic-link/" target="_blank">软链接--无法变更软件配置文件路径时的好办法</a> <br />
     </div>
    </details>
 
@@ -111,10 +111,9 @@ title: Plan
    <details open>
     <summary><b>2. 多分支开发下质量保障工具</b></summary>
     <div style="margin-left: 40px !important;">
-        1. 多分支Excel merge工具设计与开发
-        2. 多分支Excel blame工具设计与开发
-        3. 多分支merge diff工具设计与开发
-        4.  
+        1. 多分支Excel merge工具设计与开发 <br />
+        2. 多分支Excel blame工具设计与开发 <br />
+        3. 多分支merge diff工具设计与开发 <br />
     </div>
    </details>
 
