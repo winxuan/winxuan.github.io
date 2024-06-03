@@ -33,6 +33,8 @@ title: Plan
         1. ✅ <a href="https://winxuan.github.io/posts/gpt-api/" target="_blank">如何调用GPT API（python）</a> <br />
         2. ✅ <a href="https://winxuan.github.io/posts/gpt-api-function-call/" target="_blank">GPT API 调用本地函数（function call）</a> <br />
         3. 🔜 <a href="https://winxuan.github.io/posts/introduction-ai-programming/" target="_blank">面向AI框架编程--引言&简介</a> <br />
+        4. LangChain <br />
+        5. Dify <br />
     </div>
    </details>
 
@@ -46,6 +48,7 @@ title: Plan
         5. ✅ <a href="https://winxuan.github.io/posts/chatgpt-next-web-usage-config-record/" target="_blank">ChatGPT-Next-Web客户端+Azure使用配置部署</a> <br />
         6. ChatGPT-Next-Web网页版+Azure使用配置部署 <br />
         7. 🔜 <a href="https://winxuan.github.io/posts/libre-chat-usage-config-record/" target="_blank">LibreChat使用配置部署</a> <br />
+        8. Azure OpenAI接口相关 <br />
     </div>
    </details>
 
