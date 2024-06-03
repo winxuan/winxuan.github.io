@@ -48,8 +48,7 @@ title: Plan
         5. ✅ <a href="https://winxuan.github.io/posts/chatgpt-next-web-usage-config-record/" target="_blank">ChatGPT-Next-Web客户端+Azure使用配置部署</a> <br />
         6. ChatGPT-Next-Web网页版+Azure使用配置部署 <br />
         7. 🔜 <a href="https://winxuan.github.io/posts/libre-chat-usage-config-record/" target="_blank">LibreChat使用配置部署</a> <br />
-        8. Azure OpenAI接口相关 <br />
-    </div>
+        8. ✅ <a href="https://winxuan.github.io/posts/azure-api-cfg-auto-demo/" target="_blank">Azure管理用API设置与自动化脚本demo</a> <br />
    </details>
 
    <details open>
