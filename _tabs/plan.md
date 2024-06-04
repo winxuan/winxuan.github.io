@@ -49,12 +49,13 @@ title: Plan
         6. ChatGPT-Next-Web网页版+Azure使用配置部署 <br />
         7. 🔜 <a href="https://winxuan.github.io/posts/libre-chat-usage-config-record/" target="_blank">LibreChat使用配置部署</a> <br />
         8. ✅ <a href="https://winxuan.github.io/posts/azure-api-cfg-auto-demo/" target="_blank">Azure管理用API设置与自动化脚本demo</a> <br />
+    </div>
    </details>
 
    <details open>
     <summary><b>4. 本地部署大模型</b></summary>
     <div style="margin-left: 40px !important;">
-        1. 本地部署运行llama3（ollama）
+        1.  本地部署运行llama3（ollama）
     </div>
    </details>
 
