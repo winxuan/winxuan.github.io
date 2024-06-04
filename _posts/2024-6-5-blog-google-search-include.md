@@ -13,75 +13,75 @@ tags: [blog]
 
 1. 确认自己的blog确实未被Google搜索收录
 
-浏览器输入如下网址：
+    浏览器输入如下网址：
 
-```
-site:https://your_github_id.github.io/
-```
+    ```
+    site:https://your_github_id.github.io/
+    ```
 
-比如笔者这里就是site:https://winxuan.github.io/
+    比如笔者这里就是site:https://winxuan.github.io/
 
-如果没有被Google搜索收录，那会出现如下图所示，跟着笔者往下一步一步配置吧
+    如果没有被Google搜索收录，那会出现如下图所示，跟着笔者往下一步一步配置吧
 
-![截图](/assets/image/2024/6/20240605004207.png)
+    ![截图](/assets/image/2024/6/20240605004207.png)
 
-如果被收录了，那就会出现如下图所示，忽略本文章的后续步骤吧
+    如果被收录了，那就会出现如下图所示，忽略本文章的后续步骤吧
 
 2. 进入上图所提示的Google Search Console
 
-选择右侧的网址前缀，并输入自己的blog地址点继续
+    选择右侧的网址前缀，并输入自己的blog地址点继续
 
-```
-https://your_github_id.github.io/
-```
+    ```
+    https://your_github_id.github.io/
+    ```
 
-![截图](/assets/image/2024/6/20240605004637.png)
+    ![截图](/assets/image/2024/6/20240605004637.png)
 
 3. 下载并将对应的html文件上传到自己blog中
 
-上一步继续后会弹出如下窗口
+    上一步继续后会弹出如下窗口
 
-![截图](/assets/image/2024/6/20240605005125.png)
+    ![截图](/assets/image/2024/6/20240605005125.png)
 
-这里建议选择下载文件上传的方式更简单些
+    这里建议选择下载文件上传的方式更简单些
 
-下载文件后将文件放在自建blog的根目录中并上传，上传后点验证，正常一般都会验证通过
+    下载文件后将文件放在自建blog的根目录中并上传，上传后点验证，正常一般都会验证通过
 
-![截图](/assets/image/2024/6/20240605005315.png)
+    ![截图](/assets/image/2024/6/20240605005315.png)
 
 4. 添加站点地图
 
-上一步成功之后，点弹窗右下角前往资源页面，在跳转的网页中右侧会有网络地图的tag
+    上一步成功之后，点弹窗右下角前往资源页面，在跳转的网页中右侧会有网络地图的tag
 
-![截图](/assets/image/2024/6/20240605005537.png)
+    ![截图](/assets/image/2024/6/20240605005537.png)
 
-网络地图的作用是给Google知道你网站的结构，方便它的爬虫来爬你的内容的，所以非常有必要设置
+    网络地图的作用是给Google知道你网站的结构，方便它的爬虫来爬你的内容的，所以非常有必要设置
 
-生成网络地图的方法也比较简单，到[https://www.xml-sitemaps.com/](https://www.xml-sitemaps.com/)这个网站，输入自己网站地址
+    生成网络地图的方法也比较简单，到[https://www.xml-sitemaps.com/](https://www.xml-sitemaps.com/)这个网站，输入自己网站地址
 
-```
-https://your_github_id.github.io/
-```
+    ```
+    https://your_github_id.github.io/
+    ```
 
-点start
+    点start
 
-![截图](/assets/image/2024/6/20240605005926.png)
+    ![截图](/assets/image/2024/6/20240605005926.png)
 
-等待一会，弹窗提示成功，点VIEW SITEMAP DETAILS，在跳转的网页点DOWNLOAD YOUR XML SITEMAP FILE，下载到sitemap.xml文件
+    等待一会，弹窗提示成功，点VIEW SITEMAP DETAILS，在跳转的网页点DOWNLOAD YOUR XML SITEMAP FILE，下载到sitemap.xml文件
 
-![截图](/assets/image/2024/6/20240605010033.png)
+    ![截图](/assets/image/2024/6/20240605010033.png)
 
-![截图](/assets/image/2024/6/20240605010155.png)
+    ![截图](/assets/image/2024/6/20240605010155.png)
 
-将该sitemap.xml文件上传到自己网站的根目录
+    将该sitemap.xml文件上传到自己网站的根目录
 
-回到刚刚Google的网络地图，输入sitemap.xml并提交即可
+    回到刚刚Google的网络地图，输入sitemap.xml并提交即可
 
-![截图](/assets/image/2024/6/20240605010644.png)
+    ![截图](/assets/image/2024/6/20240605010644.png)
 
-![截图](/assets/image/2024/6/20240605010715.png)
+    ![截图](/assets/image/2024/6/20240605010715.png)
 
-等待1天后再回来看看数据是否发生变化，也可以在Google搜索引擎中搜索自己的blog查看
+    等待1天后再回来看看数据是否发生变化，也可以在Google搜索引擎中搜索自己的blog查看
 
 
 # 后记
