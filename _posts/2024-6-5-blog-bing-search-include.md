@@ -20,3 +20,5 @@ https://www.bing.com/webmaster/home/mysites
 ![截图](/assets/image/2024/6/20240605111755.png)
 
 想必大家配置Bing之前已经配置了Google搜索了，这里如果手动配置的话和Google搜索也大同小异，不再赘述了（偷懒bushi）。
+
+![截图](/assets/image/2024/6/20240605112156.png)
