@@ -73,10 +73,11 @@ title: Plan
                 3. ✅ <a href="https://winxuan.github.io/posts/config-blog-comment/" target="_blank">使用giscus配置GitHub Pages评论功能</a> <br />
                 4. ✅ <a href="https://winxuan.github.io/posts/add-google-analytics/" target="_blank">使用Google Analysis监听GitHub pages页面访问量</a> <br />
                 5. ✅ <a href="https://winxuan.github.io/posts/blog-merge-theme-modify/" target="_blank">GitHub pages同步主题作者仓库更改</a> <br />
-                6. ✅ <a href="https://winxuan.github.io/posts/blog-google-search-include/" target="_blank">Google搜索收录个人blog（Blog可以被Google搜索到）</a> <br />
-                7. 使用python脚本自动获取GitHub pages页面访问量 <br />
-                8. GitHub Pages添加CDN服务（加速国内访问1） <br />
-                9. GitHub+jsDelivr自建图床（加速国内访问2） <br />
+                6. ✅ <a href="https://winxuan.github.io/posts/blog-google-search-include/" target="_blank">Google搜索收录Github Pages（Blog可以被Google搜索到）</a> <br />
+                7. ✅ <a href="https://winxuan.github.io/posts/blog-bing-search-include/" target="_blank">Bing搜索收录Github Pages（Blog可以被Bing搜索到）</a> <br />
+                8. 使用python脚本自动获取GitHub pages页面访问量 <br />
+                9. GitHub Pages添加CDN服务（加速国内访问1） <br />
+                10. GitHub+jsDelivr自建图床（加速国内访问2） <br />
         </div>
         </details>
         <details open> <summary>搭建小问题解决记录</summary>

@@ -1,5 +1,5 @@
 ---
-title: Google搜索收录个人blog（Blog可以被Google搜索到）
+title: Google搜索收录Github Pages（Blog可以被Google搜索到）
 date: 2024-6-5 00:00:00 +0800
 categories: [Blog, Build]
 tags: [blog]

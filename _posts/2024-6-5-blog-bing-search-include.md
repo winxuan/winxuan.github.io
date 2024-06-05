@@ -1,5 +1,5 @@
 ---
-title: Bing搜索收录个人blog（Blog可以被Bing搜索到）
+title: Bing搜索收录Github Pages（Blog可以被Bing搜索到）
 date: 2024-6-5 00:00:00 +0800
 categories: [Blog, Build]
 tags: [blog]
@@ -9,7 +9,7 @@ tags: [blog]
 
 # 前置步骤
 
-建议先配置完成Google搜索的收录，参考这里[Google搜索收录个人blog](https://winxuan.github.io/posts/blog-google-search-include/)
+建议先配置完成Google搜索的收录，参考这里[Google搜索收录Github Pages](https://winxuan.github.io/posts/blog-google-search-include/)
 
 因为Bing的搜索配置如果使用Google账号登录如下网站，可以一键导入Google搜索的配置不用再配置一遍了
 
