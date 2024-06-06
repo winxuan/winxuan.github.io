@@ -382,16 +382,84 @@ Docker部署配置问题：
 如果生产环境不支持使用docker，那就需要直接部署在机器上，这点作者也想到了，所以有第二种办法，直接部署
 
 1. clone对应项目
-    使用git clone命令获取到项目代码。如果是长期使用，这里笔者建议下载release版本较为稳定，目前（2024年5月23日）libreChat暂未发布release版本。
 
-    ```
-    git clone https://github.com/danny-avila/LibreChat.git
-    ```
+   使用git clone命令获取到项目代码。如果是长期使用，这里笔者建议下载release版本较为稳定，目前（2024年5月23日）libreChat暂未发布release版本。
 
-    release版本
+   ```
+   git clone https://github.com/danny-avila/LibreChat.git
+   ```
 
-    ```
-    git clone --branch v0.7.2 https://github.com/danny-avila/LibreChat.git
-    ```
+   release版本
 
-2. 
+   ```
+   git clone --branch v0.7.2 https://github.com/danny-avila/LibreChat.git
+   ```
+
+2. 安装npm
+
+   前往官网按照步骤要求安装即可
+
+   ```
+   Node.js 18+: https://nodejs.org/en/download
+   ```
+
+   ![截图](/assets/image/2024/5/20240606154232.png)
+
+3. 安装mongodb
+
+   之前有讲过，该项目是为数不多的使用到数据库记录数据的项目，这里有用到mongodb也是直接去官网安装即可。
+
+   ```
+   https://www.mongodb.com/try/download/community-kubernetes-operator
+   ```
+
+   ![截图](/assets/image/2024/5/20240606155146.png)
+   
+   默认配置安装好之后，浏览器中输入localhost:27017，正常会出现如下信息：
+
+   ```
+   It looks like you are trying to access MongoDB over HTTP on the native driver port.
+   ```
+
+   如果后续有经常使用数据库的地方，建议再安装一个可视化的数据库管理工具，这里建议安装mongodb自带的工具和robot3t
+
+   安装完成后，需要配置下mongodb，这里建议配置下IP和端口：
+
+   Windows的配置文件一般在C:\Program Files\MongoDB\Server\7.0\bin目录下的mongod.cfg文件
+
+   ![截图](/assets/image/2024/5/20240606160243.png)
+
+   这里需要配置下bindip，默认应该是127.0.0.1，改成0.0.0.0就可以局域网其他机器访问了
+
+   ![截图](/assets/image/2024/5/20240606160858.png)
+
+4. 修改.env
+
+   配置完mongodb后需要修改项目中.env中mongodb的地址到自己刚刚配置的数据库中，默认是127.0.0.1，如果项目部署在和数据库一起的地方则不用修改
+
+5. build项目
+
+   逐步输入以下命令
+
+   ```
+   npm ci
+   npm run frontend
+   npm run backend
+   ```
+
+6. 访问http://localhost:3080/
+
+7. 更新代码
+
+   如果运行后需要修改或者更新代码，可以更新代码后再执行build项目的三行指令，嫌弃麻烦可以在项目根目录写一个bat， 内容如下：
+   ```
+   @echo off
+   echo Running npm ci...
+   CALL npm ci
+   echo Running npm run frontend...
+   CALL npm run frontend
+   echo Running npm run backend...
+   npm run backend:dev
+   pause
+
+   ```
