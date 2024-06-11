@@ -9,7 +9,258 @@
 
 <url>
   <loc>https://winxuan.github.io/</loc>
-  <lastmod>2024-06-04T16:51:05+00:00</lastmod>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/plan/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/tags/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/archives/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/about/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/blog-google-search-include/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/blog-bing-search-include/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/windows-symbolic-link/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/azure-api-cfg-auto-demo/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/chatgpt-azure-openai-preface/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/azure-openai-content-stream-processing/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/libre-chat-usage-config-record/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/casing-chatgpt-research/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/windows-install-openssh-server/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/chatgpt-next-web-usage-config-record/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/page2/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/page3/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/tags/blog/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/tags/chatgpt/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/tags/tips/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/tags/azure/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/tags/helloworld/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/tags/jenkins/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/chatgpt-clear-specific/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/chatgpt-more-think/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/chatgpt-Iterate/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/gpt-api/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/gpt-api-function-call/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/introduction-ai-programming/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/creat-blog/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/fenced-code-blocks-indentation/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/config-blog-comment/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/add-google-analytics/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/blog-merge-theme-modify/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/blog-giscus-url/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/github-action-build-failure/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/html-fence-block-empty/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/win10-auto-login/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/jenkins-introduce/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/jenkins-backup-and-quick-recovery/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/aigc/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/openai/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/blog/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/build/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/helloworld/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/set/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/jenkins/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/tips/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/categories/system/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/hello-world/</loc>
+  <lastmod>2024-06-11T09:13:26+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 

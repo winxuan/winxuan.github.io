@@ -463,3 +463,123 @@ Docker部署配置问题：
    pause
 
    ```
+
+以上两种是最基础的部署办法，也就是能启动，更深入的细节可以结合笔者自己使用的部署&管理配置来看
+
+1. 安装部署方式选择：
+
+   笔者使用了docker快速验证了配置相关内容和配置调整，正式环境中笔者并没有使用docker来，虽然docker并不会影响性能相关，主要是笔者对于使用docker并不太熟练，为了在正式环境中更好的控制，笔者更偏向于在正式环境中直接部署的方式来使用。
+
+   所以部署环境笔者使用了npm，也就是直接部署的方式安装，但是笔者更推荐一般用户使用docker部署。
+
+2. 配置librechat.yaml
+
+   1. 模型配置：
+   
+      由于LibreChat是国外的工程，暂时（2024年6月11日）还不支持国内的模型接口，笔者这里也暂时没有使用国内模型API的需求，所以只配置了OpenAI和Ollama两种模型：
+
+      这里需要在工程根目录打开一个cmd，并执行一下命令根据作者提供的模板创建librechat.yaml
+      ```
+      cp librechat.example.yaml librechat.yaml
+      ```
+
+      然后根据需要配置下endpoints
+
+      1. OpenAI
+         
+         可以参考笔者的部署模板：
+         ```
+         endpoints:
+            azureOpenAI:
+                  # Endpoint-level configuration
+                  titleModel: "GPT-3.5-turbo"
+                  titleMethod: "completion"
+                  summarize: true
+                  summaryModel: "GPT-3.5-turbo"
+                  plugins: true
+                  groups:
+                  # Group-level configuration
+                  - group: "xxxxxx-sweden-central"
+                  apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                  baseURL: "https://${INSTANCE_NAME}.openai.azure.com/openai/deployments/${DEPLOYMENT_NAME}/chat/completions?api-version=${version}"
+                  instanceName: "xxxxxx-sweden-central"
+                  models:
+                     GPT-3.5-turbo:
+                        deploymentName: gpt-35-turbo
+                        version: "2024-02-01"
+                     GPT-4:
+                        deploymentName: gpt-4-turbo
+                        version: "2024-02-15-preview"
+               
+                  - group: "xxxxxx-us-north-central"
+                  apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                  # baseURL: "https://xxxxxx-us-north-central.openai.azure.com/"
+                  baseURL: "https://${INSTANCE_NAME}.openai.azure.com/openai/deployments/${DEPLOYMENT_NAME}/chat/completions?api-version=${version}"
+                  instanceName: "xxxxxx-us-north-central"
+                  models:
+                     GPT-4o:
+                        deploymentName: gpt-4o
+                        version: "2024-02-01"
+         ```
+         
+         一般修改下apiKey，instanceName，deploymentName即可使用
+
+      2. Ollama
+
+         Ollama是在本地部署的大模型，所以需要先部署好本地的Ollama和对应模型，再在endpoints下一层级如下配置：
+
+         ```
+           custom:
+            # Groq Example
+            - name: "Ollama"
+               apiKey: "ollama"
+               baseURL: "http://xx.xx.xxx.xxx:11434/v1" 
+               models:
+               default: [
+                     "qwen:110b",
+                     "llama3:70b"
+                     ]
+               fetch: false # fetching list of models is not supported
+               titleConvo: true
+               titleModel: "qwen:110b"
+               summarize: false
+               summaryModel: "qwen:110b"
+               forcePrompt: false
+               modelDisplayLabel: "Ollama"
+               addParams:
+                  "stop": [
+                     "<|start_header_id|>",
+                     "<|end_header_id|>",
+                     "<|eot_id|>",
+                     "<|reserved_special_token"
+                  ]
+         ```
+
+         一般修改下模型名称和本地部署的ip地址即可
+
+   2. 自定义隐私政策和服务政策
+
+      配置这里的跳转链接
+
+      ![截图](/assets/image/2024/5/20240611163235.png)
+
+      笔者这里配置成自己的blog链接了
+
+      ```
+      # Custom interface configuration
+      interface:
+      # Privacy policy settings
+      privacyPolicy:
+         externalUrl: 'https://winxuan.github.io/plan/'
+         openNewTab: true
+
+      # Terms of service
+      termsOfService:
+         externalUrl: 'https://winxuan.github.io/plan/'
+         openNewTab: true      
+      ```
+
+   3. 
+
+      
+   

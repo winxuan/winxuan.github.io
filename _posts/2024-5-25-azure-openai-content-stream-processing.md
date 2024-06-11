@@ -5,7 +5,7 @@ categories: [AIGC, OpenAI]
 tags: [chatgpt]
 ---
 
-该方法目前（2024年5月25日）仍有效
+该方法目前（2024年6月11日）仍有效
 
 # 问题描述
 
