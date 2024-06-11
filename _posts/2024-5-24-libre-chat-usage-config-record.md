@@ -474,16 +474,15 @@ Docker部署配置问题：
 
 2. 配置librechat.yaml
 
+   这里需要在工程根目录打开一个cmd，并执行一下命令根据作者提供的模板创建librechat.yaml
+   
+   ```
+   cp librechat.example.yaml librechat.yaml
+   ```
+
    1. 模型配置：
    
       由于LibreChat是国外的工程，暂时（2024年6月11日）还不支持国内的模型接口，笔者这里也暂时没有使用国内模型API的需求，所以只配置了OpenAI和Ollama两种模型：
-
-      这里需要在工程根目录打开一个cmd，并执行一下命令根据作者提供的模板创建librechat.yaml
-      ```
-      cp librechat.example.yaml librechat.yaml
-      ```
-
-      然后根据需要配置下endpoints
 
       1. OpenAI
          
@@ -579,7 +578,34 @@ Docker部署配置问题：
          openNewTab: true      
       ```
 
-   3. 
+3. 配置.env
 
+   这里需要在工程根目录打开一个cmd，并执行一下命令根据作者提供的模板创建.env
+   
+   ```
+   cp .env.example .env
+   ```
+   
+   1. 配置mongodb
+
+      由于项目需要使用到mongodb数据库，安装完成数据库或者有现成的数据库，需要配置下对应的数据库链接
+
+      ```
+      MONGO_URI=mongodb://用户名:密码@ip地址:27017/LibreChat?authSource=admin
+      ```
+
+      一般修改下用户名密码和ip地址就好
+
+   2. 配置项目ip地址
+
+      项目默认是本地的ip地址，如果其他机器需要访问，可能会出现无法访问的问题，配置下对应的几个ip地址即可
+
+      ```
+      HOST=
+      DOMAIN_CLIENT=
+      DOMAIN_SERVER=
+      ```
+
+   
       
    
