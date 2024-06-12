@@ -608,9 +608,75 @@ Docker部署配置问题：
 
    3. 屏蔽不需要AI产品
 
-      作者默认是展示所有支持的AI产品，也就是我们默认启动后，左上角下拉框显示的AI能力
+      作者默认是展示所有支持的AI产品，也就是我们默认启动后，左上角下拉框显示的AI能力，如果只想展示几种，则可以编辑如下字段：
       
+      找到被默认注释的：
+
+      ```
+      # ENDPOINTS=openAI,assistants,azureOpenAI,bingAI,google,gptPlugins,anthropic
+      ```
       
-   
+      解开注释，并将后面支持的AI修改成自己想要的，比如笔者希望有Azure，Ollama和plugin
+
+      则对应的ENDPOINTS配置如下：
+
+      ```
+      ENDPOINTS=azureOpenAI,gptPlugins,ollama
+      ```
+
+      上述配置也会影响到显示顺序，比如笔者这里的配置即显示如下顺序
+
+      ![截图](/assets/image/2024/6/20240612190812.png)
+
+   4. 配置邮箱
+
+      之所以要配置邮箱相关，是因为作者提供了用户重置密码的能力，重置密码需要向用户邮箱发送一封修改密码的邮件，如果这里不配置会导致任何人只要知道邮箱就能重置对应的密码。
+
+      ![截图](/assets/image/2024/6/20240612191613.png)
+
+      建议使用gmail，作者这里也给出配置的具体方法了
+
+      [setup-with-gmail](https://www.librechat.ai/docs/configuration/authentication/password_reset#setup-with-gmail)
+
+      ![截图](/assets/image/2024/6/20240612191738.png)
+
+      笔者这里配置完成后如下：
+
+      ![截图](/assets/image/2024/6/20240612192042.png)
+
+      尝试下重置密码，邮箱会收到对应的邮件：
+
+      ![截图](/assets/image/2024/6/20240612192200.png)
+
+   5. 软件名修改
+
+      如果需要更换email内容中的LibreChat，根据如下代码可以看出，需要再env中配置appname
+
+      ![截图](/assets/image/2024/6/20240612192416.png)
       
+      ```
+      APP_TITLE=LibreChat
+      # CUSTOM_FOOTER="My custom footer"
+      HELP_AND_FAQ_URL=https://librechat.ai
+      ```
+
+      对应可以修改为
+
+      ```
+      APP_TITLE=AIChat
+      CUSTOM_FOOTER="Footer"
+      HELP_AND_FAQ_URL=https://winxuan.github.io
+      ```
+
+      这里修改之后，不仅仅可以修改email中信息，对应的浏览器打开时的标题等也会被更改
+
+      ![截图](/assets/image/2024/6/20240612192937.png)
+
+      会被修改为
+
+      ![截图](/assets/image/2024/6/20240612193024.png)
+
+      如果想修改的比较彻底，对应的index也可以将其修改掉
+
+      ![截图](/assets/image/2024/6/20240612193151.png)
    
