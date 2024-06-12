@@ -144,3 +144,10 @@ Structural Similarity Index (SSIM): 0.9999990593112368
 ```
 
 6.036087972159335e-09是科学计数法，意思是6.036087972159335乘以10的负9次方
+
+作为对比，两张相同的图片结果是
+
+```
+Mean Squared Error (MSE): 0.0
+Structural Similarity Index (SSIM): 1.0
+```

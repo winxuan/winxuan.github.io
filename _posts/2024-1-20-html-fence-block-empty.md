@@ -5,7 +5,7 @@ categories: [Blog, Build]
 tags: [blog]
 ---
 
-## 问题出现
+# 问题出现
 
 笔者在使用GitHub pages的md文件进行编辑过程中，贴了一些html的代码，结果在打包后，出现了html代码块空白的问题，类似如下效果
 
@@ -23,7 +23,7 @@ tags: [blog]
 
 也就是说如果在md规定的代码段中写html相关的代码，会被浏览器误以为是需要执行的html代码
 
-## 解决过程
+# 解决过程
 
 于是询问了ChatGPT相关问题，GPT建议是在html代码前后加入标记{% raw %}{% endraw %}，如下图所示
 

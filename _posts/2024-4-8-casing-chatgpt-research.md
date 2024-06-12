@@ -14,8 +14,11 @@ tags: [chatgpt]
 因为项目众多，属于大海捞针，加上网上评价参差不齐，于是笔者使用类似调查问卷的方法，在相关性非常大论坛板块（v2ex 的 openai 板块）中发贴询问，得到的回复中一共有四个比较流行的工程较为合适：
 
 1. ChatGPT-web: https://github.com/Chanzhaoyu/chatgpt-web
+
 2. ChatGPT-Next-Web: https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
+
 3. LibreChat: https://github.com/danny-avila/LibreChat
+
 4. LobeChat: https://github.com/lobehub/lobe-chat
 
 因为每个项目的理念是不同的，所以功能等相差还是比较大的，可以根据笔者对以上项目的调研信息从而判断哪个项目更适合自己使用，笔者也会给出自己的建议。
@@ -84,6 +87,7 @@ tags: [chatgpt]
 据此调研，
 
 1. 笔者在公司决定部署了 LibreChat，因为其自带后端 SQL，鉴权等功能，部署文档详细，并且使用体验十分接近于官方 ChatGPT，笔者决定部署这个用以替代已经停更的 ChatGPT-web；
+
 2. 笔者给朋友的是 ChatGPT-Next-Web 的客户端软件，因为 ChatGPT-Next-Web 提供了软件安装包，而不需要使用 docker 或者其他必要运行环境，对非计算机的朋友们十分友好；
 
 笔者这里建议的是，如果读者看到这篇文章时，LobeChat 已经发布带有后端 SQL 的版本，笔者还是偏向于部署 LobeChat，原因是 LobeChat 的 UI 和交互设计是优于 LibreChat，LibreChat 是对 ChatGPT UI 的模仿，而 LobeChat 原创的 UI 更吸引人眼球，这在公司内部推广使用是十分友好的。

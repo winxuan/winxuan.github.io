@@ -5,7 +5,7 @@ categories: [Blog, Build]
 tags: [blog]
 ---
 
-## 简介
+# 简介
 
 在数字时代，拥有一个个人博客不仅是展示你技能和创意的绝佳平台，也是与世界分享你独特视角的方式。而GitHub Pages配合Jekyll，提供了一个简单、高效且免费的途径来创建和托管你的个人博客。（抄的）
 
@@ -13,7 +13,7 @@ tags: [blog]
 
 使用GitHub Pages搭建个人博客好处是基本不受监管，想写什么就写什么，因为本身文章就存储在GitHub仓库中，不过写太多可能直接被墙了。缺点也很明显，因为使用的是GitHub，所以国内访问如果不用梯子，网速会很慢，一方面是自己写blog时git push到GitHub会很慢，一方面是不用梯子浏览时网速非常慢，基本上加载不出图片。
 
-## GitHub Pages & Jekyll 简介
+# GitHub Pages & Jekyll 简介
 
 GitHub Pages是一种静态网站托管服务，它允许用户直接从GitHub上的仓库（repository）中托管网站内容。它特别适用于托管项目文档、个人博客、甚至是小型网站。实际上就是我们在GitHub中创建的仓库，但是该仓库比较特殊，经过一些自动化的特殊处理，就可以呈现给我们网站的表现。
 
@@ -35,42 +35,52 @@ Jekyll是一个简单、可扩展的静态站点生成器。它将文本格式�
 
     Jekyll有提供多种主题供用户选择，而且用户选择好主题之后，可以fork对应仓库，这样整个网站的源码就在自己的个人仓库中，用户可以通过修改源码，深度定制属于自己的博客。并且GitHub由于处于国外，不需要进行帖子审核等即可上传到自己的个人博客上。
 
-## 搭建GitHub Pages博客的准备工作
+# 搭建GitHub Pages博客的准备工作
 
 准备一个GitHub账号，这里不在赘述如何申请，这个也是一个使用门槛，没有GitHub不懂得git使用等，基本上无法在GitHub中搭建属于自己的博客和网站。建议在搭建之前，至少掌握git的核心思想和基本操作，手里有一个自己的GitHub账号再继续。
 
-## 找到Jekyll主题
+# 找到Jekyll主题
 
 推荐直接去GitHub中寻找适合自己的主题。[github.com/topics/jekyll-theme](https://github.com/topics/jekyll-theme)
+
 上述是GitHub自己给出的当前主题排名，一般建议挑选排名靠前的主题，如果自己有需要某些特殊的功能，比如显示数学公式等，也可以在各自的主题介绍中寻找。
+
 ![主题](/assets/image/2023/12/20231228005305.png)
+
 这里我选择的是作者一直在维护，而且功能和界面比较完善的主题，并且因为有一定的开发和维护能力，我选择了fork的方式创建自己的博客。
+
 一般每个主题都会有自己的demo网站，一般格式都是 xxx.github.io，也有自己有域名改换成自己私有的域名的，demo内容上都大差不差，都会介绍自己主题的表现以及详细的部署和使用文档。如果自己英文比较好的情况下，建议直接阅读作者提供的部署教程文档。
+
 等下我们要着重介绍部署和使用方法的主题的demo网站 https://chirpy.cotes.page/
+
 ![主题](/assets/image/2023/12/20231228005731.png)
 
-## 获取主题与GitHub相关配置
+# 获取主题与GitHub相关配置
 
 根据demo中文档介绍，主题作者提供了两种创建方案供我们选择，一种是通过fork作者的开发仓库，一种是generate作者的另一个仓库，两种操作各有优缺点，这里会同时介绍两种操作。如果专注于内容，建议使用作者推荐的方案，隔离无关的项目文件，忍受一些小问题，专注于内容创作；如果是自己有能力解决问题，并且有时间有能力自己动手解决问题，则建议fork仓库的形式，为社区做贡献；
 
-### Using the Chirpy Starter（推荐）
+## Using the Chirpy Starter（推荐）
 
 操作步骤如下：（建议直接参考作者给出的预览demo中的文章，一般都会有教程说明如何操作）
 
 1. 创建git仓库
 
     仓库URL: https://github.com/cotes2020/chirpy-starter，进入仓库后点右上角 <kbd>Use this template</kbd> > <kbd>Create a new repository</kbd> 如下图所示：
+
     ![主题](/assets/image/2023/12/20231228112752.png)
 
     跳转进入创建页面，修改下仓库名称为 `USERNAME.github.io`，比如我的GitHub用户名是winxuan，那么我的仓库名就是winxuan.github.io（这里因为我已经创建过一个同名仓库了，所以有红字提示）
+
     ![主题](/assets/image/2023/12/20231228113351.png)
 
 2. 配置github仓库
 
     进入自己创建好的仓库，点 <kbd>Settings</kbd> <kbd>Pages</kbd> <kbd>Settings</kbd> 后，点 <kbd>Build and deployment</kbd> 下面的 <kbd>Source</kbd> 中的选项 Github Actions，如下图所示。
+
     ![主题](/assets/image/2023/12/20231228114948.png)
 
 这里会自动创建部署脚本，配置好之后，自己的GitHub Pages已经开始打包了，可以在仓库中 `Actions` 看到对应部署过程。
+
 ![主题](/assets/image/2023/12/20231228115450.png)
 
 3. 修改项目配置
@@ -79,7 +89,7 @@ Jekyll是一个简单、可扩展的静态站点生成器。它将文本格式�
 
     正常都会在1分钟内部署完成，这时候访问`USERNAME.github.io`，即刚刚创建的仓库名，比如我的是winxuan.github.io，即可看到对应的网页。如果能正常看到类似demo的网页，那说明部署成功了。
 
-### GitHub Fork（开发者专用）
+## GitHub Fork（开发者专用）
 
 操作步骤如下（选择这一方法说明已经很了解相关过程，这里简写下）
 
@@ -90,11 +100,15 @@ Jekyll是一个简单、可扩展的静态站点生成器。它将文本格式�
 2. 配置github仓库
 
     进入自己创建好的仓库，点 <kbd>Settings</kbd> <kbd>Pages</kbd> <kbd>Settings</kbd> 后，点 <kbd>Build and deployment</kbd> 下面的 <kbd>Source</kbd> 中的选项 Github Actions，如下图所示。
+
     ![主题](/assets/image/2023/12/20231228114948.png)
 
     注意这里需要抄作业：
+
     删除代码仓库中的.github文件夹，将我的仓库中对应的文件夹上传上去
+
     https://github.com/winxuan/winxuan.github.io/tree/master/.github/workflows
+
     因为作者的CI流程有些复杂，可能不可用，这里其实用最简单的流程即可，不需要太复杂。
 
 3. 修改项目配置
@@ -110,15 +124,18 @@ Jekyll是一个简单、可扩展的静态站点生成器。它将文本格式�
 1. 安装RUBY
 
     https://rubyinstaller.org/downloads/
+
     记得下载带devkit的版本
 
     安装过程中，如果有类似MSYS2 and MINGW development tool chain的选项，记得勾选
 
     安装成功后，使用命令行验证安装结果：
+
     ```
     ruby -v
     gem -v
     ```
+
     未出现报错即安装成功
 
 2. 安装Jekyll
@@ -126,43 +143,57 @@ Jekyll是一个简单、可扩展的静态站点生成器。它将文本格式�
     ```
     gem install jekyll bundler
     ```
+
     安装成功后，使用命令行验证安装结果：
+
     ```
     jekyll -v
     ```
 
 3. 运行项目
+
     首先使用git clone拉到项目所有文件，然后进入项目根目录文件夹中，运行命令：
+
     ```
     bundle
     ```
+
     如果安装过程过于缓慢，建议配置国内镜像：
+
     ```
     bundle config mirror.https://rubygems.org https://gems.ruby-china.com
     ```
+
     然后再运行bundle
 
     运行成功后，记得配置项目目录下的_config.yml中的变量，url，avatar，timezone，lang
+
     还有其他变量可以多探索下。
 
     最后使用命令
+
     ```
     bundle exec jekyll serve
     ```
+
     成功的话命令行中会有提醒对应的网址，一般是 http://127.0.0.1:4000/
+
     访问该网址即是对应自己网站的首页。
 
-## 维护与更新博客
+# 维护与更新博客
 
 1. 学习md知识
 
     如果之前没有使用过markdown，建议花20分钟左右速刷下教程，语法比较简单，而且加上现在很多编辑器都有实时预览功能，比如vscode，所见即所得。
+
     这里推荐MarkDown官方文档即可：https://markdown.com.cn/
 
 2. 写第一篇文章
 
     在_posts文件夹下创建一个md格式文件，文件名格式使用YYYY-MM-DD-TITLE.md
+
     文件内容上也有要求，前几行格式大概是这样：
+
     ```
     ---
     title: github pages + jekyll快速搭建blog
@@ -171,12 +202,19 @@ Jekyll是一个简单、可扩展的静态站点生成器。它将文本格式�
     tags: [blog]
     ---
     ```
+
     title:即文章标题
+
     date：就是写文章的日期，记得git push的时候这个时间不能超过真实时间，否则部署会报错
+
     categories：分类，比如这篇文章的分类在网站就长这样
+
     ![主题](/assets/image/2023/12/20231228185955.png)
+
     tags: 可以看成文章的标记，比如这篇文章长这样
+
     ![主题](/assets/image/2023/12/20231228190130.png)
+    
     后面就是文章正文，按照md的格式进行编写即可，这里建议参考的markdown教程的同时，务必学习下主题作者给出的demo中一些用法，有些细节有一些区别。
 
 3. 预览与提交

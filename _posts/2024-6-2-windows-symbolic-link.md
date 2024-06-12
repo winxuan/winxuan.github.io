@@ -74,7 +74,9 @@ mklink /D "C:\Users\mawen\Videos\Radeon ReLive" "D:\Radeon ReLive"
 另外建议读者可以就此扩展下mklink的配置选项，比如上述软链接命令中/D参数，对应mklink有三种选项
 
 1. /d：建立目录的符号链接符号链接(symbolic link)
+
 2. /j：建立目录的软链接（联接）(junction)
+
 3. /h：建立文件的硬链接(hard link)
 
 这里最常用的/d创建软链接，而/j区别于/d的绝对路径可以使用相对路径，笔者这里建议大家还是使用绝对路径保证正确性最好
