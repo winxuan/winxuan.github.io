@@ -9,7 +9,7 @@ tags: [tips]
 
 ecode.py 编码脚本：将1000个字母写入到图片中
 
-```
+```python
 from PIL import Image
 import numpy as np
 
@@ -50,7 +50,7 @@ embed_text_in_image('demo.png', 'demo_embedded.png', text)
 
 decode.py 解码脚本：读取出上段代码中写入字符信息
 
-```
+```python
 from PIL import Image
 import numpy as np
 
@@ -91,7 +91,7 @@ print(extracted_text)
 
 以下是一个使用SSIM和MSE来比较两个图片相似度的脚本：
 
-```
+```python
 import numpy as np
 from skimage.metrics import structural_similarity as ssim
 from skimage.io import imread
