@@ -159,91 +159,91 @@ tags: [blog]
 
 1. 对于Chirpy主题影响
 
-实际上是因为作者这里的替换
+    实际上是因为作者这里的替换
 
-```
-{% raw %}
-{% if _content contains '<div class="language-' and '<div class="post-content">'%}
-    {% assign _content = _content
-        | replace: '<div class="language-', '<div class="collapsible-container language-'
-        | replace: '<div class="post-content">', '<script src="/assets/js/collapsible.js"></script><div class="post-content">' %}
-        {% endif %}
-{% endraw %}
-```
+    ```
+    {% raw %}
+    {% if _content contains '<div class="language-' and '<div class="post-content">'%}
+        {% assign _content = _content
+            | replace: '<div class="language-', '<div class="collapsible-container language-'
+            | replace: '<div class="post-content">', '<script src="/assets/js/collapsible.js"></script><div class="post-content">' %}
+            {% endif %}
+    {% endraw %}
+    ```
 
-| replace: '<div class="language-', '<div class="collapsible-container language-'
+    | replace: '<div class="language-', '<div class="collapsible-container language-'
 
-上面这一句我们修改下替换的顺序
+    上面这一句我们修改下替换的顺序
 
-| replace: 'highlighter-rouge', 'highlighter-rouge collapsible-container'
-
-也就是最终改为这个
-
-```
-{% raw %}
-{% if _content contains '<div class="language-' and '<div class="content">'%}
-{% assign _content = _content
     | replace: 'highlighter-rouge', 'highlighter-rouge collapsible-container'
-    | replace: '<div class="content">', '<script src="/assets/js/dist/collapsible.js"></script><div class="content">' 
-%}
-{% endif %}
-{% endraw %}
-```
-笔者这里将collapsible.js文件移动到了/assets/js/dist/，这里看心情是否移动
 
-这样几乎不再影响到原主题的设置
+    也就是最终改为这个
+
+    ```
+    {% raw %}
+    {% if _content contains '<div class="language-' and '<div class="content">'%}
+    {% assign _content = _content
+        | replace: 'highlighter-rouge', 'highlighter-rouge collapsible-container'
+        | replace: '<div class="content">', '<script src="/assets/js/dist/collapsible.js"></script><div class="content">' 
+    %}
+    {% endif %}
+    {% endraw %}
+    ```
+    笔者这里将collapsible.js文件移动到了/assets/js/dist/，这里看心情是否移动
+
+    这样几乎不再影响到原主题的设置
 
 2. 默认折叠和展开的行数有点少需要调节下
 
-修改下\assets\css\style.scss的max-height: calc(1.6em * 5)，这里5就是显示5行，如果想显示30行，就改为30就可以
+    修改下\assets\css\style.scss的max-height: calc(1.6em * 5)，这里5就是显示5行，如果想显示30行，就改为30就可以
 
-然后在\assets\js\collapsible.js中同步修改
+    然后在\assets\js\collapsible.js中同步修改
 
-let maxLines = 30; // 设置折叠显示的行数 Maximum number of lines to display without collapsing
+    let maxLines = 30; // 设置折叠显示的行数 Maximum number of lines to display without collapsing
 
-最后改动太多，我基本上重构了下这个js，实现了折叠后滚动，默认显示行数的问题解决，收起展开按钮显示等等
+    最后改动太多，我基本上重构了下这个js，实现了折叠后滚动，默认显示行数的问题解决，收起展开按钮显示等等
 
-```javascript
-    document.addEventListener("DOMContentLoaded", function () {
-        let coll = document.getElementsByClassName("collapsible-container");
-        let maxLines = 19; // 设置折叠显示的行数 Maximum number of lines to display without collapsing
-        let defaultOpenLines = 30; // 默认展开的最大行数
+    ```javascript
+        document.addEventListener("DOMContentLoaded", function () {
+            let coll = document.getElementsByClassName("collapsible-container");
+            let maxLines = 19; // 设置折叠显示的行数 Maximum number of lines to display without collapsing
+            let defaultOpenLines = 30; // 默认展开的最大行数
 
-        for (let i = 0; i < coll.length; i++) {
-        let trigger = coll[i].querySelector('.collapsible-trigger');
-        let content = coll[i].querySelector('.collapsible-content');
-        let codeLines = (content.textContent.split('\n').length - 1) / 2; // 计算实际的代码行数
-    
-        console.log(codeLines)
+            for (let i = 0; i < coll.length; i++) {
+            let trigger = coll[i].querySelector('.collapsible-trigger');
+            let content = coll[i].querySelector('.collapsible-content');
+            let codeLines = (content.textContent.split('\n').length - 1) / 2; // 计算实际的代码行数
+        
+            console.log(codeLines)
 
-        if (codeLines <= defaultOpenLines) {
-            this.innerHTML = "收起";
-            trigger.style.display = 'none'; // 隐藏触发器
-            content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-            trigger.addEventListener("click", function () { 
-            // var triggerPosition = trigger.getBoundingClientRect().top; // 获取按钮当前位置
-            // 切换按钮上的文字
-            if (this.innerHTML.includes("展开")) {
+            if (codeLines <= defaultOpenLines) {
                 this.innerHTML = "收起";
-            } else {
-                this.innerHTML = "展开";
-            }
-            this.classList.toggle("active");
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                // 滚动页面到 trigger 元素的位置
-                content.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-                });
-            } else {
+                trigger.style.display = 'none'; // 隐藏触发器
                 content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                trigger.addEventListener("click", function () { 
+                // var triggerPosition = trigger.getBoundingClientRect().top; // 获取按钮当前位置
+                // 切换按钮上的文字
+                if (this.innerHTML.includes("展开")) {
+                    this.innerHTML = "收起";
+                } else {
+                    this.innerHTML = "展开";
+                }
+                this.classList.toggle("active");
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    // 滚动页面到 trigger 元素的位置
+                    content.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                    });
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+                });
             }
-            });
-        }
-        }
-    });
-```
+            }
+        });
+    ```
 
 大家直接抄作业即可，修改完之后默认的效果即可在这个内容中看到，有什么问题也可以参考我对应的GitHub仓库对照修改
