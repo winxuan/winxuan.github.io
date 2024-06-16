@@ -139,13 +139,15 @@ ollama目前已经支持三种平台的安装（2024年6月16日），Windows，
         
         上文提到本地run模型会自动使用显卡算力，这里有个小tips，默认任务管理器的显卡信息显示的利用率并不是对应显卡的算力，如下gif中可以看到其实将Compute 0作为指标更为合适
 
-        ![截图](/assets/image/2024/6/20240617015452.png)
+        ![截图](/assets/image/2024/6/20240617015900.gif)
 
         N卡的话观察cuda会更合适一些。
     
     4. Ollama模型退出
 
-        这里上文有提到过，Ollama有个不能退出模型的小bug，需要在任务管理器中杀掉如下几个Ollama进程才行：
+        Ollama提供了退出的命令 /bye，但是这个命令只能退出命令行，后台的模型和任务其实都还在
+
+        这里上文有提到过，Ollama有个不能退出模型的小bug，如果需要完全退出，需要在任务管理器中杀掉如下几个Ollama进程才行：
 
         ```
         映像名称                       PID 会话名              会话#       内存使用
@@ -156,7 +158,15 @@ ollama目前已经支持三种平台的安装（2024年6月16日），Windows，
         ollama_llama_server.exe      43844 Console                    1  5,201,756 K
         ```
 
-        杀掉之后会发现之前cpu和gpu占用的内存都会释放掉。
+        或者直接在powershell中执行如下命令：
+
+        ```
+        Get-Process | Where-Object { $_.Name -match 'ollama' } | ForEach-Object { Stop-Process -Id $_.Id -Force }
+        ```
+
+        杀掉之后如下图所示，会发现之前cpu和gpu占用的内存都会释放掉。
+
+        ![截图](/assets/image/2024/6/20240617022700.gif)
     
 
         
