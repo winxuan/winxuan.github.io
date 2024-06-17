@@ -95,7 +95,7 @@ ollama目前已经支持三种平台的安装（2024年6月16日），Windows，
         ```
 
 
-3. 安装模型与模型调用
+3. 安装模型与使用
 
     正常安装即可使用在命令行执行Ollama相关命令
 
@@ -168,5 +168,38 @@ ollama目前已经支持三种平台的安装（2024年6月16日），Windows，
 
         ![截图](/assets/image/2024/6/20240617022700.gif)
     
+4. API调用
 
+    1. Chat用
+        
+        一般该API主要是提供给一些套壳ChatGPT使用，而且主流的项目也都支持使用Ollama提供的接口
+
+        这里笔者以LibreChat为例子：
+
+        ```
+          custom:
+            # Groq Example
+            - name: "Ollama"
+            apiKey: "ollama"
+            baseURL: "http://10.86.237.250:11434/v1" 
+            models:
+                default: [
+                    "qwen:110b",
+                    "llama3:70b"
+                    ]
+            fetch: false # fetching list of models is not supported
+            titleConvo: true
+            titleModel: "qwen:110b"
+            summarize: false
+            summaryModel: "qwen:110b"
+            forcePrompt: false
+            modelDisplayLabel: "Ollama"
+            addParams:
+                "stop": [
+                    "<|start_header_id|>",
+                    "<|end_header_id|>",
+                    "<|eot_id|>",
+                    "<|reserved_special_token"
+                ]
+        ```
         
