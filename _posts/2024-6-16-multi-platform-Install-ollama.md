@@ -1,4 +1,4 @@
- ---
+---
 title: 多平台安装与配置ollama
 date: 2024-6-17 00:00:00 +0800
 categories: [AIGC, Ollama]
