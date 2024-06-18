@@ -298,7 +298,7 @@ Mac的安装过程实际上与Windows一致，都是从官网下载安装，并�
         3. 添加环境变量
 
             ```
-            export OLLAMA_HOST="0.0.0.0"
+            export OLLAMA_HOST="192.168.1.2"
             ```
 
         4. 保存并关闭文件
@@ -325,7 +325,7 @@ Mac的安装过程实际上与Windows一致，都是从官网下载安装，并�
         3. 添加环境变量
 
             ```
-            export OLLAMA_HOST="0.0.0.0"
+            export OLLAMA_HOST="192.168.1.2"
             ```
 
         4. 保存并关闭文件
@@ -349,7 +349,7 @@ Mac的安装过程实际上与Windows一致，都是从官网下载安装，并�
         3. 添加环境变量
 
             ```
-            export OLLAMA_HOST="0.0.0.0"
+            export OLLAMA_HOST="192.168.1.2"
             ```
         
         4. 保存并关闭文件
