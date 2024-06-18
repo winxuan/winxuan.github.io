@@ -142,6 +142,8 @@ ollama目前已经支持三种平台的安装（2024年6月16日），Windows，
         ![截图](/assets/image/2024/6/20240617015900.gif)
 
         N卡的话观察cuda会更合适一些。
+
+        ![截图](/assets/image/2024/6/20240618112624.png)
     
     4. Ollama模型退出
 
@@ -170,21 +172,21 @@ ollama目前已经支持三种平台的安装（2024年6月16日），Windows，
     
 4. API调用
 
-    1. Chat用
-        
-        一般该API主要是提供给一些套壳ChatGPT使用，而且主流的项目也都支持使用Ollama提供的接口
+    一般该API主要是提供给一些套壳ChatGPT使用，而且主流的项目也都支持使用Ollama提供的接口，一般都是为了体验，简单使用下就好，这里推荐使用Open WebUI，如果之前有配置过一些套壳ChatGPT项目，建议查看下项目文档对Ollama的直接支持；
 
-        这里笔者以LibreChat为例子：
+    1. LibreChat
+        
+        这里笔者以LibreChat的配置为例
 
         ```
           custom:
             # Groq Example
             - name: "Ollama"
             apiKey: "ollama"
-            baseURL: "http://10.86.237.250:11434/v1" 
+            baseURL: "http://127.0.0.1:11434/v1" 
             models:
                 default: [
-                    "qwen:110b",
+                    "llama3:8b",
                     "llama3:70b"
                     ]
             fetch: false # fetching list of models is not supported
@@ -203,3 +205,160 @@ ollama目前已经支持三种平台的安装（2024年6月16日），Windows，
                 ]
         ```
         
+        一般每种项目都有自己封装好的接口，不过使用ollama上核心需要提供的也是两种信息，API和模型名称
+
+    2. Open WebUI
+
+        以前该项目叫做Ollama WebUI，从名字可以看出就是为了给本地部署的大模型使用的，项目开源，地址为[open-webui](https://github.com/open-webui/open-webui)
+
+        这里建议使用Docker进行部署，部署步骤如下：
+
+        1. 安装docker与git clone该项目
+
+        2. 执行对应docker命令
+            
+            1. 如果ollama部署在本机，则
+
+                ```
+                docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+                ```
+            
+            2. 如果ollama部署在其他位置，则
+
+                ```
+                docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+                ```
+
+                这里OLLAMA_BASE_URL即部署的主机的地址
+
+        3. 运行
+
+            完成docker部署后，浏览器打开http://localhost:3000即可访问Open WebUI
+
+            ![截图](/assets/image/2024/6/20240618111722.png)
+
+            如上图所示，ollama中存在的模型会被自动加载，选择对应模型即可使用
+
+            ![截图](/assets/image/2024/6/20240618111924.png)
+
+# Mac 安装
+
+Mac的安装过程实际上与Windows一致，都是从官网下载安装，并运行对应命令行即可，区别在于Mac的配置与Windows不同，Windows支持直接配置环境变量，而Mac则需要修改一些文件达成同样目的
+
+1. 官网下载和运行ollama
+
+    [Download Ollama](https://www.ollama.com/download)
+
+2. 配置Mac的环境变量
+
+    Mac的环境变量是通过修改shell配置文件达成，mac系统有多种shell，从 macOS Catalina 开始 macOS 默认使用 zsh，之前使用的是Bash
+
+    1. 检查自己是zsh还是bash
+
+        启动终端，输入以下命令：
+
+        ```
+        echo $SHELL
+        ```
+
+        /bin/bash 表示使用的是 Bash
+        /bin/zsh 表示使用的是 Zsh
+
+    2. 对于 Bash 用户，修改环境变量命令如下：
+
+        1. 打开终端
+        
+        2. 文本编辑器打开 .bash_profile 或 .bashrc 文件，这里笔者习惯使用nano
+
+            ```
+            nano ~/.bash_profile
+            ```
+            
+            或
+
+            ```
+            nano ~/.bashrc
+            ```
+
+        3. 添加环境变量
+
+            ```
+            export OLLAMA_HOST="0.0.0.0"
+            ```
+
+        4. 保存并关闭文件
+
+        5. 使用以下命令使更改生效：
+
+            ```
+            source ~/.bash_profile
+            ```
+            或
+            ```
+            source ~/.bashrc
+            ```
+    3. 对于 Zsh 用户
+
+        1. 打开终端
+
+        2. 文本编辑器打开 .zshrc 文件，这里笔者习惯使用nano
+
+            ```
+            nano ~/.zshrc
+            ```
+
+        3. 添加环境变量
+
+            ```
+            export OLLAMA_HOST="0.0.0.0"
+            ```
+
+        4. 保存并关闭文件
+
+        5. 使用以下命令使更改生效：
+
+            ```
+            source ~/.zshrc
+            ```
+
+    4. 不确定自己默认是zsh还是bash，也就是任意shell
+
+        1. 打开终端
+
+        2. 文本编辑器打开 .profile 文件，这里笔者习惯使用nano
+
+            ```
+            nano ~/.profile
+            ```
+        
+        3. 添加环境变量
+
+            ```
+            export OLLAMA_HOST="0.0.0.0"
+            ```
+        
+        4. 保存并关闭文件
+
+        5. 使用以下命令使更改生效：
+
+            ```
+            source ~/.profile
+            ```
+
+3. 安装模型与使用
+
+    见Windows安装中3与4步骤即可
+
+# Linux 安装
+        
+1. 官网下载和运行ollama
+
+    [Download Ollama](https://www.ollama.com/download)
+
+2. 配置Linux的环境变量
+
+    Linux系统与mac中基本一致，见Mac中安装的2步骤即可
+
+3. 安装模型与使用
+
+    见Windows安装中3与4步骤即可
