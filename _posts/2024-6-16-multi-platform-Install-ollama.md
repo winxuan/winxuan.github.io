@@ -241,6 +241,14 @@ ollama目前已经支持三种平台的安装（2024年6月16日），Windows，
 
             ![截图](/assets/image/2024/6/20240618111924.png)
 
+    一个运行时的小tips，如果发现无法访问提供的接口，试试是不是ollama的serve没有启动，如果没有的话建议在命令行输入如下：
+
+    ```
+    ollama serve &
+    ```
+
+    这样即可访问ollama的服务
+
 # Mac 安装
 
 Mac的安装过程实际上与Windows一致，都是从官网下载安装，并运行对应命令行即可，区别在于Mac的配置与Windows不同，Windows支持直接配置环境变量，而Mac则需要修改一些文件达成同样目的
@@ -250,6 +258,13 @@ Mac的安装过程实际上与Windows一致，都是从官网下载安装，并�
     [Download Ollama](https://www.ollama.com/download)
 
 2. 配置Mac的环境变量
+
+    比较简单的配置是命令行直接输入
+
+    ```
+    launchctl setenv OLLAMA_HOST 0.0.0.0:11434
+    ```
+    然后重启ollama即可，如果想像传统配置的一样，可以用下面的方法
 
     Mac的环境变量是通过修改shell配置文件达成，mac系统有多种shell，从 macOS Catalina 开始 macOS 默认使用 zsh，之前使用的是Bash
 
@@ -344,6 +359,11 @@ Mac的安装过程实际上与Windows一致，都是从官网下载安装，并�
             ```
             source ~/.profile
             ```
+    以上配置完成后，不要忘了启动ollama serve
+
+    ```
+    ollama sever &
+    ```
 
 3. 安装模型与使用
 
