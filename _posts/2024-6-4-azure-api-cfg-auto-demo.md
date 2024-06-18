@@ -118,6 +118,7 @@ tags: [azure]
         client_id：应用中配置的
         scope：根据接口配置的不同的值，更新密钥就配置https://management.azure.com/.default
         grant_type：直接填client_credentials
+        client_secret：1中只会出现一次的值
         ```
 
         ![截图](/assets/image/2024/6/20240604024304.png)
