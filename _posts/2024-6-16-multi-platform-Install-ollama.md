@@ -265,6 +265,12 @@ Mac的安装过程实际上与Windows一致，都是从官网下载安装，并�
     launchctl setenv OLLAMA_HOST 0.0.0.0:11434
     ```
     然后重启ollama即可，如果想像传统配置的一样，可以用下面的方法
+    
+    mac命令行关闭ollama方法：
+
+    ```
+    osascript -e 'tell app "Ollama" to quit'
+    ```
 
     Mac的环境变量是通过修改shell配置文件达成，mac系统有多种shell，从 macOS Catalina 开始 macOS 默认使用 zsh，之前使用的是Bash
 
