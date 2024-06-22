@@ -1,5 +1,5 @@
 ---
-title: LibreChat使用配置部署
+title: LibreChat多平台安装和基础配置
 date: 2024-5-24 00:00:00 +0800
 categories: [AIGC, OpenAI]
 tags: [chatgpt]
