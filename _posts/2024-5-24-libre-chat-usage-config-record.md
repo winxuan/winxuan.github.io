@@ -799,4 +799,73 @@ Docker部署配置问题：
    
    再执行应该就没有问题了
 
+   如果你有配置一些vpn，比如笔者这里有配置socks5的，就可以全局使用vpn
+
+   1. 使用 npm config 设置代理：
+      ```
+      npm config set proxy socks5://192.168.50.113:1080
+      npm config set https-proxy socks5://192.168.50.113:1080
+      ```
+   2. 设置完成后，你可以验证设置：
+
+      ```
+      npm config get proxy
+      npm config get https-proxy
+      ```
+   
+   3. 不想使用，删除对应配置即可
+
+      ```
+      npm config delete proxy
+      npm config delete https-proxy
+      ```
+
 7. 访问http://树莓派IP地址:3080/
+
+8. 启动用脚本
+
+   如果觉得每次都需要输入三个命令去启动，嫌麻烦可以写一个sh脚本
+
+   ```sh
+   #!/bin/bash
+
+   # 设置错误处理
+   set -e
+
+   # 定义日志函数
+   log() {
+      echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
+   }
+
+   # 切换到项目目录
+   # 注意：替换 /path/to/your/project 为你的实际项目路径
+   cd /path/to/your/project
+
+   # 执行 npm ci
+   log "开始执行 npm ci"
+   npm ci
+   log "npm ci 执行完成"
+
+   # 执行 npm run frontend
+   log "开始执行 npm run frontend"
+   npm run frontend
+   log "npm run frontend 执行完成"
+
+   # 执行 npm run backend 并在后台运行
+   log "开始执行 npm run backend（后台运行）"
+   npm run backend &
+   log "npm run backend 已在后台启动"
+
+   # 等待一段时间，确保后台进程已经启动
+   sleep 10
+
+   log "所有命令执行完毕"
+   ```
+
+9. 停止运行
+   
+   笔者暂时没有找到更好的办法，一般是直接杀掉所有node
+
+   ```
+   killall node
+   ```
