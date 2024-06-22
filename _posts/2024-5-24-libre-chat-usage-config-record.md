@@ -447,6 +447,16 @@ Docker部署配置问题：
    npm run backend
    ```
 
+   如果npm失败，概率是因为网络问题，使用以下三条命令，设置下镜像和超时时间，清理下缓存：
+
+   ```
+   npm config set registry https://registry.npmmirror.com
+   npm config set fetch-timeout 600000
+   npm cache clean --force
+   ```
+   
+   再执行应该就没有问题了
+
 6. 访问http://localhost:3080/
 
 7. 更新代码
@@ -680,5 +690,113 @@ Docker部署配置问题：
 
       ![截图](/assets/image/2024/6/20240612193151.png)
 
-      秀嘎
+## 部署在Linux（树莓派）
+
+笔者在家里有树莓派长期运行，所以部署在树莓派上是一个非常好的选择。
+
+1. update
+
+   ```
+   sudo apt update
+   sudo apt upgrade 
+   ```
+2. 使用树莓派的默认仓库安装
+
+   ```
+   sudo apt-get install nodejs npm
+   ```
+
+3. 验证安装
+
+   ```
+   node -v
+   npm -v
+   ```
    
+   ![截图](/assets/image/2024/6/20240622211744.png)
+
+   如果发现版本过低，比如这里node显示版本是 12.22.12，则后续安装可能失败，
+   
+   ![截图](/assets/image/2024/6/20240622213430.png)
+   
+   出现这个问题，建议执行以下操作
+
+
+   1. 移除旧版本
+
+      ```
+      sudo apt remove nodejs
+      ```
+
+   2. 添加NodeSource仓库
+
+      ```
+      curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+      ```
+
+   3. 安装新版本
+
+      ```
+      sudo apt install -y nodejs
+      ```
+      
+   4. 验证版本
+
+      ```
+      node -v
+      ```
+   
+   ![截图](/assets/image/2024/6/20240622213011.png)
+
+
+4. 准备好.env文件和librechat.yaml
+
+   配置参数见Windows安装中的配置，这里不区分系统
+
+5. mongdb
+
+   笔者这里的mogodb已经有现成可用的，没有再安装新的，如果需要在Linux中安装mongodb，按照以下步骤进行：
+
+   1. 更新
+
+      ```
+      sudo apt update
+      ```
+
+   2. 安装
+
+      ```
+      apt  install -y mongodb-org
+      ```
+   
+   3. 配置
+
+      ```
+      sudo nano /etc/mongod.conf #将bindIp修改为局域网ip,比如0.0.0.0,这样才能局域网访问
+      sudo chown -R  mongodb:mongodb /data/mongodb/ #mongodb是使用mongodb用户启动的需要改变其归属
+      sudo service mongod start #启动命令
+      ```
+
+   连接的话建议使用robot3t或者mongodb官网自带的，看个人使用习惯
+
+6. build项目
+
+   逐步输入以下命令
+
+   ```
+   npm ci
+   npm run frontend
+   npm run backend
+   ```
+
+   如果npm失败，概率是因为网络问题，使用以下三条命令，设置下镜像和超时时间，清理下缓存：
+
+   ```
+   npm config set registry https://registry.npmmirror.com
+   npm config set fetch-timeout 600000
+   npm cache clean --force
+   ```
+   
+   再执行应该就没有问题了
+
+7. 访问http://树莓派IP地址:3080/
