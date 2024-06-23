@@ -1,5 +1,5 @@
 ---
-title: ChatGPT-Next-Web客户端+Azure使用配置部署
+title: ChatGPT-Next-Web--客户端+Azure使用配置部署
 date: 2024-3-14 12:00:00 +0800
 categories: [AIGC, OpenAI]
 tags: [chatgpt]

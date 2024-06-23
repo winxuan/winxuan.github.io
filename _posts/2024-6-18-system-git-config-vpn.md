@@ -1,5 +1,5 @@
 ---
-title: Windows系统GitHub配置git命令VPN
+title: Windows&Linux系统GitHub配置git命令VPN
 date: 2024-6-18 18:00:00 +0800
 categories: [Tips, System]
 tags: [tips]
@@ -12,6 +12,8 @@ git的命令会有两种连接，一种是http或者https，一种是ssh，以�
 ![截图](/assets/image/2024/6/20240618225044.png)
 
 ![截图](/assets/image/2024/6/20240618225017.png)
+
+# Windows系统配置git命令的全局vpn
 
 1. http or https
 
@@ -90,6 +92,54 @@ git的命令会有两种连接，一种是http或者https，一种是ssh，以�
         Hi your_username! You've successfully authenticated, but GitHub does not provide shell access.
         ```
 
+# Linux系统配置git命令的全局vpn
+
+笔者这里使用的是树莓派来进行配置
+
+1. http or https
+
+    也是使用git命令的方式配置，比如笔者这里的vpn使用socks5://192.168.50.113:1080，则对应config为：
+
+    ```
+    git config --global http.proxy socks5://192.168.50.113:1080
+    git config --global https.proxy socks5://192.168.50.113:1080
+    ```
+
+2. ssh
+
+    笔者这里以自己的配置为例：socks5://192.168.50.113:1080
+
+    1. 编辑 SSH 配置文件：使用文本编辑器（如 nano）打开或创建 SSH 配置文件
+
+        ```
+        nano ~/.ssh/config
+        ```
+    
+    2. 添加代理配置：在文件中添加以下内容:
+
+        ```
+        Host github.com
+            User git
+            ProxyCommand nc -X 5 -x 192.168.50.113:1080 %h %p
+        ```
+
+    3. 保存并关闭文件：在 nano 中，按 Ctrl+X，然后按 Y，最后按 Enter 来保存并退出。
+
+        之所以写这一步骤，是因为有人在笔者的csdn的blog中骂笔者没有教他怎么在nano中保存。
+
+    4. 确保已安装 netcat：树莓派应该预装了 netcat，没有的话安装下：
+
+        ```
+        sudo apt update
+        sudo apt install netcat
+        ```
+    5. Git 配置中设置全局代理
+
+        ```
+        git config --global core.sshCommand "ssh -o ProxyCommand='nc -X 5 -x 192.168.50.113:1080 %h %p'"
+        ```
+
+
 笔者自己在配置后即可正常使用git，如果不想配置如上，建议使用国内的gitee，gitee的功能和GitHub是差不多的，而且gitee有个仓库镜像同步的功能
 
 ![截图](/assets/image/2024/6/20240618231231.png)
@@ -97,3 +147,4 @@ git的命令会有两种连接，一种是http或者https，一种是ssh，以�
 也就是说在gitee配置和GitHub的连接之后，通过gitee推送的提交，可以自动通过gitee的服务器推送到GitHub中。
 
 当然gitee也有些问题，比如开源仓库少等，自己写一些小工具的私有仓库，使用gitee没毛病，但是开源和GitHub pages这些还是推荐GitHub吧，笔者两个仓库都用。
+

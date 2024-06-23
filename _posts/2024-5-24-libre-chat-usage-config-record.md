@@ -1,5 +1,5 @@
 ---
-title: LibreChat多平台安装和基础配置
+title: LibreChat--多平台安装和基础配置
 date: 2024-5-24 00:00:00 +0800
 categories: [AIGC, OpenAI]
 tags: [chatgpt]
@@ -839,7 +839,7 @@ Docker部署配置问题：
 
    # 切换到项目目录
    # 注意：替换 /path/to/your/project 为你的实际项目路径
-   cd /path/to/your/project
+   cd /home/pi/github/LibreChat/
 
    # 执行 npm ci
    log "开始执行 npm ci"
@@ -853,7 +853,7 @@ Docker部署配置问题：
 
    # 执行 npm run backend 并在后台运行
    log "开始执行 npm run backend（后台运行）"
-   npm run backend &
+   nohup npm run backend:dev > output.log 2>&1 &
    log "npm run backend 已在后台启动"
 
    # 等待一段时间，确保后台进程已经启动
