@@ -1,7 +1,7 @@
 ---
 title: Jenkins介绍
 date: 2024-2-19 12:00:00 +0800
-categories: [SET, Jenkins]
+categories: [SDET, Jenkins]
 tags: [jenkins]
 ---
 

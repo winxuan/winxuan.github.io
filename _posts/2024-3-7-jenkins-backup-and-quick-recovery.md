@@ -1,8 +1,8 @@
 ---
 title: Jenkins备份与快速恢复
 date: 2024-3-7 18:00:00 +0800
-categories: [Blog, Build]
-tags: [blog]
+categories: [SDET, Jenkins]
+tags: [jenkins]
 ---
 
 # 问题
