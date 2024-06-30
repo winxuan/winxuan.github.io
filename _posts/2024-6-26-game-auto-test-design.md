@@ -1,6 +1,6 @@
 ---
 title: 游戏自动化测试框架设计
-date: 2024-2-19 12:00:00 +0800
+date: 2024-6-26 12:00:00 +0800
 categories: [SDET, AutoTest]
 tags: [autotest]
 ---
