@@ -290,3 +290,4 @@ Google search有对应的API，该API可以实现向Google search中添加索引
 
     ![截图](/assets/image/2024/6/20240625075440.png)
 
+根据以上思路即可写出一个可用的demo，笔者后面会将这个demo优化配置后开源到GitHub中。
