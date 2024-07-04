@@ -403,7 +403,7 @@ Docker部署配置问题：
    Node.js 18+: https://nodejs.org/en/download
    ```
 
-   ![截图](/assets/image/2024/5/20240606154232.png)
+   ![截图](/assets/image/2024/6/20240606154232.png)
 
 3. 安装mongodb
 
@@ -413,7 +413,7 @@ Docker部署配置问题：
    https://www.mongodb.com/try/download/community-kubernetes-operator
    ```
 
-   ![截图](/assets/image/2024/5/20240606155146.png)
+   ![截图](/assets/image/2024/6/20240606155146.png)
    
    默认配置安装好之后，浏览器中输入localhost:27017，正常会出现如下信息：
 
@@ -427,11 +427,11 @@ Docker部署配置问题：
 
    Windows的配置文件一般在C:\Program Files\MongoDB\Server\7.0\bin目录下的mongod.cfg文件
 
-   ![截图](/assets/image/2024/5/20240606160243.png)
+   ![截图](/assets/image/2024/6/20240606160243.png)
 
    这里需要配置下bindip，默认应该是127.0.0.1，改成0.0.0.0就可以局域网其他机器访问了
 
-   ![截图](/assets/image/2024/5/20240606160858.png)
+   ![截图](/assets/image/2024/6/20240606160858.png)
 
 4. 修改.env
 
@@ -570,7 +570,7 @@ Docker部署配置问题：
 
       配置这里的跳转链接
 
-      ![截图](/assets/image/2024/5/20240611163235.png)
+      ![截图](/assets/image/2024/6/20240611163235.png)
 
       笔者这里配置成自己的blog链接了
 
