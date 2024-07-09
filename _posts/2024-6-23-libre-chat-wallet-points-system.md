@@ -1,6 +1,6 @@
 ---
 title: LibreChat--钱包积分系统（控制用户tokens使用量）
-date: 2024-5-24 00:00:00 +0800
+date: 2024-6-23 00:00:00 +0800
 categories: [AIGC, OpenAI]
 tags: [chatgpt]
 ---
