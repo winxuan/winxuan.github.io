@@ -14,9 +14,9 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Marvin's blog # the main title
+title: 落月空间
 
-tagline: welcome to my blog # it will display as the sub-title
+tagline: sweven的个人博客
 
 description: >- # used by seo meta and the atom feed
   Record what should be recorded.
@@ -29,13 +29,13 @@ github:
   username: sweven-tears # change to your github username
 
 twitter:
-  username: twitter_username # change to your twitter username
+  username: sweven # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Marvin
-  email: mawenxuan963@gmail.com # change to your email address
+  name: sweven
+  email: sweventears@163.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your twitter homepage
