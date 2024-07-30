@@ -4,8 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://winxuan.github.io/posts/chatgpt-clear-specific/</loc>
@@ -191,6 +189,11 @@
   <loc>https://winxuan.github.io/posts/hello-world/</loc>
   <lastmod>2024-07-11T07:06:56+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/cheat-engine-install-windows/</loc>
+  <lastmod>2024-07-31T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
