@@ -5,11 +5,11 @@ categories: [AIGC, OpenAI]
 tags: [chatgpt]
 ---
 
-# 前言
+## 前言
 
 该系列最早源于笔者的账户被OpenAI封禁，于是同事朋友向笔者推荐了Azure OpenAI，于是逐步从申请到最后给公司内部部署逐步成体系，于是笔者决定整理该系列，最终能做到读者可以跟着笔者从最开始的申请Azure OpenAI到最终套皮ChatGPT部署成功。
 
-# 内容
+## 内容
 
 系列预计会包含如下内容：
 

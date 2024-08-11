@@ -5,11 +5,11 @@ categories: [Tips, System]
 tags: [tips]
 ---
 
-# 前言
+## 前言
 
 Windows系统一般不默认安装ssh，尤其是ssh服务端，也就是别的机器想通过ssh方式连接Windows机器时，Windows机器需要启动的服务，这里因为笔者日常经常会使用到Windows系统ssh服务端，并且由于Windows安装ssh服务端经常会出现失败，这里笔者总结了3种方法，确保可以安装成功。
 
-# 前置检查：
+## 前置检查：
 
 1. Windows系统最低要求： Windows Server 2019 或 Windows 10
 
@@ -25,7 +25,7 @@ Windows系统一般不默认安装ssh，尤其是ssh服务端，也就是别的�
 
 务必确认以上检查通过，没有通过建议询问ChatGPT寻求解决方案
 
-# 方法一：Windows设置中安装
+## 方法一：Windows设置中安装
 
 1. 打开“设置”，选择“系统”，然后选择“可选功能”，没找到就直接在设置中搜索“可选功能”
 
@@ -43,7 +43,7 @@ Windows系统一般不默认安装ssh，尤其是ssh服务端，也就是别的�
 
 以上是Windows10操作系统的过程，Windows11会有细微不同这里不再赘述
 
-# 方法二：命令行方式（全程使用管理员PowerShell）
+## 方法二：命令行方式（全程使用管理员PowerShell）
 
 1. 输入如下命令
 
@@ -93,7 +93,7 @@ Windows系统一般不默认安装ssh，尤其是ssh服务端，也就是别的�
     }
     ```
 
-# 方法三：手动下载离线安装
+## 方法三：手动下载离线安装
 
 微软PowerShell的GitHub仓库有开源ssh部分，这里直接下载安装即可。
 

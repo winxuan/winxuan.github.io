@@ -7,7 +7,7 @@ tags: [blog]
 
 由于GitHub同样也封禁了Bing搜索，在设置完Google搜索后，同时也要设置下Bing搜索。
 
-# 前置步骤
+## 前置步骤
 
 建议先配置完成Google搜索的收录，参考这里[Google搜索收录Github Pages](https://winxuan.github.io/posts/blog-google-search-include/)
 

@@ -5,7 +5,7 @@ categories: [Blog, Build]
 tags: [blog]
 ---
 
-# 问题
+## 问题
 
 我们在 fork 了作者主题的仓库之后，这时候我们和主题仓库实际上已经是两个仓库了，也就是说我们自己可以在 fork 出的仓库自己更改，同时作者也在更新功能或者修复主题的 bug，此时如果我们想获取作者的修改，如果没有 git，我们就需要一行一行对照着进行修改，好处是我们有 git，也就是说我们可以通过 git 来自动化 merge 作者的修改，具体的操作如下
 
@@ -83,7 +83,7 @@ tags: [blog]
     git push origin master
     ```
 
-## 冲突处理
+### 冲突处理
 
 在上述第 5 步中如果出现了 Automatic merge failed; fix conflicts and then commit the result.
 
@@ -171,7 +171,7 @@ tags: [blog]
     git push origin master
     ```
 
-# 最后
+## 最后
 
 提交到远程仓库之后，正常情况下会打包成功并且会显示你的代码仓库领先主题作者仓库多少分支，如图笔者这里提交后的显示：
 

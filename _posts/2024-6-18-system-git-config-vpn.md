@@ -13,7 +13,7 @@ git的命令会有两种连接，一种是http或者https，一种是ssh，以�
 
 ![截图](/assets/image/2024/6/20240618225017.png)
 
-# Windows系统配置git命令的全局vpn
+## Windows系统配置git命令的全局vpn
 
 1. http or https
 
@@ -92,7 +92,7 @@ git的命令会有两种连接，一种是http或者https，一种是ssh，以�
         Hi your_username! You've successfully authenticated, but GitHub does not provide shell access.
         ```
 
-# Linux系统配置git命令的全局vpn
+## Linux系统配置git命令的全局vpn
 
 笔者这里使用的是树莓派来进行配置
 

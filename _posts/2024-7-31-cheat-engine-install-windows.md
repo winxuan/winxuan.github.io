@@ -7,8 +7,8 @@ tags: [ce]
 
 CheatEngine，简称CE，大名鼎鼎的外挂制作神器，除了熟知的外挂之母，CE的功能还包括内存扫描，调试等，功能非常强大。而且软件本身入门门槛非常简单，如果是第一次使用，只需要安装完成之后，跟着软件使用教程溜一遍，写一个小外挂并不是很难。
 
-# 1. CheatEngine
-## 1.1 CheatEngine下载
+## 1. CheatEngine
+### 1.1 CheatEngine下载
 
 CE一款开源免费的软件，并且软件本身提供官网，所以这里推荐大家直接去官网下载安装包。
 
@@ -20,7 +20,7 @@ CE一款开源免费的软件，并且软件本身提供官网，所以这里推
 
 ![截图](/assets/image/2024/7/20240731011550.png)
 
-## 1.2 CheatEngine安装
+### 1.2 CheatEngine安装
 
 双击启动上图中下载的CheatEngine.exe应用程序，如下图所示选择英语即可，后面笔者会给出汉化教程。
 
@@ -34,7 +34,7 @@ CE一款开源免费的软件，并且软件本身提供官网，所以这里推
 
 ![截图](/assets/image/2024/7/20240731012830.png)
 
-## 1.3 CheatEngine汉化
+### 1.3 CheatEngine汉化
 
 进入官网[Cheat Engine](https://cheatengine.org/)，如下图，选择Downloads，然后点Chinese translation files (zh_CN)
 
@@ -70,7 +70,7 @@ https://fearlessrevolution.com/ceshare/
 
 如果已经安装了汉化包首次启动还可能是英文，这里直接重启软件即可恢复到中文。
 
-# 学习建议
+## 学习建议
 
 建议初学者不要跳过软件教程，笔者自认为该教程绝非普通软件新手教程那么敷衍，而是真的在教你使用CE的主要功能，并且这些功能是后面使用CE必备的技能，务必花30~60分钟学习，对以后使用将大有裨益。
 

@@ -5,7 +5,7 @@ categories: [Tips, System]
 tags: [tips]
 ---
 
-# 编解码python脚本
+## 编解码python脚本
 
 ecode.py 编码脚本：将1000个字母写入到图片中
 
@@ -85,7 +85,7 @@ extracted_text = extract_text_from_image('demo_embedded.png')
 print(extracted_text)
 ```
 
-# 图片相似度验证
+## 图片相似度验证
 
 因为LSB隐写术是一种对图片有损的写入方法，这里用脚本比较下原图和编码后的图片相似度
 

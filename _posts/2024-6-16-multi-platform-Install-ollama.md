@@ -7,7 +7,7 @@ tags: [ollama]
 
 ollama目前已经支持三种平台的安装（2024年6月16日），Windows，MacOS和Linux
 
-# Windows安装
+## Windows安装
 
 之前版本的ollama，只能通过安装在Windows子系统的方式安装，目前ollama已经支持直接安装在Windows，并且安装完成之后不用再安装cuda等组件支持，直接可以调用显卡算力；
 
@@ -249,7 +249,7 @@ ollama目前已经支持三种平台的安装（2024年6月16日），Windows，
 
     这样即可访问ollama的服务
 
-# Mac 安装
+## Mac 安装
 
 Mac的安装过程实际上与Windows一致，都是从官网下载安装，并运行对应命令行即可，区别在于Mac的配置与Windows不同，Windows支持直接配置环境变量，而Mac则需要修改一些文件达成同样目的
 
@@ -375,7 +375,7 @@ Mac的安装过程实际上与Windows一致，都是从官网下载安装，并�
 
     见Windows安装中3与4步骤即可
 
-# Linux 安装
+## Linux 安装
         
 1. 官网下载和运行ollama
 
