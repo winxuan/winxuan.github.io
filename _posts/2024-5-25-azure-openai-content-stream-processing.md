@@ -5,7 +5,7 @@ categories: [AIGC, OpenAI]
 tags: [chatgpt]
 ---
 
-AI全文总结：笔者在使用 ChatGPT PLUS 和 Azure OpenAI 的 GPT--4 时，发现二者输出效果不同。ChatGPT 有类似打字机的流输出效果，而 Azure 的输出是缓冲后一次性输出一大坨。原因是 Azure OpenAI 有默认开启的“内容筛选”功能，会检测输入和输出内容是否有害，导致缓冲延迟。虽可申请关闭但几乎都会被拒绝，不过可通过配置异步筛选器解决。笔者给出了配置步骤，包括在 Azure OpenAI 模型部署中创建自定义内容筛选器，设置相关参数等。
+AI全文总结：笔者使用 ChatGPT PLUS 和 Azure OpenAI 的 GPT–4 时，发现输出效果不同。ChatGPT 流输出，Azure 缓冲后一次性输出。因 Azure 有默认“内容筛选”功能致缓冲延迟，虽申请关闭常被拒，但可配置异步筛选器解决，包括创建自定义筛选器、设置参数等步骤。
 
 ## 问题描述
 
