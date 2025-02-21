@@ -210,6 +210,15 @@
   <lastmod>2024-12-16T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://winxuan.github.io/posts/wsl-install-docker/</loc>
+  <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://winxuan.github.io/posts/windows-wsl-move/</loc>
+  <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>
