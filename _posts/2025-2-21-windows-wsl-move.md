@@ -15,6 +15,7 @@ wsl 是Windows子系统，相当于在Windows系统中就可以使用到原生�
 迁移主要是先将wsl备份打包，然后使用命令放在指定位置上，这里笔者以自己安装的Ubuntu22.04迁移到F盘为例
 
 1. 停用wsl
+cmd中输入以下命令
 ```
 wsl --shutdown
 ```
